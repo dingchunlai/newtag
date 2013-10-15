@@ -1,0 +1,43 @@
+<div class="width960 margin10 clearfix">
+  <%kw = "海外"%>
+  <div class="jus_h_pic jus_hp_lbg f_l">
+    <h3>
+      <span>
+        <%@tuiguang[0]["title"].split(" ").each do |k|%>
+          <%=get_zq_inner_link(k)%>
+        <%end%>
+        <%=get_zq_inner_link(kw, "jus_hp_more", "more》")%>
+      </span>
+      <%=get_zq_inner_link(kw)%>
+    </h3>
+    <ul>
+      <%rs = get_articles_by_editor_keyword(kw, 3)%>
+      <%[0,1,2].each do |i|%>
+        <li><a href="<%=rs[i]["url"]%>" target="_blank">
+            <img src="<%=HejiaArticle.image_url(rs[i]["entity_id"])%>" alt="<%=rs[i]["title"]%>" /></a><span>
+            <a href="<%=rs[i]["url"]%>" target="_blank" title="<%=rs[i]["title"]%>">
+              <%=rs[i]["title"]%></a></span></li>
+      <%end%>
+    </ul>
+  </div>
+
+  <%kw = "设计"%>
+  <div class="jus_h_pic jus_hp_rbg f_r">
+    <h3><span>
+        <%@tuiguang[1]["title"].split(" ").each do |k|%>
+          <%=get_zq_inner_link(k)%>
+        <%end%>
+        <%=get_zq_inner_link(kw, "jus_hp_more", "more》")%>
+      </span>
+      <%=get_zq_inner_link(kw)%></h3>
+    <ul>
+      <%rs = get_articles_by_editor_keyword(kw, 3)%>
+      <%[0,1,2].each do |i|%>
+        <li><a href="<%=rs[i]["url"]%>" target="_blank">
+            <img src="<%=HejiaArticle.image_url(rs[i]["entity_id"])%>" alt="<%=rs[i]["title"]%>" /></a><span>
+            <a href="<%=rs[i]["url"]%>" target="_blank" title="<%=rs[i]["title"]%>">
+              <%=rs[i]["title"]%></a></span></li>
+      <%end%>
+    </ul>
+  </div>
+</div>

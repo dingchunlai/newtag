@@ -1,0 +1,312 @@
+<link href="http://js.51hejia.com/css/zhuangxiu1123-b.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+  function setFocus2(p,y,o,m)//(y)id标签下的 (p)内容,对应li的id为(o)(m)
+  {
+    selectLayer2(p,y,o,m);
+  }
+  function selectLayer2(p,y,o,m)
+  {
+    for (var i=0;i<document.getElementById(y).getElementsByTagName(p).length;)
+    {
+      document.getElementById("li_"+i).className="";
+      document.getElementById(o+i).style.display="none";
+      i++;
+    }
+    document.getElementById("li_"+m).className="hover";
+    document.getElementById(o+m).style.display="block";
+  }
+</script>
+
+<div class="width960">
+  <div id="index_ad1"></div>
+</div>
+<div class="menu_main_201110new clearfix">
+  <div class="title clearfix">
+    <ul class="clearfix f_r">
+      <li>
+        <!-- afp广告代码　装修资讯首页文字链1　START　============================== -->
+        <script type="text/javascript">//&lt;![CDATA[
+          ac_as_id = 55061;
+          ac_format = 0;
+          ac_mode = 1;
+          ac_group_id = 1;
+          ac_server_base_url = "afp.csbew.com/";
+          //]]&gt;</script>
+        <script id="ac_js86_55061"></script><script src=" http://static.csbew.com/k.js" type="text/javascript"></script>
+
+        <!-- afp广告代码　首页文字链1　END　================================ -->
+      </li>
+      <li>
+        <!-- afp广告代码　装修资讯首页文字链2　START　============================== -->
+        <script type="text/javascript">//&lt;![CDATA[
+          ac_as_id = 55059;
+          ac_format = 0;
+          ac_mode = 1;
+          ac_group_id = 1;
+          ac_server_base_url = "afp.csbew.com/";
+          //]]&gt;</script>
+        <script id="ac_js86_55059"></script><script src=" http://static.csbew.com/k.js" type="text/javascript"></script>
+
+        <!-- afp广告代码　首页文字链2　END　================================ -->
+      </li>
+    </ul>
+    <a target="_blank" href="http://www.51hejia.com">
+      <img src="http://img.51hejia.com/images/zhuangxiu1126/51hejia.jpg" alt="和家网" />
+    </a>
+
+    <style type="text/css">
+      .menu_main_201110new .title h1 {
+        float: left;
+        height: auto;
+        overflow: hidden;
+        width: auto;
+        text-indent: 0;
+        font-size: 12px;
+        line-height: 1;
+      }
+      .menu_main_201110new .title .pind {
+        display: block;
+        float: left;
+        font-family: "黑体";
+        font-size: 18px;
+        margin-top: 23px;
+        text-decoration: none;
+      }
+    </style>
+    <h1><a class="pind" href="<%= "http://www.51hejia.com"+request.path %>"><%= param %></a></h1>
+  </div>
+</div>
+<div class="main_menu_201110new">
+  <div class="menubg">
+    <ul class="first_menu_201110new clearfix">
+      <li style="background: none repeat scroll 0% 0% transparent;">
+        <a id="li_0" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',0);" href="http://d.51hejia.com/" class="hover">装修资讯 &gt;&gt;</a>
+        <a id="li_1" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',1);" href="http://www.51hejia.com/xiaohuxing/">小户型</a>
+        <a id="li_2" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',2);" href="http://www.51hejia.com/gongyu/">公寓</a>
+        <a id="li_3" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',3);" href="http://www.51hejia.com/bieshu/">别墅</a>
+        <a id="li_4" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',4);" href="http://www.51hejia.com/keting/">客厅</a>
+        <a id="li_5" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',5);" href="http://www.51hejia.com/chufang/">厨房</a>
+        <a id="li_6" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',6);" href="http://d.51hejia.com/zq/%E6%88%BF%E9%97%B4%E8%A3%85%E4%BF%AE-%E9%A4%90%E5%8E%85%E8%A3%85%E4%BF%AE.html">餐厅</a>
+        <a id="li_7" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',7);" href="http://www.51hejia.com/woshi/">卧室</a>
+        <a id="li_8" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',8);" href="http://www.51hejia.com/shufang/">书房</a>
+        <a id="li_9" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',9);" href="http://www.51hejia.com/ertongfang/">儿童房</a>
+        <a id="li_10" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',10);" href="http://www.51hejia.com/weiyu/">卫浴</a>
+        <a id="li_11" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',11);" href="http://d.51hejia.com/zq/%E9%98%B3%E5%8F%B0/">阳台</a>
+        <a id="li_12" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',12);" href="http://d.51hejia.com/zq/%E7%8E%84%E5%85%B3/">玄关</a>
+        <a id="li_13" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',13);" href="http://www.51hejia.com/beijingqiang/">背景墙</a>
+        <a id="li_14" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',14);" href="http://d.51hejia.com/zq/%E8%A1%A3%E5%B8%BD%E9%97%B4/">衣帽间</a>
+        <a id="li_15" target="_blank" onmouseover="javascript:setFocus2('li','U1','x',15);" href="http://www.51hejia.com/hunfang/">婚房</a>
+      </li>
+    </ul>
+    <ul class="sc_menu_201110new clearfix" id="U1">
+      <li id="x0">
+        <% hejia_promotion_items(55271, :attributes => ['title','url'],:limit => 12).each do |r| %>
+          <%= link_to r.title , r.url, :target => "_blank" %>
+        <% end %>
+      </li>
+      <li style="display: none;" id="x1">
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/小户型设计/') %>">小户型设计</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/小户型装饰/') %>">小户型装饰</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/阁楼-小户型阁楼.html') %>">小户型阁楼</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/户型装修-超小户型装修.html') %>">超小户型装修</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/小户型空间-小户型客厅.html') %>">小户型客厅</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/小户型空间-小户型厨房.html') %>">小户型厨房</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/小户型空间-小户型卧室.html') %>">小户型卧室</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/小户型空间-小户型餐厅.html') %>">小户型餐厅</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/小户型空间-小户型儿童房.html') %>">小户型儿童房</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/小户型空间-小户型卫生间.html') %>">小户型卫生间</a>
+      </li>
+      <li style="display: none;" id="x2">
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/户型装修-公寓装修.html') %>">公寓装修</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/公寓设计') %>">公寓设计</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/公寓装饰') %>">公寓装饰</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/公寓空间') %>">公寓空间</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/公寓收纳') %>">公寓收纳</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/公寓风格') %>">公寓风格</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/公寓风格-欧式公寓.html') %>">欧式公寓</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/经典公寓') %>">经典公寓</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/小户型空间-小户型公寓.html') %>">小户型公寓</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/装修人群-单身公寓装修.html') %>">单身公寓装修</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/装修人群-白领公寓装修.html') %>">白领公寓装修</a>
+      </li>
+      <li style="display: none;" id="x3">
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/户型装修-别墅装修.html') %>">别墅装修</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/别墅设计/') %>">别墅设计</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/别墅装饰/') %>">别墅装饰</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/家居风水-别墅风水.html') %>">别墅风水</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/别墅设计-豪华别墅.html') %>">豪华别墅</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/别墅设计-联排别墅.html') %>">联排别墅</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/别墅设计-中式别墅.html') %>">中式别墅</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/别墅设计-欧式别墅.html') %>">欧式别墅</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/别墅设计-阳光别墅.html') %>">阳光别墅</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/别墅设计-园林别墅.html') %>">园林别墅</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/别墅设计-乡村别墅.html') %>">乡村别墅</a>
+      </li>
+      <li style="display: none;" id="x4">
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/房间装修-客厅装修.html') %>">客厅装修</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/客厅设计/') %>">客厅设计</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/客厅设计-客厅颜色.html') %>">客厅颜色</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/客厅风格/') %>">客厅风格</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/背景墙设计-客厅背景墙.html') %>">客厅背景墙</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/客厅设计-客厅隔断.html') %>">客厅隔断</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/客厅设计-客厅吊顶.html') %>">客厅吊顶</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/家居风水-客厅风水.html') %>">客厅风水</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/客厅装饰/') %>">客厅装饰</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/装饰画-客厅装饰画.html') %>">客厅装饰画</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/客厅装饰-客厅窗帘.html') %>">客厅窗帘</a>
+      </li>
+      <li style="display: none;" id="x5">
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/房间装修-厨房装修.html') %>">厨房装修</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/厨房设计/') %>">厨房设计</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/厨房装饰-厨房风格.html') %>">厨房风格</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/厨房设计-厨房色彩搭配.html') %>">厨房色彩搭配</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/背景墙设计-厨房背景墙.html') %>">厨房背景墙</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/厨房设计-整体厨房.html') %>">整体厨房</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/厨房设计-开放式厨房.html') %>">开放式厨房</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/厨房装饰/') %>">厨房装饰</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/家居风水-厨房风水.html') %>">厨房风水</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/厨房装饰-厨房用品.html') %>">厨房用品</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/厨房设计-厨房门.html') %>">厨房门</a>
+      </li>
+      <li style="display: none;" id="x6">
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/房间装修-餐厅装修.html') %>">餐厅装修</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/装修费用-餐厅装修费用.html') %>">餐厅装修费用</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/背景墙设计-餐厅背景墙.html') %>">餐厅背景墙</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/样板间-餐厅样板间.html') %>">餐厅样板间</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/家居风水-餐厅风水.html') %>">餐厅风水</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/装饰画-餐厅装饰画.html') %>">餐厅装饰画</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/中式风格-中式餐厅.html') %>">中式餐厅</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/日式风格-日式餐厅.html') %>">日式餐厅</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/中户型-中户型餐厅.html') %>">中户型餐厅</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/小户型空间-小户型餐厅.html') %>">小户型餐厅</a>
+      </li>
+      <li style="display: none;" id="x7">
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/房间装修-卧室装修.html') %>">卧室装修</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/卧室设计/') %>">卧室设计</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/卧室装饰-卧室颜色.html') %>">卧室颜色</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/背景墙设计-卧室背景墙.html') %>">卧室背景墙</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/卧室装饰-卧室壁纸.html') %>">卧室壁纸</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/卧室装饰/') %>">卧室装饰</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/家居风水-卧室风水.html') %>">卧室风水</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/卧室布置/') %>">卧室布置</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/卧室装饰-卧室家具.html') %>">卧室家具</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/卧室设计-卧室门.html') %>">卧室门</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/小卧室装修/') %>">小卧室装修</a>
+      </li>
+      <li style="display: none;" id="x8">
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/房间装修-书房装修.html') %>">书房装修</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/书房设计/') %>">书房设计</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/书房设计-书房颜色.html') %>">书房颜色</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/房屋装修风水-书房装修风水.html') %>">书房装修风水</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/样板间-书房样板间.html') %>">书房样板间</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/书房设计-开放式书房.html') %>">开放式书房</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/书房设计-中式书房.html') %>">中式书房</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/书房设计-欧式书房.html') %>">欧式书房</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/书房设计-现代书房.html') %>">现代书房</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/书房家具/') %>">书房家具</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/书房设计-小书房.html') %>">小书房</a>
+      </li>
+      <li style="display: none;" id="x9">
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/房间装修-儿童房装修.html') %>">儿童房装修</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/儿童房设计/') %>">儿童房设计</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/儿童房设计-儿童房颜色.html') %>">儿童房颜色</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/背景墙装修-儿童房背景墙装修.html') %>">儿童房背景墙装修</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/儿童房设计-儿童房吊顶.html') %>">儿童房吊顶</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/儿童房设计-儿童房壁纸.html') %>">儿童房壁纸</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/儿童房装饰/') %>">儿童房装饰</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/儿童房家具/') %>">儿童房家具</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/儿童房装饰-儿童房手绘墙.html') %>">儿童房手绘墙</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/儿童房装饰-儿童装饰画.html') %>">儿童装饰画</a>
+      </li>
+      <li style="display: none;" id="x10">
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/房间装修-卫浴装修.html') %>">卫浴装修</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/卫浴设计/') %>">卫浴设计</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/卫浴装饰/') %>">卫浴装饰</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/卫浴用品/') %>">卫浴用品</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/卫浴设计-卫生间装饰.html') %>">卫生间装饰</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/卫浴装饰-卫生间风格.html') %>">卫生间风格</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/卫浴设计-卫生间隔断.html') %>">卫生间隔断</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/卫浴设计-卫生间吊顶.html') %>">卫生间吊顶</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/房屋装修风水-卫生间装修风水.html') %>">卫生间装修风水</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/小卫生间装修/') %>">小卫生间装修</a>
+      </li>
+      <li style="display: none;" id="x11">
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/房间装修-阳台装修.html') %>">阳台装修</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/阳台-阳台设计.html') %>">阳台设计</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/阳台-阳台吊顶.html') %>">阳台吊顶</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/阳台-阳台装饰.html') %>">阳台装饰</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/阳台-无框阳台.html') %>">无框阳台</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/阳台-封闭阳台.html') %>">封闭阳台</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/阳台-阳台门.html') %>">阳台门</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/阳台-阳台窗帘.html') %>">阳台窗帘</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/阳台-阳台护栏.html') %>">阳台护栏</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/装修流程-封阳台.html') %>">封阳台</a>
+      </li>
+      <li style="display: none;" id="x12">
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/房间装修-玄关装修.html') %>">玄关装修</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/玄关-玄关设计.html') %>">玄关设计</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/玄关-玄关柜.html') %>">玄关柜</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/玄关-玄关鞋柜.html') %>">玄关鞋柜</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/玄关-玄关隔断.html') %>">玄关隔断</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/玄关-玄关吊顶.html') %>">玄关吊顶</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/玄关-欧式玄关.html') %>">欧式玄关</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/玄关-中式玄关.html') %>">中式玄关</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/玄关-玄关屏风.html') %>">玄关屏风</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/房屋装修风水-玄关风水.html') %>">玄关风水</a>
+      </li>
+      <li style="display: none;" id="x13">
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/背景墙装修/') %>">背景墙装修</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/背景墙设计/') %>">背景墙设计</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/背景墙装饰/') %>">背景墙装饰</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/背景墙装饰-背景墙壁纸.html') %>">背景墙壁纸</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/电视背景墙/') %>">电视背景墙</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/背景墙设计-沙发背景墙.html') %>">沙发背景墙</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/背景墙装饰-手绘背景墙.html') %>">手绘背景墙</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/背景墙装饰-床头背景墙.html') %>">床头背景墙</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/中式风格-中式背景墙.html') %>">中式背景墙</a>
+        <a target="_blank" href="<%= URI.escape('http://deco.51hejia.com/zq/背景墙装饰-欧式背景墙.html') %>">欧式背景墙</a>
+      </li>
+      <li style="display: none;" id="x14">
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/房间装修-衣帽间装修.html') %>">衣帽间装修</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/衣帽间-衣帽间设计.html') %>">衣帽间设计</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/衣帽间-步入式衣帽间.html') %>">步入式衣帽间</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/衣帽间-整体衣帽间.html') %>">整体衣帽间</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/衣帽间-卧室衣帽间.html') %>">卧室衣帽间</a>
+        <a target="_blank" href="<%= URI.escape('http://d.51hejia.com/zq/衣帽间-小衣帽间.html') %>">小衣帽间</a>
+        <a target="_blank" href="http://tuku.51hejia.com/pic/%E8%A1%A3%E5%B8%BD%E9%97%B4.html">衣帽间效果图</a>
+      </li>
+      <li style="display: none;" id="x15">
+        <a target="_blank" href="http://d.51hejia.com/zq/%E8%A3%85%E4%BF%AE%E7%94%A8%E9%80%94-%E5%A9%9A%E6%88%BF%E8%A3%85%E4%BF%AE.html">婚房装修</a>
+        <a target="_blank" href="http://deco.51hejia.com/zq/%E8%A3%85%E9%A5%B0%E8%AE%BE%E8%AE%A1-%E5%A9%9A%E6%88%BF%E8%AE%BE%E8%AE%A1.html">婚房设计</a>
+        <a target="_blank" href="http://deco.51hejia.com/zq/%E5%A9%9A%E6%88%BF%E5%B8%83%E7%BD%AE/">婚房布置</a>
+        <a target="_blank" href="http://deco.51hejia.com/zq/%E5%A9%9A%E6%88%BF%E8%AE%BE%E8%AE%A1-%E7%8E%B0%E4%BB%A3%E7%AE%80%E7%BA%A6%E5%A9%9A%E6%88%BF.html">现代简约婚房</a>
+        <a target="_blank" href="http://deco.51hejia.com/zq/%E5%A9%9A%E6%88%BF%E8%AE%BE%E8%AE%A1-%E7%94%B0%E5%9B%AD%E9%A3%8E%E6%A0%BC%E5%A9%9A%E6%88%BF.html">田园风格婚房</a>
+        <a target="_blank" href="http://deco.51hejia.com/zq/%E5%A9%9A%E6%88%BF%E8%AE%BE%E8%AE%A1-%E5%B0%8F%E6%88%B7%E5%9E%8B%E5%A9%9A%E6%88%BF.html">小户型婚房</a>
+        <a target="_blank" href="http://deco.51hejia.com/zq/%E5%A9%9A%E6%88%BF%E8%AE%BE%E8%AE%A1-80%E5%90%8E%E5%A9%9A%E6%88%BF.html">80后婚房</a>
+        <a target="_blank" href="http://d.51hejia.com/zq/%E8%A3%85%E4%BF%AE%E7%94%A8%E9%80%94-%E6%96%B0%E5%A9%9A%E6%88%BF%E8%A3%85%E4%BF%AE.html">新婚房装修</a>
+      </li>
+
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+  
+  var param="<%= param %>";
+  var arrA=["装修资讯","小户型","公寓","别墅","客厅","厨房","餐厅","卧室","书房","儿童房","卫浴","阳台","玄关","背景墙","衣帽间","婚房"]
+  if($.inArray(param, arrA) != -1)
+    {
+      getInit(arrA,param)
+    }
+  function getInit(arrA,t_param)
+  {
+    for(var i=0;arrA;i++)
+    {
+      if(arrA[i] == t_param )
+      {
+        setFocus2('li','U1','x',i);
+        document.getElementById("li_"+i).className="hover"
+        return
+      }
+    }
+  }
+</script>

@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title><%= @ci["html_title"] %></title>
+    <meta name="keywords" content="<%= @ci["html_keywords"] %>"/>
+    <meta name="description" content="<%= @ci["html_description"] %>"/>
+    <link href="http://js.51hejia.com/css/sdeco-w.css?12354" rel="stylesheet" type="text/css"/>
+    <% if @ci["style"].to_i == 1 %>
+      <link href="http://js.51hejia.com/css/pinlei-g1.css?12354" rel="stylesheet" type="text/css"/>
+    <% else %>
+      <link href="http://js.51hejia.com/css/pinlei-r.css?12354" rel="stylesheet" type="text/css"/>
+    <% end %>
+    <script src="http://www.51hejia.com/js/cha.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://js.51hejia.com/js/pricingbox.js"></script>
+
+    <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+    <!--script src="http://js.51hejia.com/js/zb-ad.js" type="text/javascript"></script-->
+    <script type="text/javascript">
+      function rember_cookies()
+      {
+        document.cookie = "jie_sheng" + "="+ escape("jie_sheng") + ";path=/;domain=.51hejia.com";
+        $('#jie_sheng_ad').hide();
+      }
+    </script>
+    <link href="http://js.51hejia.com/css/zb20120510.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <!--header-->
+    <!--begin_top_nav_links-->
+    <div class="top_menu clearfix">
+      <% if @spell == "jiadian" %>
+        <div style="width:960px; margin:5px auto 5px auto;">
+          <%= render_ad 82813, "家电-首页-置顶通栏", "afp" %>
+        </div>
+      <% end %>
+      <!--频道头部-->
+      <%= render :partial => '/share/public_header' %>
+
+      <div style="width:960px; margin:5px auto 5px auto;">
+        <%= render_ad 56257, "#{@kw}-首页-通栏1", "afp" %>
+        <%#=
+        adspace("#{@kw}-首页-通栏1", '', '') do
+          render :partial => "/share/ad_space/#{@ci["spell"]}_tonglan1"
+        end %>
+      </div>
+
+      <script type='text/javascript'>
+        function setFocus2(p, y, o, m) {
+          selectLayer2(p, y, o, m);
+        }
+        function selectLayer2(p, y, o, m) {
+          for (var i = 0; i < document.getElementById(y).getElementsByTagName(p).length;) {
+            document.getElementById(o + i).style.display = "none";
+            i++;
+          }
+          document.getElementById(o + m).style.display = "block";
+        }
+        function daohang(m) {
+          for (var z = 0; z < document.getElementById('menulist').getElementsByTagName('li').length;) {
+            document.getElementById(z + 1).className = z == m - 1 ? 'on' : 'off';
+            z++;
+          }
+          ;
+        }
+      </script>
+
+      <div class="menu_main clearfix">
+        <div class="title clearfix">
+          <a href="http://www.51hejia.com" target="_blank"><img src="http://www.51hejia.com/images/zhuangxiu1126/51hejia.jpg"/></a>
+          <a href=" http://www.51hejia.com/<%= @ci["spell"] %>/" target="_blank" class="pind"><%= @kw %></a>
+          <ul>
+            <%= adspace("#{@ci["name"]}-首页-文字链1", '', '<li></li>') %>
+            <%= adspace("#{@ci["name"]}-首页-文字链2", '', '<li></li>') %>
+            <%= adspace("#{@ci["name"]}-首页-文字链3", '', '<li></li>') %>
+
+          </ul>
+        </div>
+      </div>
+      <div class="main_menu">
+        <div class="menubg">
+          <ul class="first_menu" id="menulist">
+            <% 1.upto(9) do |i| %>
+              <% kw = trim(@ci["pd_daohang#{i}"]).split(" ")[0].to_s %>
+              <% if i==9 then
+                ; url = get_tuku_link(kw, "", kw, true);
+              else
+                ; url = get_zq_inner_link(kw, "", kw, true);
+              end; %>
+              <% if kw.length > 0 %>
+                <li <%= "class='first'" if i==1 %>>
+                  <a id="<%= i %>" href="<%= url %>" onmouseover="javascript:setFocus2('li','U1','x',<%=i-1%>);javascript:daohang(<%=i%>);" target="_blank"><%= kw %><%= "图片" if i==9 %></a>
+                </li>
+              <% end %>
+            <% end %>
+
+            <% if @spell == "jiajuchanpin" %>
+              <li>
+                <a id="8" href="http://shops.youhui.51hejia.com/index/1607" onmouseover="javascript:setFocus2('li','U1','x',7);javascript:daohang(8);" target="_blank">家具定制</a>
+              </li>
+            <% end %>
+            <script>daohang(1);</script>
+          </ul>
+          <ul class="sc_menu" id="U1">
+            <% 1.upto(9) do |i| %>
+              <% j = 1 %>
+              <li id="x<%= i-1 %>" style="display:<%= (i==1) ? "block" : "none" %>;">
+                <% for kw in trim(@ci["pd_daohang#{i}"]).split(" ") %>
+                  <% unless j == 1 %>
+                    <%= (i==9) ? get_tuku_link(kw) : get_zq_inner_link(kw) %>
+                  <% end %>
+                  <% j += 1 %>
+                <% end %>
+                <% if @spell == "cizhuan" %>
+                  <% if trim(@ci["pd_daohang#{i}"]).split(" ")[0].to_s == "瓷砖品牌" %>
+                    <%= link_to("能强瓷砖", "http://shops.youhui.51hejia.com/index/1582", :target => "_blank", :style => "padding:0 12px") %>
+                    <%= link_to("格莱斯瓷砖", "http://shops.youhui.51hejia.com/index/1582", :target => "_blank", :style => "padding:0 12px") %>
+                    <%= link_to("罗马利奥磁砖", "http://shops.youhui.51hejia.com/index/4612", :target => "_blank", :style => "padding:0 10px") %>
+                  <% end %>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main box_1 clearfix">
+      <div class="left">
+        <div class="jiaodian">
+          <style type="text/css">
+            <!--
+            #f_div {
+              width: 314px;
+              height: 295px;
+              overflow: hidden;
+              float: left;
+            }
+
+            #f_adDiv {
+              width: 100%;
+              height: 25px;
+              overflow: hidden;
+            }
+
+            #f_imgDiv {
+              width: 100%;
+              height: 295px;
+              overflow: hidden;
+            }
+
+            #f_img {
+              filter: progid:DXImageTransform.Microsoft.Fade(Overlap = 1.00);
+              border: 0;
+            }
+
+            #f_infoDiv {
+              width: 100%;
+              top: -20px;
+              position: relative;
+            }
+
+            #f_buttonDiv {
+              width: 100%;
+              margin-right: 1px;
+              height: 18px;
+              overflow: hidden;
+              text-align: left;
+            }
+
+            #f_line {
+              margin-left: 230px;
+              width: 140px;
+              height: 1px;
+              background: #000;
+              overflow: hidden;
+              filter: progid:DXImageTransform.Microsoft.Alpha(startX = 0, startY = 0, finishX = 0, finishY = 100, style = 1, opacity = 0, finishOpacity = 100)
+            }
+
+            #f_buttonDiv div {
+              width: 1px;
+              height: 18px;
+              background: #fff;
+              float: right;
+            }
+
+            #f_buttonDiv .bg {
+              width: 20px;
+              height: 18px;
+              background: #9c9c9c;
+              float: right;
+              filter: Alpha(Opacity = 40);
+              -moz-opacity: 0.5;
+            }
+
+            #f_buttonDiv a {
+              width: 20px;
+              height: 18px;
+              float: right;
+              line-height: 14px;
+              color: #fff;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 12px;
+              text-align: center;
+              display: block;
+              overflow: hidden;
+              text-decoration: none;
+              position: absolute;
+            }
+
+            #f_buttonDiv a:link, #f_buttonDiv a:visited, #f_buttonDiv a:active {
+              color: #fff;
+            }
+
+            #f_buttonDiv a:hover {
+              background: #dedede;
+              color: #000;
+            }
+
+            #f_buttonDiv a.on:link, #f_buttonDiv a.on:visited, #f_buttonDiv a.on:active, #f_buttonDiv a.on:hover {
+              background: #dedede;
+              color: #000;
+            }
+
+            #f_buttonDiv a.on:hover {
+              background: #dedede;
+            }
+
+            #f_text {
+              height: 34px;
+              line-height: 34px;
+              overflow: hidden;
+              text-align: left;
+              margin-top: 1px;
+              padding-left: 25px;
+              color: #FFFFFF
+            }
+
+            #f_text a:link, #f_text a:visited, #f_text a:active {
+              color: #ffffff;
+            }
+
+            #f_text a:hover {
+              color: #FF6600;
+              text-decoration: none;
+            }
+
+            -->
+          </style>
+          <div id="f_div">
+            <!--图片区域-->
+            <div id="f_imgDiv"></div>
+            <div id="f_infoDiv">
+              <!--数字按钮区域-->
+              <div id="f_buttonDiv"></div>
+            </div>
+          </div>
+          <!--焦点文字区域-->
+          <div id="f_text" class="f12b" style="display:none;"></div>
+          <p>
+            <script>
+              //可修改区域
+              var imgWidth = 314;
+              var imgHeight = 295;
+              var _timeOut_ = 7000;
+              var show_text = true; //是否显示焦点文字
+              var timeOut = _timeOut_;
+              var timeOut2 = _timeOut_ / 2;//onmouseout img后需要切换的时间
+              var now = 0;              //第一张图
+              var target = "_blank";   //打开方式
+              var button_on = 'on'; //当前焦点对应按钮的样式名
+              var button_off = '';//非当前焦点对应按钮的样式名
+              //不可修改区域
+              var imgUrl = new Array();
+              var imgText = new Array();
+              var imgLink = new Array();
+              var imgAlt = new Array();
+              //var menuList = new Array();//菜单menu
+              var ver = 2; //兼容浏览器版本 默认2 为非ie
+              var firstTime = true;
+              var n = -1;
+<%jiaodiantu_order=@ci["jiaodiantu_order"].split(" ")%>
+<%1.upto(5) do |i|%>
+  <%j = jiaodiantu_order[i-1].to_i%>
+  <%if @ci["jiaodiantu_image_url#{j}"].to_s.length > 1%>
+      imgUrl[++n] = '<%=@ci["jiaodiantu_image_url#{j}"]%>';
+      imgLink[n] = '<%=@ci["jiaodiantu_url#{j}"]%>';
+      imgText[n] = "<%=@ci["jiaodiantu_title#{j}"]%>";
+      imgAlt[n] = "<%=@ci["jiaodiantu_title#{j}"]%>";
+  <%end%>
+<%end%>
+
+  var count = 0;
+  for (i = 0; i < imgUrl.length; i++) {
+    if ((imgUrl[i] != "") && (imgText[i] != "") && (imgLink[i] != "") && (imgAlt[i] != "")) {
+      count++;
+    } else {
+      break;
+    }
+  }
+  function p$(string) {
+    document.write(string);
+  }
+  //固定图片size
+  p$("<style> #f_img { width:" + imgWidth + "px;height:" + imgHeight + "px;</style>");
+  function change() {
+    if (ver == 1) {
+      with (document.getElementById('f_img').filters[0]) {
+        Transition = 1;
+        apply();
+        play();
+      }
+    }
+    if (firstTime) {
+      firstTime = false;
+      timeOut = _timeOut_ / 1000;
+    }
+    else {
+      document.getElementById('f_img').src = imgUrl[now];
+      document.getElementById('f_img').alt = imgAlt[now];
+      document.getElementById('f_imgLink').href = imgLink[now];
+      if (show_text) document.getElementById('f_text').innerHTML = imgText[now];
+      for (var i = 0; i < count; i++) {
+        document.getElementById('b' + i).className = "button";
+      }
+      document.getElementById('b' + now).className = "on";
+      now = (now >= imgUrl.length - 1) ? 0 : now + 1;
+      timeOut = _timeOut_;
+    }
+    theTimer = setTimeout("change()", timeOut);
+  }
+  function b_change(num) {
+    window.clearInterval(theTimer);
+    now = num;
+    firstTime = false;
+    change();
+  }
+  //draw 渐变line （即css:f_line)
+  function draw_line() {
+    var div = document.createElement("div");
+    div.id = 'f_line';
+    document.getElementById('f_infoDiv').insertBefore(div, document.getElementById('f_infoDiv').childNodes.item(0));
+  }
+  //表现层 start
+  //图片
+  var a = document.createElement("a");
+  a.id = "f_imgLink";
+  a.target = target;
+  a.href = imgLink[now];
+  document.getElementById('f_imgDiv').appendChild(a);
+  var img = document.createElement("img");
+  img.id = "f_img";
+  img.width = imgWidth;
+  img.height = imgHeight;
+  img.src = imgUrl[now];
+  img.alt = imgAlt[now];
+  a.appendChild(img);
+  //数字按钮
+  for (var i = count - 1; i >= 0; i--) {
+    var div_bg = document.createElement("div");
+    div_bg.id = 'div_bg' + i;
+    div_bg.className = 'bg';
+    document.getElementById('f_buttonDiv').appendChild(div_bg);
+    var a = document.createElement("a");
+    a.id = 'b' + i;
+    a.className = (i == now + 1) ? "button_on" : "button_off";
+    a.title = imgAlt[i];
+    a.innerHTML = i + 1;
+    a.href = 'javascript:b_change(' + i + ')';
+    document.getElementById('div_bg' + i).appendChild(a);
+    var div = document.createElement("div");
+    document.getElementById('f_buttonDiv').appendChild(div);
+  }
+  if (show_text) document.getElementById('f_text').innerHTML = imgText[now];
+  //表现层 end
+  document.getElementById('f_img').onmouseover = function () {
+    window.clearInterval(theTimer);
+  }
+  document.getElementById('f_img').onmouseout = function () {
+    theTimer = setTimeout("change()", timeOut2);
+  }
+  try {  //滤镜版本
+    new ActiveXObject("DXImageTransform.Microsoft.Fade");
+    document.getElementById('f_img').filters[0].play();
+    ver = 1;
+    draw_line();
+  }
+  catch (e) {
+    ver = 2;
+  }
+  var theTimer = setTimeout("change()", _timeOut_ / 1000);
+            </script>
+          </p>
+        </div>
+        <div class="hot">
+          <h3><a href="http://zt.51hejia.com" target="_blank">热点专题</a></h3>
+          <ul>
+            <% for r in parse_xml("http://api.51hejia.com/rest/build/xml/54728.xml", ["title", "url"], 3) %>
+              <li><a href="<%= r["url"] %>" target="_blank" title="<%= r["title"] %>"><%= ul(r["title"], 22, 0, "") %></a>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="top">
+          <h3>
+            <a href="<%= @ci["headline_url"] %>" target="_blank" title="<%= @ci["headline_title"] %>"><%= ul(@ci["headline_title"], 21, 0, "") %></a>
+          </h3>
+          <p><%= ul(@ci["headline_resume"], 54, 0, "") %><a href="<%= @ci["headline_url"] %>" target="_blank">[详细]</a></p>
+        </div>
+
+        <!--资讯推广关键词-->
+        <%= render :partial => "pinlei/index/tags_ul_temp", :locals => {:parames => {:ul_class => "ul1", :entity => "zx", :times => 7, :type => 1, :show_count => 16}} -%>
+        <!--8条资讯-->
+        <ul class="ul2 clearfix">
+          <% for rs in get_articles_by_ids(@ci["tuijian_ids2"], 8) %>
+            <li>
+              <a href="<%= rs["url"] %>" target="_blank" title="<%= rs["title"] %>"><%= ul(rs["title"], 11, 0, "") %></a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="right">
+
+        <div class="ad">
+          <%= adspace("#{@kw}-首页-宽幅") do
+            "<a href=\"#{@ci["tw_url1"]}\" target=\"_blank\"><img src=\"#{@ci["tw_image_url1"]}\" width=\"220\" height=\"120\" alt=\"#{@ci["tw_title1"]}\"/></a>"
+          end %>
+        </div>
+
+        <!--# 图文2-4的title与url-->
+        <%= render :partial => "pinlei/index/ul_li_temp", :locals => {:parames => {:ul_class => "ul1", :entity => "tw", :start_num => 2, :end_num => 4, :show_count => 15}} -%>
+
+
+        <div class="r_box">
+          <h3><%= get_zq_inner_link(@ci["tw_kw"]) %></h3>
+          <a href="<%= @ci["tw_url5"] %>" target="_blank"><img src="<%= @ci["tw_image_url5"] %>" alt="<%= @ci["tw_title5"] %>" width="206" height="83"/></a>
+          <ul>
+            <% unless Article::promotion_articles(4, @ci["tw_kw"]).blank? %>
+              <% ids = Article::promotion_articles(4, @ci["tw_kw"]) %>
+              <% for id in ids %>
+                <% article = Article.get_article(id) %>
+                <li>
+                  <a href="<%= article.detail_url %>" target="_blank" title="<%= article.title %>"><%= ul(article.title, 16, 0, "") %></a>
+                </li>
+              <% end %>
+              <% limit = 4 - ids.size %>
+              <% if limit > 0 %>
+                <% for rs in get_articles_by_editor_keyword(@ci["tw_kw"], limit) %>
+                  <li>
+                    <a href="<%= rs["url"] %>" target="_blank" title="<%= rs["title"] %>"><%= ul(rs["title"], 16, 0, "") %></a>
+                  </li>
+                <% end %>
+              <% end %>
+            <% else %>
+              <% for rs in get_articles_by_editor_keyword(@ci["tw_kw"], 4) %>
+                <li>
+                  <a href="<%= rs["url"] %>" target="_blank" title="<%= rs["title"] %>"><%= ul(rs["title"], 16, 0, "") %></a>
+                </li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="main box_2">
+
+      <h3>
+        <span class="more">
+          <%= get_zq_inner_link(@ci["tj_kw"], "", ">>更多") %>
+        </span>
+        <ul>
+          <%
+          tj_tags = get_array_title_and_url(@ci["tj_tags"], 9)
+          for rs in tj_tags
+            i = 0 if i.nil?
+            i += 1
+          %>
+            <li <%= "class='last'" if i==tj_tags.length %>>
+              <a href="<%= rs["url"] %>" title="<%= rs["title"] %>" target="_blank"><%= rs["title"] %></a></li>
+          <% end %>
+        </ul>
+        <%= get_zq_inner_link(@ci["tj_kw"]) %>
+      </h3>
+
+      <ul>
+        <!--#推荐1-4-->
+        <%= render :partial => "pinlei/index/li_image_temp", :locals => {:parames => {:entity => "tj", :i_class => "li1", :end_num => 4, :show_count => 14, :pic_width => 220, :pic_height => 130}} -%>
+
+      </ul>
+
+    </div>
+
+    <div style="width:960px; margin:5px auto 5px auto;">
+      <%= adspace("#{@kw}-首页-通栏2") %>
+    </div>
+
+    <div class="main box_3">
+
+      <div class="left">
+        <%= render :partial => "pinlei/index/lm1" %>
+        <!--栏目2 -->
+        <%= render :partial => "pinlei/index/lm2" %>
+        <!--栏目3 -->
+        <%= render :partial => "pinlei/index/lm3" %>
+        <!--栏目4 -->
+        <%= render :partial => "pinlei/index/lm4" %>
+        <!--栏目5 -->
+        <%= render :partial => "pinlei/index/lm5" %>
+      </div>
+
+      <div class="right">
+        <!-- 频道名 品牌排行 -->
+        <%= render :partial => "pinlei/index/div_box", :locals => {:parames => {:ul_class => "list1", :href => "http://b.51hejia.com", :top_title => @kw+"品牌排行", :times => 10, :entity => "pp", :show_count => 11}} -%>
+
+        <!-- 品牌11图片 -->
+        <div class="ad">
+          <a href="<%= @ci["pp_url11"] %>" target="_blank" title="<%= @ci["pp_title11"] %>">
+            <img src="<%= @ci["pp_image_url11"] %>" width="205" height="140" alt="<%= @ci["pp_title11"] %>"/></a>
+        </div>
+
+        <!-- 套图/单图关联 -->
+        <%= render :partial => "pinlei/index/image_link", :locals => {:parames => {:raws => 4, :cols => 2, :show_count => 6}} -%>
+
+        <!-- 右侧推荐词 -->
+        <div class="box">
+          <h3><%= get_zq_inner_link(@ci["rtj_kw"]) %></h3>
+          <ul class="list3">
+            <% unless Article::promotion_articles(15, @ci["rtj_kw"]).blank? %>
+              <% ids = Article::promotion_articles(15, @ci["rtj_kw"]) %>
+              <% unless ids.blank? %>
+                <% for id in ids %>
+                  <% article = Article.get_article(id) %>
+                  <li><a href="<%= article.detail_url %>" title="<%= article.title %>"><%= ul(article.title, 11) %></a></li>
+                <% end %>
+              <% end %>
+              <% limit = 15 - ids.size %>
+              <% if limit > 0 %>
+                <% for r in get_articles_by_editor_keyword(@ci["rtj_kw"], limit) %>
+                  <li><a href="<%= r["url"] %>" title="<%= r["title"] %>"><%= ul(r["title"], 11) %></a></li>
+                <% end %>
+              <% end %>
+            <% else %>
+              <% for r in get_articles_by_editor_keyword(@ci["rtj_kw"], 15) %>
+                <li><a href="<%= r["url"] %>" title="<%= r["title"] %>"><%= ul(r["title"], 11) %></a></li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+
+        <!-- 频道名 论坛相关 -->
+        <%= render :partial => "pinlei/index/relate_rs", :locals => {:parames => {:ul_class => "list3", :href => "http://bbs.51hejia.com", :top_title => @kw+"论坛相关", :times => 15, :type => 3, :show_count => 11}} -%>
+        <!-- 频道名 产品相关 -->
+        <%= render :partial => "pinlei/index/relate_rs", :locals => {:parames => {:ul_class => "list3", :href => "http://p.51hejia.com", :top_title => @kw+"产品相关", :times => 15, :type => 5, :show_count => 11}} -%>
+        <!-- 频道名 术语 -->
+        <%= render :partial => "pinlei/index/div_box", :locals => {:parames => {:ul_class => "list3", :top_title => @kw+"术语", :times => 6, :entity => "sy", :show_count => 11}} -%>
+
+      </div>
+
+    </div>
+
+    <div id="link00" class="clearfix">
+
+      <ul>
+        <li>友情链接：</li>
+        <li>
+          <% for r in get_array_title_and_url(@ci["friendly_links"], 99) %>
+            <a href="<%= r["url"] %>" style="color:#000" target="_blank" title="<%= r["title"] %>"><%= r["title"] %></a>
+          <% end %>
+        </li>
+      </ul>
+
+    </div>
+    <%= render :partial => '/share/public_footer' %>
+
+    <% if @spell == "jiajuchanpin" %>
+      <iframe width="0" scrolling="no" height="0" frameborder="0" border="0" id="framelink" name="framelink" noresize="" src=""></iframe>
+      <% if Time.now.hour != 23 %>
+        <script src="http://api.51hejia.com/analog_codes?code=SYVE5vGqkRtWvrJMd6AC" type="text/javascript"></script>
+      <% end %>
+    <% end %>
+    <% if @spell == "jiadian" %>
+      <iframe width="0" scrolling="no" height="0" frameborder="0" border="0" id="framelink" name="framelink" noresize="" src=""></iframe>
+      <% if Time.now.hour != 23 %>
+        <script src="http://api.51hejia.com/analog_codes?code=SYVE5vGqkRtWvrJMd6AG" type="text/javascript"></script>
+      <% end %>
+    <% end %>
+
+    <style type="text/css">
+      .footer_ad {
+        z-index: 9999;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
+        _position: absolute;
+        _left: expression(eval(document.documentElement.scrollLeft));
+        _top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+        background: url(http://js.51hejia.com/img/ad_bg.gif) no-repeat top center;
+      }
+
+      .footer_ad .footer_ad_img {
+        width: 1000px;
+        height: 84px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .footer_ad a.footer_ad_close {
+        width: 16px;
+        height: 16px;
+        margin: 0px;
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        background: url(http://js1.51hejia.com/img/zxdpimg/contrast_li_close.jpg) no-repeat;
+        z-index: 99;
+      }
+
+      .footer_ad a.footer_ad_link {
+        display: block;
+        width: 1000px;
+        height: 84px;
+        margin: 0 auto;
+      }
+    </style>
+    <div class="footer_ad" id="footer_ad">
+      <div class="footer_ad_img">
+        <!--a href="javascript:void(0);" onclick="open_gongyi_ad_url();" class="footer_ad_link"></a-->
+        <%= render_ad(81091, '品牌中心首页-飘带底', 'afp') %>
+        <a class="footer_ad_close" href="javascript:void(0);" onclick="$('#footer_ad').hide();"></a>
+      </div>
+    </div>
+
+    <% if render_ad(82293, '品牌中心-左漂浮', 'afp').include?("<span>") %>
+      <div style="left: 0px; position: absolute; top: 100px;" id="ALayer1">
+        <div align="left">
+          <img border="0" style="cursor:pointer" onclick="closeBanner();" src="http://js.51hejia.com/img/dl_close.gif">
+        </div>
+        <%= render_ad(82293, '品牌中心-左漂浮', 'afp') %>
+      </div>
+    <% end %>
+    <% if render_ad(82295, '品牌中心-右漂浮', 'afp').include?("<span>") %>
+      <div style="right: 0px; position: absolute; top: 100px;" id="ALayer2">
+        <div align="right"><img border="0" onclick="closeBanner();" src="http://js.51hejia.com/img/dl_close.gif"></div>
+        <%= render_ad(82295, '品牌中心-右漂浮', 'afp') %>
+      </div>
+    <% end %>
+    <% if render_ad(82293, '品牌中心-左漂浮', 'afp').include?("<span>") || render_ad(82295, '品牌中心-右漂浮', 'afp').include?("<span>") %>
+      <script type="text/javascript">
+        if (remote_ip_info.city == '上海') {
+          lastScrollY = 0;
+          function heartBeat() {
+            var diffY;
+            if (document.documentElement && document.documentElement.scrollTop) {
+              diffY = document.documentElement.scrollTop;
+            }
+            else if (document.body) {
+              diffY = document.body.scrollTop
+            }
+            else {
+            }
+            percent = .1 * (diffY - lastScrollY);
+            if (percent > 0) {
+              percent = Math.ceil(percent);
+            }
+
+            else {
+              percent = Math.floor(percent);
+            }
+            document.getElementById("ALayer1").style.top = parseInt(document.getElementById("ALayer1").style.top) + percent + "px";
+            document.getElementById("ALayer2").style.top = parseInt(document.getElementById("ALayer1").style.top) + percent + "px";
+            lastScrollY = lastScrollY + percent;
+          }
+
+          window.setInterval("heartBeat()", 1);
+          function closeBanner() {
+            document.getElementById("ALayer1").style.display = 'none';
+            document.getElementById("ALayer2").style.display = 'none';
+          }
+        }
+      </script>
+    <% end %>
+    <% if false #if cookies["jie_sheng"].blank? %>
+      <div id="jie_sheng_ad" style="bottom: 0px; right: 0px;_position:absolute; _top:expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight);" class="zb-ad" title="">
+        <%= render_ad(81093, '品牌中心首页-弹窗右下', 'afp') %>
+        <a class="close" id="jie_sheng" onclick="rember_cookies();"></a>
+      </div>
+    <% end %>
+  </body>
+
+</html>

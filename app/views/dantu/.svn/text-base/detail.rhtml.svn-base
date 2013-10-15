@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><%=@dantu_info["html_title"] rescue ""%></title>
+<meta name="keywords" content="<%=@dantu_info["html_keywords"] rescue ""%>" />
+<meta name="description" content="<%=@dantu_info["html_description"] rescue ""%>" />
+<link href="http://js.51hejia.com/css/home.css?99251482" rel="stylesheet" type="text/css" />
+<link href="http://js.51hejia.com/css/opstyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+document.domain = "51hejia.com";
+window.onload=function()
+{
+for(var i=0; i<document.links.length; i++)
+document.links[i].onfocus=function(){this.blur()}
+}
+function change_about_tags(obj){   //切换图片相关标签
+  var tags = obj.attributes['tags'].nodeValue
+  <%if @s_kws.length > 1%>tags += ",<%=@kw%>";<%end%>
+  var str = "";
+  tags = tags.split(",")
+  for (i in tags){
+    str += "<a href='/pic/" + tags[i] + ".html' target='_blank'>" + tags[i] + "</a> ";
+  }
+  document.getElementById("about_tags").innerHTML = str;
+  document.getElementById("case_title").innerHTML = obj.attributes['title'].nodeValue + ' - <%=@kw%>';
+  document.getElementById("case_title").href = 'http://tuku.51hejia.com/zhuangxiu/tuku-' + obj.attributes['case_id'].nodeValue;
+  document.getElementById("carousel_photo").alt = obj.attributes['title'].nodeValue + ' - <%=@kw%>';
+}
+function sf(){document.f.q.focus();}
+window.gbar={};(function(){var g=window.gbar,j,k;function l(a){var d=window.encodeURIComponent&&(document.forms[0].q||"").value;if(d)a.href=a.href.replace(/([?&])q=[^&]*|$/,function(h,f){return(f||"&")+"q="+encodeURIComponent(d)})}g.qs=l;function m(a,d,h,f,b,c){var i=document.getElementById(a),e=i.style;if(i){e.left=f?"auto":d+"px";e.right=f?d+"px":"auto";e.top=h+"px";e.visibility=k?"hidden":"visible";if(b){e.width=b+"px";e.height=c+"px"}else{m(j,d,h,f,i.offsetWidth,i.offsetHeight);k=k?"":a}}}g.tg=function(a){a=a||window.event;var d=0,h,f=window.navExtra,b,c=a.target||a.srcElement;a.cancelBubble=true;if(c.className!="gb3")c=c.parentNode;if(!j){b=document.createElement(Array.every||window.createPopup?"iframe":"div");b.frameBorder="0";b.src="#";j=c.parentNode.appendChild(b).id="gbs";document.onclick=g.close}a=c.getAttribute("aria-owns")||"gbi";b=c.offsetWidth;var i=c.offsetTop>20?46:24,e;do d+=c.offsetLeft||-150;while(c=c.offsetParent);if(a=="gbi")for(b=document.getElementById(a);f&&(h=f.pop());)b.insertBefore(h,b.firstChild).className="gb2";else e=d=(document.documentElement.clientWidth||document.body.clientWidth)-d-b;k!=a&&g.close();m(a,d,i,e)};g.close=function(){k&&m(k,0,0)}})();
+</script>
+</head>
+<body>
+
+<%= render :partial => '/share/public_header' %>
+
+<div id="main" class="clearfix">
+
+  <%=render_ad(571, "图片单图终端页-顶部通栏960*80", "openx")%>
+
+  <div id="location"><span>当前位置：</span><a href="http://tuku.51hejia.com" target="_blank" title="图库">图库</a> > 
+    <a href="/pic/<%=@kw%>.html" target="_blank" ><%=@kw%>图片专区</a> > 图片详情</div>
+  <div id="center">
+    <h1><a href="<%=@cur_case.url%>" id="case_title" target="_blank" title="点击标题查看整套图片"><%=@cur_case.title%> - <%=@kw%></a></h1>
+    <div class="full">您还可以查看 <a href="/pic/<%=@kw%>.html" target="_blank" title="<%=@kw%>图库"><%=@kw%>图库</a>|<%=get_zq_inner_link(@kw,"","#{@kw}专区")%></div>
+    <!-- <a href="#" target="_blank" title="全屏" class="a01"></a> -->
+    <div class="pic clearfix">
+      <div class="picbutton">
+        <div id="carousel_photo_container">
+          <img src="<%=@cur_case_image_url%>" id="carousel_photo" alt="<%=@cur_case.title%>" />
+        </div>
+      </div>
+      
+      <div class="tags">标签：
+        <span id="about_tags">
+          <%for tag in get_dantu_tags_by_photo_id(@photo_id, 15)%>
+            <a href="/pic/<%=tag%>.html" target="_blank" title="<%=tag%>"><%=tag%></a>
+          <%end%>
+          <%if @s_kws.length > 1 #如果是复合词%>
+            <a href="/pic/<%=@kw%>.html" target="_blank" title="<%=@kw%>"><%=@kw%></a>
+          <%end%>
+        </span>
+      </div>
+      
+    </div>
+    <div class="piclist clearfix">
+      <div id="carousel">
+        <div id="carousel_btn_lastgroup"><a href="#1"></a></div>
+        <div id="carousel_container">
+          <ul id="samples_list">
+            <li><a href="<%=@cur_case_image_url%>" tags="<%=get_dantu_tags_by_photo_id(@photo_id, 15).join(",")%>" case_id="<%=@cur_case_id%>" title="<%=@cur_case.title%>" target="_blank">
+                <img src="<%=@cur_case_image_url%>" alt="图片编号：<%=@photo_id%>" /></a></li>
+            <%for l in @ls%>
+              <%if l.id != @photo_id%>
+                  <%
+                    dantu_tags = get_dantu_tags_by_photo_id(l.id, 15)
+                  %>
+                  <li><a href="<%=get_tuku_big_photo_url(l.filepath)%>" tags="<%=dantu_tags.join(",")%>" case_id="<%=l.case_id%>" title="<%=get_case_title_by_case_id(l.case_id)%>" target="_blank">
+                  <img src="<%=get_tuku_photo_url(l.type_id, l.filepath)%>" alt="图片编号：<%=l.id%>" /></a></li>
+              <%end%>
+            <%end%>
+          </ul>
+        </div>
+        <div id="carousel_btn_nextgroup"><a href="#1"></a></div>
+      </div>
+    </div>
+    <p id="carousel_photo_intro" style="display:none;"></p>
+    <script language="javascript" type="text/javascript" src="http://js.51hejia.com/js/yao_tag2.js"></script>
+    <script language="javascript" type="text/javascript">
+<!--
+var Album = new YAO.YAlbum();
+//-->
+</script>
+  </div>
+  <div id="sidebar">
+    <div class="sidebox01"><h3>我是大评委</h3></div>
+    <div class="sidetit01">
+      <ul class="clearfix">
+
+        <script src="http://tag.51hejia.com/zq/dantu_pingfen/<%=u(@kw)%>/0.js"></script>
+        
+        <!--
+        <li class="li03"><a href="#" target="_blank" title="收藏图片">收藏图片</a></li>
+        <li class="li04"><a href="#" target="_blank" title="下载图片">下载图片</a></li>
+        -->
+        <li><a href="http://tag.51hejia.com/zq/dantu_pingfen/<%=u(@kw)%>/1.js" target="hideiframe" title="好评" class="good">好评</a></li>
+        <li><a href="http://tag.51hejia.com/zq/dantu_pingfen/<%=u(@kw)%>/s1.js" target="hideiframe" title="差评" class="bad">差评</a></li>
+      </ul>
+    </div>
+    <div class="sidebox02"><h3>热门图片专区</h3><a href="http://tuku.51hejia.com/zhuanqu/" target="_blank" title="更多">更多>></a></div>
+    <div class="sidetit02">
+      <%for tl in get_dantu_about_links(dantu_info("about_links"))%>
+          <%=get_tuku_link(tl)%>
+      <%end%>
+    </div>
+    <div class="sidebox03"><h3>热门资讯专区</h3><a href="http://www.51hejia.com/zq/" target="_blank" title="更多">更多>></a></div>
+    <div class="sidetit02">
+      <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54136.xml", ["title", "url",], 99)%>
+       <a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=r["title"]%></a>
+      <%end%>
+    </div>
+    <!--
+    <div class="sidebox04"><h3>我收藏的图片</h3><a href="#" target="_blank" title="更多">更多>></a></div>
+    <div class="sidetit04">
+      <ul class="clearfix">
+        <li><a href="#" target="_blank" title="效果图"><img src="http://www.51hejia.com/images/piclistimages/pic05.jpg" alt="效果图" /></a></li>
+        <li><a href="#" target="_blank" title="效果图"><img src="http://www.51hejia.com/images/piclistimages/pic05.jpg" alt="效果图" /></a></li>
+        <li><a href="#" target="_blank" title="效果图"><img src="http://www.51hejia.com/images/piclistimages/pic05.jpg" alt="效果图" /></a></li>
+        <li><a href="#" target="_blank" title="效果图"><img src="http://www.51hejia.com/images/piclistimages/pic05.jpg" alt="效果图" /></a></li>
+      </ul>
+    </div>
+    -->
+  </div>
+  <div id="content">
+    <div class="conbox01">
+      <h3>网友评论</h3>
+    </div>
+    <script type="text/javascript" src="http://radmin.51hejia.com/comment/show?theme_id=<%=dantu_info("id")%>&sort_id=3"></script>
+  </div>
+</div>
+
+<%= render :partial => '/share/public_footer' %>
+
+  <iframe name="hideiframe" width="0" height="0" style="display: none;"></iframe>
+</body>
+</html>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/103/51hejia/repos/newtag/release/vendor/plugins/attachment_fu
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/103/51hejia/repos/newtag/release/vendor/plugins/attachment_fu/init.rb
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/103/51hejia/repos/newtag/release/vendor/plugins/attachment_fu/CHANGELOG
+END
+amazon_s3.yml.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/103/51hejia/repos/newtag/release/vendor/plugins/attachment_fu/amazon_s3.yml.tpl
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/103/51hejia/repos/newtag/release/vendor/plugins/attachment_fu/install.rb
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/103/51hejia/repos/newtag/release/vendor/plugins/attachment_fu/README
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/103/51hejia/repos/newtag/release/vendor/plugins/attachment_fu/Rakefile
+END

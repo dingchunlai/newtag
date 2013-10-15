@@ -1,0 +1,14 @@
+<div id="<%=div_id%>" class="tab">
+  <ul>
+    <li>
+      <%5.upto(rs.length-1) do |i|%>
+        <%unless rs[i].nil?%><a href="<%=rs[i]["url"]%>" target="_blank"><%=rs[i]["title"]%></a><%end%>|
+      <%end%>
+    </li>
+    <li class="li01">推荐
+      <%1.upto(4) do |i|%>
+        <%unless rs[i].nil?%><a href="<%=rs[i]["url"]%>" target="_blank"><%=rs[i]["title"]%></a><%end%>
+      <%end%>
+    </li>
+  </ul>
+</div>

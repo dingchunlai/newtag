@@ -1,0 +1,20 @@
+<div class="box03">
+  <div id="sub_09"><h3><%=@keyword%>品牌排行</h3><span class="sp">关注度</span></div>
+  <div id="sub_10">
+    <ul>
+      <%for brand in get_brands(@keyword, PINLEI_SORT[@pinlei.sort_id], 10)%>
+        <li><a href="http://p.51hejia.com/brands/<%=brand.id%>" target="_blank" title="<%=brand.name_zh%>"><%=brand.name_zh%></a><span><%=brand.view_count%></span></li>
+      <%end%>
+    </ul></div>
+</div>
+<div class="box01">
+  <div id="sub_11"><h3><%=@keyword%>促销产品</h3></div>
+  <div class="text02">
+    <div id="sub_12"><ul class="clearfix">
+        <%for product in get_products(@keyword, PINLEI_SORT[@pinlei.sort_id], 6)%>
+          <li><div><a href="http://p.51hejia.com/products/<%=product.productid%>.html" target="_blank" >
+                <img src="<%#=product.primary_image_path(:thumb)%>" width="117" height="90" alt="<%=product.name%>"/></a></div><div><h4><a href="http://p.51hejia.com/products/<%=product.productid%>.html" target="_blank" title="<%=product.name%>"><%=product.name%></a></h4></div><div><p>￥<%=format_price(product.now_price,product.unit)%></p></div></li>
+        <%end%>
+      </ul></div>
+  </div>
+</div>

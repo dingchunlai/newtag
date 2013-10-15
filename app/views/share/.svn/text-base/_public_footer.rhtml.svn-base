@@ -1,0 +1,2 @@
+<%= render_shared_footer :without_tracking_code => true %>
+<%=yield :html_body_end%>

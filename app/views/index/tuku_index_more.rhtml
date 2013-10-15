@@ -1,0 +1,18 @@
+
+
+  <div id="map">
+
+  <div class="clear" style="margin-top:10px;"></div>
+  <div class="left">当前位置：<a href="http://www.51hejia.com" target="_blank">和家首页</a>&nbsp;&gt;&nbsp;
+  <a href="http://tuku.51hejia.com/zhuanqu" target="_blank" target="_blank">图库专区</a>&nbsp;&gt;&nbsp;
+  <a href="http://tuku.51hejia.com/zhuanqu/<%=@tag_id%>" target="_blank"><%=@tags[0]%></a>
+  </div>
+  <div class="clear" style="margin-top:10px;"></div>
+
+  <ul>
+    <%1.upto(@tags.length-1) do |i|%>
+      <%=get_tag_link(@tags[i])%>
+    <%end%>
+  </ul>
+</div>
+

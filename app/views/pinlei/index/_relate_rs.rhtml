@@ -1,0 +1,18 @@
+<%
+      div_class=parames[:div_class].nil? ? "box":parames[:div_class]
+      ul_class=parames[:ul_class]
+      href=parames[:href].nil? ? "#" : parames[:href]
+      top_title=parames[:top_title]
+      times=parames[:times]
+      type=parames[:type] #type定义： 1.文章 2.博客 3.论坛 4.图片 5.产品 6.问吧
+      show_count=parames[:show_count]
+%>
+
+<div class="<%=div_class%>">
+          <h3><a href="<%=href%>" target="_blank"><%=top_title%></a></h3>
+          <ul class="<%=ul_class%>">
+            <%for r in get_rs_by_any_keywords(@about_kws, times){|kw, limit| get_about_list(type, kw, limit) }%>
+             <li><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=ul(r["title"],show_count)%></a></li>
+            <%end%>
+          </ul>
+</div>

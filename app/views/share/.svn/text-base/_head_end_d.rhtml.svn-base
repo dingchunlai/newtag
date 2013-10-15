@@ -1,0 +1,92 @@
+<!--small_header-->
+<link href="http://js.51hejia.com/css/header914.css?99173" rel="stylesheet" type="text/css" />
+<script>
+function sf(){document.f.q.focus();}
+window.gbar={};(function(){var g=window.gbar,j,k;function l(a){var d=window.encodeURIComponent&&(document.forms[0].q||"").value;if(d)a.href=a.href.replace(/([?&])q=[^&]*|$/,function(h,f){return(f||"&")+"q="+encodeURIComponent(d)})}g.qs=l;function m(a,d,h,f,b,c){var i=document.getElementById(a),e=i.style;if(i){e.left=f?"auto":d+"px";e.right=f?d+"px":"auto";e.top=h+"px";e.visibility=k?"hidden":"visible";if(b){e.width=b+"px";e.height=c+"px"}else{m(j,d,h,f,i.offsetWidth,i.offsetHeight);k=k?"":a}}}g.tg=function(a){a=a||window.event;var d=0,h,f=window.navExtra,b,c=a.target||a.srcElement;a.cancelBubble=true;if(c.className!="gb3")c=c.parentNode;if(!j){b=document.createElement(Array.every||window.createPopup?"iframe":"div");b.frameBorder="0";b.src="#";j=c.parentNode.appendChild(b).id="gbs";document.onclick=g.close}a=c.getAttribute("aria-owns")||"gbi";b=c.offsetWidth;var i=c.offsetTop>20?46:24,e;do d+=c.offsetLeft||-150;while(c=c.offsetParent);if(a=="gbi")for(b=document.getElementById(a);f&&(h=f.pop());)b.insertBefore(h,b.firstChild).className="gb2";else e=d=(document.documentElement.clientWidth||document.body.clientWidth)-d-b;k!=a&&g.close();m(a,d,i,e)};g.close=function(){k&&m(k,0,0)}})();
+</script>
+<div class="header_s">
+  <ul>
+    <li class="sshouye"><a href="http://www.51hejia.com/">和家首页</a></li>
+    <li class="spindao"><a href="http://tuku.51hejia.com/">看图片</a><a href="http://z.51hejia.com/">选装修</a><a href="http://p.51hejia.com/">找低价</a><a href="http://b.51hejia.com/">选品牌</a><a href="http://wb.51hejia.com/">问专家</a></li>
+    <li class="slei">
+    <nobr>
+    <a href="http://www.51hejia.com/xinwen/" target="_blank">新闻</a><a href="http://d.51hejia.com/" target="_blank">装修</a><a href="http://www.51hejia.com/jushang/" target="_blank">居尚</a><a href="http://www.51hejia.com/jiajuchanpin/" target="_blank">家具</a><a href="http://www.51hejia.com/jiadian/" target="_blank">家电</a><a href="http://www.51hejia.com/keting/" target="_blank">客厅</a><a href="http://www.51hejia.com/woshi/" target="_blank">卧室</a><a href="http://www.51hejia.com/chufang/" target="_blank">厨房</a><a href="http://www.51hejia.com/xiaohuxing/" target="_blank">小户型</a><a href="http://bbs.51hejia.com/list/484" target="_blank" class="snl">论坛</a>
+    <a onclick="this.blur();gbar.tg(event);return !1" class="snl more" style="cursor:pointer;"><u>更多</u><small>&#9660;</small></a>
+    <div id=gbi>
+<a href="http://www.51hejia.com/youqituliao/" target="_blank" class="gb2">涂料</a>
+<a href="http://www.51hejia.com/diban/" target="_blank" class="gb2">地板</a>
+<a href="http://www.51hejia.com/cizhuan/" target="_blank" class="gb2 snl">瓷砖</a>
+<a href="http://www.51hejia.com/buyi/" target="_blank" class="gb2">布艺</a>
+<a href="http://www.51hejia.com/zhaomingpindao/" target="_blank" class="gb2">灯具</a>
+<a href="http://www.51hejia.com/cainuan/" target="_blank" class="gb2 snl">采暖</a>
+<a href="http://www.51hejia.com/weiyu/" target="_blank" class="gb2">卫浴</a>
+<a href="http://www.51hejia.com/shufang/" target="_blank" class="gb2">书房</a>
+<a href="http://www.51hejia.com/huayuanshenghuo/" target="_blank" class="gb2 snl">花园</a>
+<a href="http://www.51hejia.com/gongyu/" target="_blank" class="gb2">公寓</a>
+<a href="http://www.51hejia.com/bieshu/" target="_blank" class="gb2">别墅</a>
+<a href="http://blog.51hejia.com/" target="_blank" class="gb2 snl">博客</a>
+<a href="http://www.51hejia.com/maichang/" target="_blank" class="gb2">卖场</a>
+<a href="http://www.51hejia.com/beijingqiang/" target="_blank" class="gb2">背景墙</a>
+<a href="http://www.51hejia.com/ertongfang/" target="_blank" class="gb2 snl">儿童房</a>
+<a href="http://www.51hejia.com/ershoufang/" target="_blank" class="gb2">二手房</a>
+<a href="http://www.51hejia.com/shuichuli/" target="_blank" class="gb2">水处理</a>
+<a href="http://www.51hejia.com/chuguipindao/" target="_blank" class="gb2 snl">厨房橱柜</a>
+<a href="http://www.51hejia.com/weiyupindao/" target="_blank" class="gb2">卫浴产品</a>
+<a href="http://www.51hejia.com/kongtiao/" target="_blank" class="gb2">中央空调</a>
+<a href="http://bbs.51hejia.com/list/426" target="_blank" class="gb2 snl">装修日记</a>
+<a href="http://d.51hejia.com/zq/" target="_blank" class="gb2">装修专区</a>
+<a href="http://deco.51hejia.com/zq/" target="_blank" class="gb2">装饰专区</a>
+<a href="http://b.51hejia.com/zq/" target="_blank" class="gb2 snl">品牌专区</a>
+<a href="http://prod.51hejia.com/zq/" target="_blank" class="gb2">产品专区</a>
+<a href="http://tuku.51hejia.com/zhuanqu/" target="_blank" class="gb2 snl">图库专区</a>
+</div>
+    </nobr>
+    </li>
+  </ul>
+</div>
+<!--end_small_header-->
+
+<div style="width:960px; margin:5px auto 5px auto;">
+<!--/* OpenX Javascript标签 v2.6.2 */-->
+
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://a.51hejia.com/www/delivery/ajs.php':'http://a.51hejia.com/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=320");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://a.51hejia.com/www/delivery/ck.php?n=aa52fe9f&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://a.51hejia.com/www/delivery/avw.php?zoneid=320&amp;n=aa52fe9f' border='0' alt='' /></a></noscript>
+
+</div>
+
+<!--new_header-->
+<div id="new_header">
+	<div class="main_menu">
+		<div class="menubg">
+			<ul class="first_menu">
+				<li><a id="1" class="off" href="http://z.51hejia.com/"   target="_blank">装修点评</a></li>
+				<li><a id="2" class="off" href="http://z.51hejia.com/zhuangxiugongsi/"  target="_blank">公司点评</a></li>
+				<li><a id="3" class="off" href="http://z.51hejia.com/dianping/"   target="_blank">装修故事</a></li>
+				<li><a id="4" class="off" href="http://z.51hejia.com/zhuangxiuanli/"  target="_blank">案例图片</a></li>
+				<li><a id="5" class="on" href="http://d.51hejia.com/"  target="_blank">装修资讯</a></li>
+			</ul>
+
+			<ul class="sc_menu" id="U1"  >
+				<li>
+  <% for result in parse_xml("http://api.51hejia.com/rest/build/xml/54719.xml", ["title", "url", "image_url", "description"], 12) %>
+    <a href="<%= result["url"] %>" target="_blank"><%= result["title"] %></a>
+  <%end%>
+				</li>
+            </ul>
+		</div>
+	</div>
+</div>
+<!--new_header_end-->

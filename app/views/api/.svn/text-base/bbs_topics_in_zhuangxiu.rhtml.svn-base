@@ -1,0 +1,65 @@
+<%topics =  get_about_list(3, "装修", 5)%>
+<%asks = AskZhidaoTopic.get_asks("装修", 3)%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://js.51hejia.com/css/zhuangxiu1023.css" rel="stylesheet" type="text/css" />
+<title>和家网</title>
+</head>
+
+<body>
+<div class="iframe2 clearfix">
+ 			<div class="iframe2-l">
+                          <h3><a href="http://bbs.51hejia.com" target="_blank">装修网友交流区</a> </h3>
+            <a href="http://bbs.51hejia.com" target="_blank"><img src="http://www.51hejia.com/images/zhuangxiu1023/pic-10.jpg" /></a>
+            <ul>
+             <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54221.xml",["title","url","image_url"],4)%>
+                  <li><a href="<%=r["url"]%>" target="_blank"><%=ul(r["title"],24)%></a></li>
+              <%end%>
+            </ul>
+            </div>
+
+            <div class="iframe2-m">
+              <%unless topics[0].nil?%>
+           	<p class="title"><a href="http://bbs.51hejia.com/forum.php?mod=viewthread&tid=<%= topics[0].url.split('/')[4] %>&extra=page%3D1" target="_blank"><%=ul(topics[0].title,20)%></a></p>
+              <%end%>
+                
+                    <ul>
+                        <%1.upto(4) do |i|%>
+                          <%unless topics[i].nil?%>
+                            <li>
+                              <a href="http://bbs.51hejia.com" target="_blank">论坛</a>&nbsp;|&nbsp;&nbsp;
+                              <a href="http://bbs.51hejia.com/forum.php?mod=viewthread&tid=<%= topics[i].url.split('/')[4] %>&extra=page%3D1" target="_blank"><%=ul(topics[i].title,24)%></a>
+                            </li>
+                          <%end%>
+                        <%end%>
+                        <li class="line">
+                          <%unless topics[5].nil?%>
+                            <a href="http://bbs.51hejia.com" target="_blank">论坛</a>&nbsp;|&nbsp;&nbsp;
+                            <a href="http://bbs.51hejia.com/forum.php?mod=viewthread&tid=<%= topics[5].url.split('/')[4] %>&extra=page%3D1" target="_blank"><%=ul(topics[5].title,24)%></a>
+                          <%end%>
+                        </li>
+                        <%0.upto(2) do |i|%>
+                          <%unless topics[i].nil?%>
+                            <li>
+                              <a href="http://wb.51hejia.com" target="_blank">问吧</a>&nbsp;|&nbsp;&nbsp;
+                              <a href="http://wb.51hejia.com/q/<%=asks[i].id%>.html" target="_blank"><%=ul(asks[i].subject,24)%></a>
+                            </li>
+                          <%end%>
+                        <%end%>
+                    </ul>
+                    <span><a href="http://wb.51hejia.com/detail/new_topic" class="btn" target="_blank">我要提问</a></span>
+
+            </div>
+</div>
+
+
+<script type="text/javascript">
+if (Math.ceil(Math.random()*(100))==1){  //有1%的概率会重新生成静态页面
+	document.write("<iframe style='display:none' width='0' height='0' src='/api/get_static?n=bbs_topics_in_zhuangxiu'></iframe>");
+}
+</script>
+
+</body>
+</html>

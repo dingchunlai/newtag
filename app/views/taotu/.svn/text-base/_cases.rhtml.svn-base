@@ -1,0 +1,34 @@
+<div class="ltopno tleft">
+	<div class="sidetag-top">
+		<ul><li class="hoveron" id="nav-230" style="_margin-left:5px"><%= @city_name%>热门案例推荐</li></ul>
+	</div>
+</div>
+<div class="ltext">
+	<div>
+	  <% @new_cases[0,2].each do |ca| %>
+	  <div class="pic-loop">
+	    <div class="pic-12090">
+	    <div class="pic-12090-img"><a href="<%= ca.url %>" target="_blank"><img src="http://d.51hejia.com/api<%= ca.image_url %>" width="114" height="84" alt="<%= ca.title %>" /></a></div>
+	      <div class="pic-txt">
+	        <h3 class="pt-title"><a href="<%= ca.url %>" target="_blank" class="black"><%=truncate(ca.title,10,'')%></a></h3>
+	      </div>
+	    </div>
+	  </div>
+	  <%end%>
+      <div class='clear'></div>
+      <div class="ltext_list">
+      	<ul>
+            <% if @new_cases[2,5] %>
+                <% @new_cases[2,5].each do |nc| %>
+                <li>·<a target="_blank" href="<%= nc.url %>"><%= h nc.title %></a></li>
+                <% end %>
+            <% end %>
+        </ul>
+	  </div>
+
+	  <div class='clear'></div>
+	  <div class="stt-more">&raquo; <a href="http://z.<%=@city%>.51hejia.com/cases/">更多</a></div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="lbot"></div>	

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><%=PINLEI_SORT[@sort_id]%> - 和家网</title>
+<link href="http://www.51hejia.com/css/diban/diban0625.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<%topics = get_rs_by_any_keywords("#{PINLEI_SORT[@sort_id]},装修", 10){|kw, limit| get_about_list(3, kw, limit)}%>
+<div class="box05">
+    <h3><span class="n1">网友交流区</span><span class="n2"><a href="http://bbs.51hejia.com" target="_blank">更多</a></span></h3>
+    <h4><a href="http://bbs.51hejia.com" target="_blank">我要提问</a></h4>
+    <div class="clear"></div>
+    <div class="box05l">
+    <a href="http://bbs.51hejia.com" target="_blank"><img src="http://www.51hejia.com/images/diban625/jiaoliu.jpg" alt="aaa" /></a>
+  <ol>
+    <%unless topics[1].nil?%><li><a href="<%=topics[1].url%>" target="_blank"><%=ul(topics[1].title, 17)%></a></li><%end%>
+    <%unless topics[2].nil?%><li><a href="<%=topics[2].url%>" target="_blank"><%=ul(topics[2].title, 15)%></a></li><%end%>
+  </ol>
+  </div>
+  <h5><%unless topics[0].nil?%><li><a href="<%=topics[0].url%>" target="_blank"><%=ul(topics[0].title, 17)%></a></li><%end%></h5>
+  <ul>
+    <%3.upto(6) do |i|%>
+      <%break if topics[i].nil?%>
+      <li><%="<span>" if i==4%><a href="http://bbs.51hejia.com" target="_blank">论坛|</a> <a href="<%=topics[i].url%>" target="_blank"><%=ul(topics[i].title, 15)%></a><%="</span>" if i==4%></li>
+    <%end%>
+    <%7.upto(9) do |i|%>
+      <%break if topics[i].nil?%>
+      <li><%="<span>" if i==7%><a href="http://wb.51hejia.com" target="_blank">社区|</a> <a href="<%=topics[i].url%>" target="_blank"><%=ul(topics[i].title, 15)%></a><%="</span>" if i==7%></li>
+    <%end%>
+  </ul>
+  </div>
+</body>
+</html>

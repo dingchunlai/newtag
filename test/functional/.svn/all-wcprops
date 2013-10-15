@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional
+END
+pinlei_pindao_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/pinlei_pindao_controller_test.rb
+END
+list_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/list_controller_test.rb
+END
+hangye_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/hangye_controller_test.rb
+END
+dantu_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/dantu_controller_test.rb
+END
+pinlei_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/pinlei_controller_test.rb
+END
+sort_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/sort_controller_test.rb
+END
+tuku_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/tuku_controller_test.rb
+END
+admin_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/admin_controller_test.rb
+END
+zhuanqu_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/zhuanqu_controller_test.rb
+END
+taotu_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/taotu_controller_test.rb
+END
+siteindex_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/siteindex_controller_test.rb
+END
+ip_ads_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/ip_ads_controller_test.rb
+END
+dianxing_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/dianxing_controller_test.rb
+END
+memcache_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/memcache_controller_test.rb
+END
+index_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/index_controller_test.rb
+END
+api_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/103/51hejia/repos/newtag/release/test/functional/api_controller_test.rb
+END

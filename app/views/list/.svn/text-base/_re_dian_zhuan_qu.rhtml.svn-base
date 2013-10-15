@@ -1,0 +1,9 @@
+<div id="tab-panel-220" style="font-size:14px;padding:10px 20px;text-align:left;">
+<p class="tag-cloud">
+<%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54046.xml",["title","url"],100)%>
+    <%i = rand(4)+1%>
+    <a href='<%=r["url"]%>' class="hot<%=i%>" target='_blank'><%=r["title"]%></a>&nbsp;&nbsp;
+<%end%>
+</p>
+<div class="clear"></div>
+</div>

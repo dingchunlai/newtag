@@ -1,0 +1,15 @@
+<div class="ltext">
+<div id="tab-panel-<%=panel_id%>" class="<%=classname%>">
+<ul class="newst">
+<%ars = get_rs_by_any_keywords(@keywords.split('_').join(","), 15){|kw, limit| get_about_list(type, kw, limit) }%>
+<%for ar in ars%>
+<li style="height:26px;">
+  <a href="<%=ar["url"]%>" target="_blank" class="grey"><%=ar["title"]%></a>
+</li>
+<%end%>
+</ul>
+  <%if type == 1%>
+  <div class="stt-more">&raquo; <%=get_zq_inner_link(kw.name, "")%></div>
+  <%end%>
+</div>
+</div>

@@ -1,0 +1,15 @@
+<div class="ltext">
+  <div id="tab-panel-<%= panel_id %>" class="<%= classname %>">
+    <ul class="newst">
+      <% ars = get_rs_by_any_keywords(@about_kws.join(","), 15){|kw, limit| get_about_list(type, kw, limit) } %>
+      <% for ar in ars %>
+        <% if ar.url.include?("/topic/") %>
+          <% ar.url = "http://bbs.51hejia.com/forum.php?mod=viewthread&tid=" + ar.url.split("/topic/")[1] + "&extra=page%3D2" %>
+        <% end %>
+        <li style="height:26px;">
+          <a href="<%= ar["url"] %>" target="_blank" class="grey"><%= ar["title"] %></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

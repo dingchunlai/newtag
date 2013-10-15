@@ -1,0 +1,17 @@
+<div id="tab-panel-221" class="hidden">
+
+<%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54045.xml",["title","url","image_url"],4)%>
+    <div class="pic-loop">
+        <div class="pic-12090">
+            <div class="pic-12090-img"><a href="<%=r["url"]%>" target="_blank"><img src="<%=r["image_url"]%>" alt="<%=r["title"]%>" /></a></div>
+            <div class="pic-txt">
+                <h3 class="pt-title"><a href="<%=r["url"]%>" target="_blank" class="black"><%=r["title"]%></a></h3>
+            </div>
+        </div>
+    </div>
+<%end%>
+
+		<div class='clear'></div>
+		
+			<!-- <div class="stt-more">&raquo; <a href="/topic/pic/506/">更多</a></div> -->
+		</div>

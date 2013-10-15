@@ -1,0 +1,103 @@
+<%
+lm_id = 5
+%>
+<div class="box">
+  <h3>
+    <span class="more">
+      <%=get_zq_inner_link(@ci["lm#{lm_id}_kw"],"",">>更多")%>
+    </span>
+    <ul>
+      <%
+      lm_tags = get_array_title_and_url(@ci["lm#{lm_id}_tags"],9)
+      for rs in lm_tags
+        i = 0 if i.nil?
+        i += 1
+      %>
+        <li <%="class='last'" if i==lm_tags.length%>><a href="<%=rs["url"]%>" title="<%=rs["title"]%>" target="_blank"><%=rs["title"]%></a></li>
+      <%end%>
+    </ul>
+
+    <%=get_zq_inner_link(@ci["lm#{lm_id}_kw"])%>
+  </h3>
+
+  <div class="b_left">
+    <a href="<%=@ci["lm#{lm_id}_url1"]%>" target="_blank" ><img  src="<%=@ci["lm#{lm_id}_image_url1"]%>"width="230" height="240" alt="<%=@ci["lm#{lm_id}_title1"]%>" /></a>
+    <p class="title"><a href="<%=@ci["lm#{lm_id}_url1"]%>" target="_blank"><%=ul(@ci["lm#{lm_id}_title1"],13,0,"")%></a></p>
+    <p><%=ul(@ci["lm#{lm_id}_resume1"],48,0,"")%><span><a href="<%=@ci["lm#{lm_id}_url1"]%>" target="_blank">[查看详细]</a></span></p>
+
+    <a href="<%=@ci["lm#{lm_id}_url5"]%>" target="_blank"><img class="p1" src="<%=@ci["lm#{lm_id}_image_url5"]%>" width="230" height="85" alt="<%=@ci["lm#{lm_id}_title5"]%>"/></a>
+
+  </div>
+  <div class="b_right">
+    <ul class="list1">
+      <% 1.upto(3) do |i|
+        lm_url="lm#{lm_id}_url#{i+1}"
+        lm_image_url="lm#{lm_id}_image_url#{i+1}"
+        lm_title="lm#{lm_id}_title#{i+1}"
+        lm_kws="lm#{lm_id}_kws#{i}"
+        temp_lm_kws = @ci[lm_kws].to_s.split(" ")
+        rs = get_rs_by_any_keywords(temp_lm_kws, 5) do |kw, limit|
+          get_articles_by_editor_keyword(kw, limit)
+        end
+      %>
+        <li>
+          <% ids = Article::promotion_articles(18, @ci["lm#{lm_id}_kw"]) %>
+          <% tmp_ids = ids[(i-1)*6,6] %>
+          <% unless tmp_ids.blank? %>
+            <% article = Article.get_article(tmp_ids[0]) %>
+            <div class="pic">
+              <a href="<%= article.detail_url %>" target="_blank" ><img src="<%= HejiaArticle::image_url(article.ID) %>" width="125" height="105" alt="<%= article.detail_url %>"/></a>
+              <p><a href="<%= article.detail_url %>" target="_blank"><%=ul(article.title,9,0,"")%></a></p>
+            </div>
+            <div class="txt">
+              <p class="title">
+                <% unless tmp_ids[1].blank? %>
+                  <% article = Article.get_article(tmp_ids[1]) %>
+                  <a target="_blank" title="<%= article.title %>" href="<%= article.detail_url %>"><%= article.title %></a>
+                <% else %>
+                  <%unless rs[0].nil?%><a href="<%=rs[0]["url"]%>" title="<%=rs[0]["title"]%>" target="_blank"><%=ul(rs[0]["title"],17,0,"")%></a><%end%>
+                <% end %>
+              </p>
+              <ul class="ul1">
+                <% unless tmp_ids[2,4].blank? %>
+                  <% for id in tmp_ids[2,4] %>
+                    <% article = Article.get_article(id) %>
+                    <li>
+                      <a target="_blank" title="<%= article.title %>" href="<%= article.detail_url %>"><%= article.title %></a>
+                    </li>
+                  <% end %>
+                <% else %>
+                  <%0.upto(3) do |i|%>
+                    <li>
+                      <span><%unless temp_lm_kws[i].nil?%><%=get_zq_inner_link(temp_lm_kws[i])%><% end %></span>
+                      <%unless rs[i+1].nil?%><a href="<%=rs[i+1]["url"]%>" title="<%=rs[i+1]["title"]%>" target="_blank"><%=ul(rs[i+1]["title"],12,0,"")%></a><%end%>
+                    </li>
+                  <%end%>
+                <% end %>
+              </ul>
+            </div>
+          <% else %>
+            <div class="pic">
+              <a href="<%=@ci[lm_url]%>" target="_blank" ><img src="<%=@ci[lm_image_url]%>" width="125" height="105" alt="<%=@ci[lm_title]%>"/></a>
+              <p><a href="<%=@ci[lm_url]%>" target="_blank"><%=ul(@ci[lm_title],9,0,"")%></a></p>
+            </div>
+            <div class="txt">
+              <p class="title">
+                <%unless rs[0].nil?%><a href="<%=rs[0]["url"]%>" title="<%=rs[0]["title"]%>" target="_blank"><%=ul(rs[0]["title"],17,0,"")%></a><%end%>
+              </p>
+              <ul class="ul1">
+                <%0.upto(3) do |i|%>
+                  <li>
+                    <span><%unless temp_lm_kws[i].nil?%><%=get_zq_inner_link(temp_lm_kws[i])%><% end %></span>
+                    <%unless rs[i+1].nil?%><a href="<%=rs[i+1]["url"]%>" title="<%=rs[i+1]["title"]%>" target="_blank"><%=ul(rs[i+1]["title"],12,0,"")%></a><%end%>
+                  </li>
+                <%end%>
+              </ul>
+            </div>
+          <% end %>
+
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

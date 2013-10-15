@@ -1,0 +1,56 @@
+<div id="tab-panel-220">
+        <div class="topic-left-2">
+			<div class="tl-titlen">
+				<span class="tlt1"><h3><a href="<%=@zhuanqu.hot1_url1%>" target="_blank"><%=@zhuanqu.hot1_title1%></a></h3></span>
+				<span class="stt-more">&raquo; <a href="<%=@zhuanqu.hot1_url1%>" target="_blank">进入</a></span>
+			</div>
+
+
+				<div class="headline">
+					<div class="headline-r">
+						<h3><a href="<%=@zhuanqu.hot1_url2%>" target="_blank" class="greytitle"><%=ul(@zhuanqu.hot1_title2, 23)%></a></h3>
+						<p><%=ul(@zhuanqu.hot1_resume2, 40)%><a href="<%=@zhuanqu.hot1_url2%>" target="_blank">[进入]</a></p>
+					</div>
+					<div class="headline-l"><a href="<%=@zhuanqu.hot1_url2%>" target="_blank"><img src="<%=@zhuanqu.hot1_image_url2%>" alt="<%=@zhuanqu.hot1_title2%>" width="130" height="112" /></a></div>
+				</div>
+
+
+			<ul class="newsbbs-list">
+
+				<li><a href="<%=@zhuanqu.hot1_url3%>" target="_blank" class="grey"><%=@zhuanqu.hot1_title3%></a></li>
+
+				<li><a href="<%=@zhuanqu.hot1_url4%>" target="_blank" class="grey"><%=@zhuanqu.hot1_title4%></a></li>
+
+				<li><a href="<%=@zhuanqu.hot1_url5%>" target="_blank" class="grey"><%=@zhuanqu.hot1_title5%></a></li>
+
+			</ul>
+			</div>
+
+			<div class="topic-left-2">
+			<div class="tl-titlen">
+				<span class="tlt1"><h3><a href="<%=@zhuanqu.hot2_url1%>" target="_blank"><%=@zhuanqu.hot2_title1%></a></h3></span>
+				<span class="stt-more">&raquo; <a href="<%=@zhuanqu.hot2_url1%>" target="_blank">进入</a></span>
+			</div>
+
+
+				<div class="headline">
+					<div class="headline-r">
+						<h3><a href="<%=@zhuanqu.hot2_url2%>" target="_blank" class="greytitle"><%=ul(@zhuanqu.hot2_title2, 23)%></a></h3>
+						<p><%=ul(@zhuanqu.hot2_resume2, 40)%><a href="<%=@zhuanqu.hot2_url2%>" target="_blank">[进入]</a></p>
+					</div>
+					<div class="headline-l"><a href="<%=@zhuanqu.hot2_url2%>" target="_blank"><img src="<%=@zhuanqu.hot2_image_url2%>" alt="<%=@zhuanqu.hot2_title2%>" width="130" height="112" /></a></div>
+				</div>
+
+
+			<ul class="newsbbs-list">
+
+				<li><a href="<%=@zhuanqu.hot2_url3%>" target="_blank" class="grey"><%=@zhuanqu.hot2_title3%></a></li>
+
+				<li><a href="<%=@zhuanqu.hot2_url4%>" target="_blank" class="grey"><%=@zhuanqu.hot2_title4%></a></li>
+
+				<li><a href="<%=@zhuanqu.hot2_url5%>" target="_blank" class="grey"><%=@zhuanqu.hot2_title5%></a></li>
+
+			</ul>
+			</div>
+<div class="clear"></div>
+</div>

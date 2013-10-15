@@ -1,0 +1,114 @@
+/* CSS template */
+/* July 14, 2009 */
+/* Jary 51hejia.com */
+
+/* overall */
+body{ font-family:Arial, Helvetica, sans-serif,"宋体"; font-size:12px; line-height:20px; text-align:left;}
+body,ul,li,p,h1,h3,h4,h5,span,dl,dt,dd{ margin:0; padding:0;}
+img,div{ margin:0 auto; padding:0;}
+img{ border:none;}
+li{ list-style-type:none;}
+
+.clearfix:after, .container:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix, .container {display:inline-block;}
+* html .clearfix, * html .container {height:1%;}
+.clearfix, .container {display:block;}
+.clear {clear:both;}
+
+.main{ width:960px; height:auto; clear:both;}
+a:link,a:visited,a:active{text-decoration:none;color:#000;}
+a:hover{color:#ff6600;text-decoration:underline;}
+h4 a{font-size:12px; font-weight:bold;}
+h4 a:link,h4 a:visited,h4 a:active{text-decoration:none;}
+h4 a:hover{text-decoration:underline;}
+
+.banner{width:960px; height:auto; margin:10px 0; position:relative;}
+.banner .bannerbg{ background:url(images/bannerbg.gif) no-repeat; width:268px; height:196px; position:absolute; top:24px; left:54px; padding:14px 0 0 12px;}
+.banner .titbg01{width:176px; height:75px; position:absolute; top:0; left:413px;}
+.banner h1{ display:block;width:176px; height:75px; position:absolute; top:35px; left:462px; font-weight:bold;font-size:24px;}
+.banner .tittext{width:510px; height:100px; overflow:hidden; position:absolute; top:110px; left:420px;}
+.banner .tittext p{ line-height:24px;text-indent:2em;}
+
+.box01{ width:712px; height:auto; float:left; margin-bottom:10px;}
+.box01 h3{width:712px; height:28px; line-height:28px;font-size:14px; text-indent:1.5em;}
+.box01 .text01{border-top:none;}
+.box01 .text01 ul{padding:10px 0 20px 0;}
+.box01 .text01 li{padding:3px 20px;}
+.box01 .text01 li span{ font-weight:bold;}
+
+.box01 .text02{border-top:none;background:url(images/textbg.gif) no-repeat;}
+.box01 .text02 ul{ padding:20px 0 11px 22px;}
+.box01 .text02 li{ padding:5px 0 20px 0; width:229px;float:left;}
+.box01 .text02 li div{ float:left;}
+.box01 .text02 li h4{ width:78px; height:44px; overflow:hidden; margin:5px 0 0 5px;}
+.box01 .text02 li p{ margin:10px 0 0 5px;}
+.box01 .text02 li p span{ font-size:14px;font-weight:bold;}
+
+.box01 .text03{border-top:none;padding:10px 0 6px 0;background:url(images/luntbg.gif) no-repeat;}
+.box01 .text03 .text03_left{ width:355px; float:left;}
+.box01 .text03 .text03_left h5{ margin:10px; height:22px; line-height:22px;font-size:12px; text-indent:1.6em; display:block;}
+.box01 .text03 .text03_left span{ float:right; margin:10px 10px 0 0; height:22px; line-height:22px;font-size:12px; text-indent:1.6em; display:block;}
+.box01 .text03 .text03_left .pic{ width:122px; height:92px; float:left; margin:0 10px 10px 10px;_margin:0 10px 10px 5px;}
+.box01 .text03 .text03_left ul{ float:left; line-height:23px; margin:0 10px 10px 0;}
+
+.box01 .text03 .text03_right{ width:355px; float:left;}
+.box01 .text03 .text03_right h5{ margin:10px 10px 10px 30px;height:22px; line-height:22px;font-size:12px; text-indent:1.6em; display:block;}
+.box01 .text03 .text03_right span{ float:right; margin:10px 10px 0 0; height:22px; line-height:22px;font-size:12px; text-indent:1.6em; display:block;}
+.box01 .text03 .text03_right ul{ float:left; line-height:24px; margin:0 10px 0 30px;_margin:0 10px 0 15px;}
+
+
+.box02{ width:236px; height:auto;float:right; margin-bottom:10px;}
+.box02 h3{ margin:0 10px;height:28px; line-height:28px;font-size:14px; text-indent:1.6em; display:block;}
+.box02 ul{ margin:7px 0 10px 8px}
+.box02 li{ line-height:24px;}
+
+.box03{ width:236px; height:auto;float:right; margin-bottom:10px;}
+.box03 h3{margin:0 10px; height:28px; line-height:28px;font-size:14px; text-indent:1.6em; display:block;}
+.box03 .sp{ float:right; margin:-24px 10px 0 0;}
+.box03 ul{ margin:9px 0 10px 8px}
+.box03 li{ line-height:24px; text-indent:1.7em; clear:both;}
+.box03 li a{ float:left;}
+.box03 li span{ float:right; margin-right:10px;}
+
+.box04{ width:960px; height:auto; margin-bottom:10px; clear:both;}
+.box04 h3{ width:960px; height:32px; line-height:32px;font-size:14px; text-indent:1.5em;}
+.box04 .text01{border-top:none; padding-bottom:10px;}
+.box04 .text01 dl{ width:159px; height:134px; overflow:hidden; text-align:center; margin-top:12px; float:left;}
+.box04 .text01 dt img{ width:139px; height:103px; padding:2px;}
+.box04 .text01 dd{margin-top:3px;}
+
+.box04 .text02{ border-top:none; margin-bottom:10px;}
+.box04 .text02 dl{clear:both;}
+.box04 .text02 dt{ width:115px; height:27px; line-height:27px;margin:1px 1px 0 1px; text-align:center; float:left; font-size:14px; font-weight:bold;}
+.box04 .text02 dd{height:27px; line-height:27px;float:left; margin-left:10px;}
+
+.box05{ width:236px; height:auto;float:right; margin-bottom:10px;}
+.box05 h3{margin:0 10px; height:28px; line-height:28px;font-size:14px; text-indent:1.6em; display:block;}
+.box05 ul{ margin:9px 0 10px 8px}
+.box05 li{ line-height:24px; text-indent:1.7em;}
+/* color */
+#class01 .banner h1,#class01 .banner .tittext p,#class01 .box01 h3{color:#fff;}
+
+#class01 .box01 .text01,#class01 .box01 .text02,#class01 .box01 .text03,#class01 .box01 .text03 .text03_left .pic img,#class01 .box02,#class01 .box03,#class01 .box04 .text01,#class01 .box04 .text02,#class01 .box05{ border:1px solid #dadada;}
+
+#class01 .box01 h3{ background:url(images/tit01.gif) no-repeat;}
+#class01 .box01 .text01{background:#ececec;}
+#class01 .box01 .text01 li{ border-bottom:1px dashed #dadada; background:url(images/icon01.gif) no-repeat 5px 10px;}
+#class01 .box01 .text01 .color01{ background:#fff url(images/icon01.gif) no-repeat 5px 10px;}
+#class01 .box01 .text01 .color02,#class01 .box01 .text02 li p span{ color:red;}
+
+
+#class01 .box01 .text03 .text03_left h5,#class01 .box01 .text03 .text03_right h5{ background:url(images/icon02.gif) no-repeat 1px; border-bottom:1px solid #afafb0;color:#000;}
+
+#class01 .box02{background:#fbfaf5;}
+#class01 .box02 h3,#class01 .box03 h3,#class01 .box05 h3{ background:url(images/icon02.gif) no-repeat 1px;border-bottom:1px solid #afafb0;color:#000;}
+
+#class01 .box03{background:#fbfaf5 url(images/icon03.gif) no-repeat 10px top;}
+
+#class01 .box04 h3{ background:url(images/tit02.gif) no-repeat;color:#000;}
+#class01 .box04 .text01 dt img{border:1px solid #939393;}
+
+#class01 .box04 .text02 dl{ border-bottom:1px dashed #dadada;}
+#class01 .box04 .text02 dt{background:#f3f3f3;}
+
+#class01 .box05{background:#fbfaf5 url(images/icon03.gif) no-repeat 10px top;}

@@ -1,0 +1,7 @@
+<html>
+  <head></head>
+  <body>
+  <script type="text/javascript" src="/javascripts/swfobject.js"></script>
+  <%=@graph%>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<%
+links = []
+for api_id in @api_ids
+  for r in parse_xml("http://api.51hejia.com/rest/build/xml/#{api_id}.xml", ["title", "url"], 999)
+    url = r["url"]
+    url = "http://#{url}" unless url.include?("http://")
+    links << "<a href='#{url}' target='_blank'>#{r["title"]}</a>"
+  end
+end
+%>
+<%if params[:rtype] == "js"%>
+document.getElementById("tuiguangid").innerHTML = "<%=links.join(" | ")%>";
+<%else%>
+document.write("<%=links.join(" | ")%>");
+<%end%>

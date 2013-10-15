@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv=Content-Type content="text/html;charset=utf-8"/>
+  <title><%= @zhuanqu.html_title %></title>
+  <meta name="keywords" content="<%= @zhuanqu.html_keywords.gsub(";", ",") %>"/>
+  <meta name="description" content="<%= @zhuanqu.html_description %>"/>
+  <link href="http://js.51hejia.com/css/theme_2.css?20100909" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="http://js.51hejia.com/css/header914.css" rel="stylesheet" type="text/css"/>
+  <script src="http://js.51hejia.com/js/public.js"></script>
+
+  <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+  <script type="text/javascript">
+	function rember_cookies()
+	{
+	    document.cookie = "jie_sheng" + "="+ escape("jie_sheng") + ";path=/;domain=.51hejia.com";
+	    $('#jie_sheng_ad').hide();
+	}
+  </script>
+  <link href="http://js.51hejia.com/css/zb20120510.css" rel="stylesheet" type="text/css"/>
+  <link href="http://js.51hejia.com/css/baoming/baoming.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<%= render :partial => '/share/public_header' %>
+
+<% if ["d", "deco"].include?(@zhuanqu.board) %>
+    <%= render :partial => "sort/zhuangxiu_menu" %>
+<% elsif ["prod", "news", "b"].include?(@zhuanqu.board) %>
+    <%= render :partial => "sort/menu" %>
+<% elsif ["case"].include?(@zhuanqu.board) %>
+    <%= render :partial => "sort/jushang_menu" %>
+<% end %>
+
+<div class="width960" style="margin-bottom: 5px;">
+  <%= render_ad 80881, "装修资讯-首页-通栏1+", "afp" %>
+  <!--embed align="middle" width="960" height="85" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" name="gamefile" quality="high" id="gamefile" src="http://js.51hejia.com/flash/zd.swf"-->
+</div>
+
+<%= yield %>
+
+<div style="clear:both"></div>
+<style type="text/css">
+    .citypath1 {
+        padding: 0 0;
+        text-align: center;
+    }
+</style>
+<%= render :partial => '/share/public_footer' %>
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=slide&img=2&pos=right&uid=608544"></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+    var bds_config = {"bdTop":191};
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+<!-- Baidu Button END -->
+<style type="text/css">
+    .footer_ad {
+        z-index: 9999;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
+        _position: absolute;
+        _left: expression(eval(document.documentElement.scrollLeft));
+        _top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+        background: url(http://js.51hejia.com/img/ad_bg.gif) no-repeat top center;
+    }
+
+    .footer_ad .footer_ad_img {
+        width: 1000px;
+        height: 84px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .footer_ad a.footer_ad_close {
+        width: 16px;
+        height: 16px;
+        margin: 0px;
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        background: url(http://js1.51hejia.com/img/zxdpimg/contrast_li_close.jpg) no-repeat;
+        z-index: 99;
+    }
+
+    .footer_ad a.footer_ad_link {
+        display: block;
+        width: 1000px;
+        height: 84px;
+        margin: 0 auto;
+    }
+</style>
+<div class="footer_ad" id="footer_ad">
+  <div class="footer_ad_img">
+    <!--a href="javascript:void(0);" onclick="open_gongyi_ad_url();" class="footer_ad_link"></a-->
+    <%= render_ad(81059, '装修资讯-首页-飘带底', 'afp') %>
+    <a class="footer_ad_close" href="javascript:void(0);" onclick="$('#footer_ad').hide();"></a>
+  </div>
+</div>
+<% if render_ad(82293, '品牌中心-左漂浮', 'afp').include?("<span>") %>
+    <div style="left: 0px; position: absolute; top: 100px;" id="ALayer1">
+      <div align="left">
+        <img border="0" style="cursor:pointer" onclick="closeBanner();" src="http://js.51hejia.com/img/dl_close.gif">
+      </div>
+      <%= render_ad(82293, '品牌中心-左漂浮', 'afp') %>
+    </div>
+<% end %>
+<% if render_ad(82295, '品牌中心-右漂浮', 'afp').include?("<span>") %>
+    <div style="right: 0px; position: absolute; top: 100px;" id="ALayer2">
+      <div align="right"><img border="0" onclick="closeBanner();" src="http://js.51hejia.com/img/dl_close.gif"></div>
+      <%= render_ad(82295, '品牌中心-右漂浮', 'afp') %>
+    </div>
+<% end %>
+<% if render_ad(82293, '品牌中心-左漂浮', 'afp').include?("<span>") || render_ad(82295, '品牌中心-右漂浮', 'afp').include?("<span>") %>
+<script type="text/javascript">
+    if (remote_ip_info.city == '上海') {
+        lastScrollY = 0;
+        function heartBeat() {
+            var diffY;
+            if (document.documentElement && document.documentElement.scrollTop) {
+                diffY = document.documentElement.scrollTop;
+            }
+            else if (document.body) {
+                diffY = document.body.scrollTop
+            }
+            else {
+            }
+            percent = .1 * (diffY - lastScrollY);
+            if (percent > 0) {
+                percent = Math.ceil(percent);
+            }
+
+            else {
+                percent = Math.floor(percent);
+            }
+            document.getElementById("ALayer1").style.top = parseInt(document.getElementById("ALayer1").style.top) + percent + "px";
+            document.getElementById("ALayer2").style.top = parseInt(document.getElementById("ALayer1").style.top) + percent + "px";
+            lastScrollY = lastScrollY + percent;
+        }
+
+        window.setInterval("heartBeat()", 1);
+        function closeBanner() {
+            document.getElementById("ALayer1").style.display = 'none';
+            document.getElementById("ALayer2").style.display = 'none';
+        }
+    }
+</script>
+<% end %>
+<% if false#if cookies["jie_sheng"].blank? %>
+	<div id="jie_sheng_ad" style="bottom: 0px; right: 0px;_position:absolute; _top:expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight);" class="zb-ad" title="">
+		<%= render_ad(81061, '装修资讯-首页-弹窗右下', 'afp') %>
+		<a class="close" id="jie_sheng" onclick="rember_cookies();"></a>
+	</div>
+<% end %>
+</body>
+</html>

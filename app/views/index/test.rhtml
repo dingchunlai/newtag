@@ -1,0 +1,23 @@
+newtag项目测试<br /><br />
+
+<%
+prefix = "http://seven.51hejia.com:3001"
+urls = []
+urls << "/"
+urls << "/家居-2.html"
+urls << "/zq"
+urls << "/zq/阳光房"
+urls << "/zq/马赛克-金属马赛克.html"
+urls << "/zhuanqu"
+urls << "/zhuanqu/别墅.html"
+urls << "/zhuanqu/复式_公寓装修.html"
+urls << "/pic/客厅.html"
+urls << "/pic/卧室/183028.html"
+urls << "/diban/"
+urls << "/chufang/"
+urls << "/siteindex/result/装修.html"
+%>
+
+<%for url in urls%>
+<a href="<%="#{prefix}#{url}"%>" target="_blank" onclick="this.style.display='none';" style="font-size: 15pt"><%=url%></a> <br /><br />
+<%end%>

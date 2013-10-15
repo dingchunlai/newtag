@@ -1,0 +1,20 @@
+<div id="map">
+  <span style="float:right">
+    <a href="http://blog.51hejia.com" target="_blank">博客</a>　
+    <a href="http://www.51hejia.com/maichang/" target="_blank">卖场</a>
+  </span>
+  当前位置：<a href="http://www.51hejia.com/" target="_blank">和家首页</a>&nbsp;&gt;&nbsp;
+  <a href="http://<%=@hostname%>/zq/" target="_blank"><%=@zq_name%>专区</a>
+</div>
+<% for tags in @tags %>
+  <% if tags[0] == ZhuanquSort.get_sort_id_by_sort_name(params[:sort_name]) || params[:sort_name].nil? %>
+    <div id="map">
+      <h2><a href="http://<%=@hostname%>/zq/<%= URI.escape(tags[1]) %>/" title="<%= tags[1] %>" target="_blank"><%= tags[1] %></a></h2>
+      <ul>
+        <% for tag in tags[2] %>
+          <li><h3><a href="http://<%=@hostname%>/zq/<%= URI.escape(tags[1]) %>-<%= URI.escape(tag) %>.html" title="<%= tag %>" target="_blank"><%= tag %></a></h3></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% end %>

@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>【<%=@keyword%>】<%#=PINLEI_SORT[@pinlei.sort_id]%> 品牌 价格 图片 性能 优缺点 材质 论坛 和家网</title>
+<meta name="description" content="<%=@keyword%>,和家网为您提供所有有关<%=@keyword%>的信息，本页所显示了<%=@keyword%>最全面信息。在此基础上，还提供<%=@keyword%>图片、<%=@keyword%>特性、<%=@keyword%>价位、<%=@keyword%>论坛、<%=@keyword%>问吧等信息，为您在购买<%=@keyword%>时提供最全面的参考，最精彩的<%=@keyword%>内容尽在和家网。" />
+<meta name="keywords" content="N97,<%=@keyword%>,<%=@keyword%>报价,<%=@keyword%>价格,<%=@keyword%>图片,<%=@keyword%>性能,<%=@keyword%>导购,<%=@keyword%>论坛" />
+<link href="http://www.51hejia.com/zhannei01/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<%= render :partial => '/share/public_header' %>
+
+<%=yield%>
+
+<%= render :partial => '/share/public_footer' %>
+
+</body>
+</html>

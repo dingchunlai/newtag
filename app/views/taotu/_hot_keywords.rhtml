@@ -1,0 +1,17 @@
+<div class="sidetag-main">
+	<div class="ltopno tleft"><div class="sidetag-top">
+	<ul>
+		<li class="hoveron oneleft">热门标签</li>
+	</ul>
+	</div></div>
+	<div class="ltext">
+		<div class="tagcontent">
+		  <span class="webseo">
+            <%for kw in hot_keywords(2)%>
+              <a href='/<%=u(kw.name)%>.html' class="topic_a" target='_blank'><%=kw.name%></a>&nbsp;&nbsp;
+            <%end%>
+            </span></div>
+		<div class="tagnav"></div>
+	</div><div class="clear"></div>
+	<div class="lbot"></div>
+</div>

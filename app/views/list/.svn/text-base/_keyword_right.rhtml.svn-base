@@ -1,0 +1,94 @@
+<div class="right" style="width:323px;">
+  <script type="text/javascript">
+    function g(o){
+      return document.getElementById(o);
+    }
+    function HoverLi(m,n,limited){
+      for(var i=0;i<limited;i++){
+        g("nav-"+m+i).className="";
+        g("tab-panel-"+m+i).style.display="none";
+      }
+      g("nav-"+m+n).className="hoveron";
+      g("tab-panel-"+m+n).style.display="block";
+    }
+  </script>
+  <style>
+    ul.news li{padding-left:10px;}
+  </style>
+
+  <div class="sidetag-main">
+    <div class="ltopno tleft">	<div class="sidetag-top">
+        <ul>
+          <li class="hoveron" onmouseover="HoverLi(21,0,2);" id="nav-210" style="_margin-left:5px"><%=@keyword_v%>热点文章</li>
+          <li onmouseover="HoverLi(21,1,2);" id="nav-211">热门标签</li>
+        </ul>
+      </div></div>
+    <div class="ltext">
+      <!-- 热点文章 -->
+      <%=render :partial => "re_dian_wen_zhang"%>
+
+      <!-- 热门标签 -->
+      <%=render :partial => "re_men_biao_qian"%>
+
+    </div><div class="clear"></div>
+    <div class="lbot"></div>
+  </div>
+
+  <div class="sidetag-main">
+    <div class="ltopno tleft"><div class="sidetag-top">
+        <ul>
+          <li class="hoveron" onmouseover="HoverLi(22,0,2);" id="nav-220" style="_margin-left:5px">热点专区</li>
+          <li onmouseover="HoverLi(22,1,2);" id="nav-221">专题推荐</li>
+        </ul>
+      </div></div>
+    <div class="ltext">
+      <!-- 热点专区 -->
+      <%=render :partial => "re_dian_zhuan_qu"%>
+
+      <!-- 专题推荐 -->
+      <%=render :partial => "zhuan_ti_tui_jian"%>
+    </div>
+    <div class="clear"></div>
+    <div class="lbot"></div>
+    <div class="clear"></div>
+  </div>
+
+  <%=render :partial => "tu_pian_xiang_guan"%>
+
+  <div class="sidetag-main">
+    <div class="ltopno tleft"><div class="sidetag-top">
+        <ul>
+          <li class="hoveron" id="nav-250" style="_margin-left:5px"><a href="http://z.51hejia.com/dianping/" target="_blank">网友装修点评推荐</a></li>
+          <!-- <li onmouseover="HoverLi(21,1,2);" id="nav-211">热门标签</li> -->
+        </ul>
+      </div></div>
+    <div class="ltext">
+      <div id="tab-panel-250" class="">
+        <ul class="newst">
+          <%HejiaIndex.new_diaries(10).each do |r|%>
+            <li style="height:26px;"><a href="<%=r[:url]%>" target="_blank" class="grey" title="<%=r[:title]%>"><%=ul(r[:title],20)%></a></li>
+          <%end%>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="lbot"></div>
+  </div>
+
+
+  <%ets = [5, 3, 2]%>
+  <%ets.each do |i|%>
+    <div class="sidetag-main">
+      <div class="ltopno tleft"><div class="sidetag-top">
+          <ul>
+            <li class="hoveron" id="nav-2<%=i%>0" style="_margin-left:5px"><%=@keyword_v%><%=ENTITY_TYPE[i]%>相关</li>
+            <!-- <li onmouseover="HoverLi(21,1,2);" id="nav-211">热门标签</li> -->
+          </ul>
+        </div></div>
+      <%=render :partial => "tab_panel", :locals => {:panel_id => "2#{i}0", :classname => "", :type => i, :keyword => @keyword}%>
+      <div class="clear"></div><div class="lbot"></div>
+  <%#=render :partial => "ad"%>
+    </div>
+  <%end%>
+
+</div>

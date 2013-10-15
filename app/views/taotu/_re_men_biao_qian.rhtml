@@ -1,0 +1,9 @@
+<div id="tab-panel-211" class="hidden" style="font-size:14px;padding:10px 20px;text-align:left;">
+<p class="tag-cloud">
+<%for kw in hot_keywords(110)%>
+    <%i = rand(4)+1%>
+    <a href='/<%=u(kw.name)%>.html' class="hot<%=i%>" target='_blank'><%=kw.name%></a>&nbsp;&nbsp;
+<%end%>
+</p>
+<div class="clear"></div>
+</div>

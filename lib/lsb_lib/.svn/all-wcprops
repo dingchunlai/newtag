@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/103/51hejia/repos/newtag/release/lib/lsb_lib
+END
+data_handle.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/103/51hejia/repos/newtag/release/lib/lsb_lib/data_handle.rb
+END
+others.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/103/51hejia/repos/newtag/release/lib/lsb_lib/others.rb
+END
+string_and_date.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/103/51hejia/repos/newtag/release/lib/lsb_lib/string_and_date.rb
+END
+public_method.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/103/51hejia/repos/newtag/release/lib/lsb_lib/public_method.rb
+END

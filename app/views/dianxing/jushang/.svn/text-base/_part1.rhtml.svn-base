@@ -1,0 +1,106 @@
+<div class="width960">
+  <div class="jus_home clearfix">
+    <div class="jus_home_l f_l">
+      <div class="jus_hl_tit">
+        <h2>家居话题</h2>
+      </div>
+<%#焦点图 start ############%>
+      <div class="jus_hl_slide">
+
+        <script type="text/javascript">
+          $(function(){
+            $('#newsSlider').loopedSlider({
+              autoStart: 2000
+            });
+            $('.validate_Slider').loopedSlider({
+              autoStart: 2000
+            });
+            $("#enter_lab").click(function(){
+              window.location=$(this).find("a").attr("href"); return false;});
+          });
+        </script>
+        <div id="newsSlider">
+          <div class="container">
+            <ul class="slides">
+              <%@jiaodiantus.each do |j|%>
+                <li>
+                  <a href="<%=j["url"]%>" target="_blank">
+                    <img src="<%=j["image_url"]%>" alt="<%=j["title"]%>" /></a>
+                  <span><a href="<%=j["url"]%>" title="<%=j["title"]%>" target="_blank"><%=j["title"]%></a></span>
+                </li>
+              <%end%>
+            </ul>
+          </div>
+          <div class="validate_Slider"></div>
+          <ul class="pagination">
+            <%1.upto(@jiaodiantus.length) do |i|%>
+              <li><a href="<%=@jiaodiantus[i-1]["url"]%>" title="<%=@jiaodiantus[i-1]["title"]%>"><%=i%></a> </li>
+            <%end%>
+          </ul>
+        </div>
+
+      </div>
+<%#焦点图 end ############%>
+    </div>
+    <div class="jus_home_c f_l">
+      <ul class="jus_hc_tuigart clearfix">
+        <%parse_xml("http://api.51hejia.com/rest/build/xml/55216.xml",["title","url"], 2).each do |r|%>
+          <li>·<a href="<%=r.url%>" target="_blank" title="<%=r.title%>"><%=r.title%></a></li>
+        <%end%>
+      </ul>
+      <div class="jus_hc_hotart">
+        <h2><span>||</span><a href="<%=@jiaodians[0]["url"]%>" target="_blank" title="<%=@jiaodians[0]["title"]%>"><%=@jiaodians[0]["title"]%></a></h2>
+        <p><%=ul(@jiaodians[0]["description"],55)%> [<a href="<%=@jiaodians[0]["url"]%>" target="_blank" title="<%=@jiaodians[0]["title"]%>">查看详情</a>]</p>
+      </div>
+      <div class="jus_hc_hotpic clearfix">
+        <div class="jus_hc_hptit f_l">
+          <h2>home topic</h2>
+        </div>
+        <div class="jus_hc_hptxt jus_hc_hptxt_bb f_l">
+          <div class="jus_hc_hotimg f_l"><a href="<%=@jiaodians[1]["url"]%>" target="_blank" title="<%=@jiaodians[1]["title"]%>"><img src="<%=@jiaodians[1]["image_url"]%>" alt="<%=@jiaodians[1]["title"]%>" /></a></div>
+          <h3 class="f_l"><a href="<%=@jiaodians[1]["url"]%>" target="_blank" title="<%=@jiaodians[1]["title"]%>"><%=@jiaodians[1]["title"]%></a></h3>
+          <p class="f_l"><%=ul(@jiaodians[1]["description"], 50)%> [<a href="<%=@jiaodians[1]["url"]%>" target="_blank">查看详情</a>]</p>
+        </div>
+        <div class="jus_hc_hptxt jus_hc_hptxt_bt f_l">
+          <div class="jus_hc_hotimg f_l"><a href="<%=@jiaodians[2]["url"]%>" target="_blank" title="<%=@jiaodians[2]["title"]%>"><img src="<%=@jiaodians[2]["image_url"]%>" alt="<%=@jiaodians[2]["title"]%>" /></a></div>
+          <h3 class="f_l"><a href="<%=@jiaodians[2]["url"]%>" target="_blank" title="<%=@jiaodians[2]["title"]%>"><%=@jiaodians[2]["title"]%></a></h3>
+          <p class="f_l"><%=ul(@jiaodians[2]["description"], 50)%> [<a href="<%=@jiaodians[2]["url"]%>" target="_blank">查看详情</a>]</p>
+        </div>
+      </div>
+    </div>
+    <div class="jus_home_r f_r">
+      <!--tab_code-->
+      <div class="jus_hr_tab">
+        <ul>
+          <li id="jus_hr_but1" class="jus_hr_tabbg1" onMouseover="show_tab('jus_hr_list','jus_hr_but','jus_hr_tabbg',2,1)"> <a href="http://deco.51hejia.com/zq/设计-创意饰品.html" target="_blank" title="新品">新品</a></li>
+          <li id="jus_hr_but2" class="jus_hr_tabbg2" onMouseover="show_tab('jus_hr_list','jus_hr_but','jus_hr_tabbg',2,2)"> <a href="http://zt.51hejia.com/" target="_blank" title="专题">专题</a></li>
+        </ul>
+      </div>
+      <div id="jus_hr_list1" class="jus_hr_list0 clearfix">
+        <ul>
+          <%get_articles_by_editor_keyword("创意饰品", 3).each do |r|%>
+            <li class="clearfix">
+              <div class="jus_hr_limg f_l"><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>">
+                  <img src="<%=HejiaArticle.image_url(r["entity_id"])%>" alt="<%=r["title"]%>" /></a></div>
+              <h3 class="f_l"><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=r["title"]%></a></h3>
+              <p class="f_l"><%=ul(HejiaIndex.get_resume_by_id(r["id"]), 20)%> [<a href="<%=r["url"]%>" target="_blank">查看详情</a>]</p>
+            </li>
+          <%end%>
+        </ul>
+      </div>
+      <div id="jus_hr_list2" class="jus_hr_list0 clearfix">
+        <ul>
+          <%@zhuanti.each do |zhuanti|%>
+            <li class="clearfix">
+              <div class="jus_hr_limg f_l"><a href="<%=zhuanti["url"]%>" target="_blank" title="<%=zhuanti["title"]%>">
+                  <img src="<%=zhuanti["image_url"]%>" alt="<%=zhuanti["title"]%>" /></a></div>
+              <h3 class="f_l"><a href="<%=zhuanti["url"]%>" target="_blank" title="<%=zhuanti["title"]%>"><%=zhuanti["title"]%></a></h3>
+              <p class="f_l"><%=ul(zhuanti["description"], 20)%> [<a href="<%=zhuanti["url"]%>" target="_blank">查看详情</a>]</p>
+            </li>
+          <%end%>
+        </ul>
+      </div>
+      <!--end_tab_code-->
+    </div>
+  </div>
+</div>

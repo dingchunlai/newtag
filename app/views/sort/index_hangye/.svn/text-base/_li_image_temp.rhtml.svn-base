@@ -1,0 +1,9 @@
+  <%
+   pics=  get_tuku_taotu_or_dantu(kw, num)
+   pics.each do |pic|
+  %>
+      <li>
+         <a href="<%=pic[:url]%>" target="_blank"><img src="<%=pic[:image_url]%>" alt="<%=pic[:title]%>"  width="200" height="150"/></a>
+         <a href="<%=pic[:url]%>" target="_blank" title="<%=pic[:title]%>"><%=ul(pic[:title],15,0,"")%></a>
+      </li>
+<%end%>

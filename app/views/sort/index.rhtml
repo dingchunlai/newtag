@@ -1,0 +1,409 @@
+<style type="text/css">
+  .topleft h2 {
+    background: url("http://img.51hejia.com/images/zhuangshi916/zfsh_h3.gif") no-repeat scroll left top transparent;
+    color: #A76314;
+    font-size: 14px;
+    padding-left: 20px;
+  }
+  .topright h2 {
+    background: url("http://img.51hejia.com/images/zhuangshi916/topright_h3.gif") no-repeat scroll left top transparent;
+    color: #A76314;
+    font-size: 14px;
+    text-indent: 15px;
+    width: 100%;
+  }
+  .mbox h2 {
+    color: #A76314;
+    float: left;
+    font-size: 14px;
+    margin-bottom: 11px;
+    width: 448px;
+  }
+  .mbox h2 a {
+    color: #A76314;
+  }
+  .piclist h2 {
+    background: url("http://img.51hejia.com/images/zhuangshi916/piclist.gif") no-repeat scroll 0 0 transparent;
+    color: #A76314;
+    display: block;
+    font-size: 14px;
+    height: 37px;
+    line-height: 37px;
+    margin: 0;
+    padding: 0;
+    width: 960px;
+  }
+  .piclist h2 a {
+    color: #A76314;
+    padding-left: 12px;
+    line-height: 37px;
+  }
+  .piclist h2 img {
+    float: left;
+    margin-right: 10px;
+    margin-top: 12px;
+  }
+  .bbox h2 {
+    color: #A76314;
+    float: left;
+    margin-bottom: 10px;
+    width: 567px;
+  }
+  .bbox h2 a {
+    color: #A76314;
+    font-size: 12px;
+  }
+  .brbox h2 {
+    float: left;
+    margin-bottom: 11px;
+    width: 331px;
+  }
+  .brbox h2 a {
+    color: #A76314;
+    font-size: 12px;
+  }
+</style>
+<div class="main">
+  <div class="menu">
+    <div id="sub_01">
+      <h1><%=@kw%>专区</h1>
+    </div>
+    <div id="sub_02">
+      <ul>
+        <%for tl in get_array_title_and_url(sort("top_links"))%>
+          <li><a href="<%=tl["url"]%>" target="_blank"><%=tl["title"]%></a></li>
+        <%end%>
+        <li><a href="/zq/<%=@kw%>/more/" target="_blank">更多</a></li>
+        <!-- class="now" -->
+      </ul>
+    </div>
+    <div class="search">
+
+      <form action="http://zhannei.baidu.com/cse/search" target="_blank">
+        <input name="s" type="hidden" value="7289350921164188503" />
+        <input type="text" name="q" size="30" class="txt" />
+        <input type="submit" value="" class="bt" />
+      </form>
+
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div class="topborder"></div>
+  <div class="topbox">
+    <div class="topleft">
+      <div id="sub_03">
+        <h2><%=@kw%>编辑推荐</h2>
+      </div>
+      <div id="sub_04">
+        <div class="topleftbox01">
+
+          <a href="<%=sort("tuijian_url1")%>" target="_blank"><img src="<%=sort("tuijian_image_url1")%>" alt="<%=sort("tuijian_title1")%>" width="109" height="91" border="0" /></a>
+          <h4><a href="<%=sort("tuijian_url1")%>" title="<%=sort("tuijian_title1")%>" target="_blank"><%=sort("tuijian_title1")%></a></h4>
+          <p><%=ul(sort("tuijian_resume1"),33)%>[<a href="<%=sort("tuijian_url1")%>" target="_blank">详细</a>]</p>
+
+          <a href="<%=sort("tuijian_url2")%>" target="_blank"><img src="<%=sort("tuijian_image_url2")%>" alt="<%=sort("tuijian_title2")%>" width="109" height="91" border="0" /></a>
+          <h4><a href="<%=sort("tuijian_url2")%>" title="<%=sort("tuijian_title2")%>" target="_blank"><%=sort("tuijian_title2")%></a></h4>
+          <p><%=ul(sort("tuijian_resume2"),33)%>[<a href="<%=sort("tuijian_url2")%>" target="_blank">详细</a>]</p>
+
+          <a href="<%=sort("tuijian_url3")%>" target="_blank"><img src="<%=sort("tuijian_image_url3")%>" alt="<%=sort("tuijian_title3")%>" width="109" height="91" border="0" /></a>
+          <h4><a href="<%=sort("tuijian_url3")%>" title="<%=sort("tuijian_title3")%>" target="_blank"><%=sort("tuijian_title3")%></a></h4>
+          <p><%=ul(sort("tuijian_resume3"),33)%>[<a href="<%=sort("tuijian_url3")%>" target="_blank">详细</a>]</p>
+
+          <a href="<%=sort("tuijian_url4")%>" target="_blank"><img src="<%=sort("tuijian_image_url4")%>" alt="<%=sort("tuijian_title4")%>" width="109" height="91" border="0" /></a>
+          <h4><a href="<%=sort("tuijian_url4")%>" title="<%=sort("tuijian_title4")%>" target="_blank"><%=sort("tuijian_title4")%></a></h4>
+          <p><%=ul(sort("tuijian_resume4"),33)%>[<a href="<%=sort("tuijian_url4")%>" target="_blank">详细</a>]</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="topfocus">
+      <div class="topfocusbox">
+        <div id="sub_05">
+          <div>
+            <script type="text/javascript">
+              //function $(id) { return document.getElementById(id); }
+              function addLoadEvent(func){
+                var oldonload = window.onload;
+                if (typeof window.onload != 'function') {
+                  window.onload = func;
+                } else {
+                  window.onload = function(){
+                    oldonload();
+                    func();
+                  }
+                }
+              }
+              function moveElement(elementID,final_x,final_y,interval) {
+                if (!document.getElementById) return false;
+                if (!document.getElementById(elementID)) return false;
+                var elem = document.getElementById(elementID);
+                if (elem.movement) {
+                  clearTimeout(elem.movement);
+                }
+                if (!elem.style.left) {
+                  elem.style.left = "0px";
+                }
+                if (!elem.style.top) {
+                  elem.style.top = "0px";
+                }
+                var xpos = parseInt(elem.style.left);
+                var ypos = parseInt(elem.style.top);
+                if (xpos == final_x && ypos == final_y) {
+                  return true;
+                }
+                if (xpos < final_x) {
+                  var dist = Math.ceil((final_x - xpos)/10);
+                  xpos = xpos + dist;
+                }
+                if (xpos > final_x) {
+                  var dist = Math.ceil((xpos - final_x)/10);
+                  xpos = xpos - dist;
+                }
+                if (ypos < final_y) {
+                  var dist = Math.ceil((final_y - ypos)/10);
+                  ypos = ypos + dist;
+                }
+                if (ypos > final_y) {
+                  var dist = Math.ceil((ypos - final_y)/10);
+                  ypos = ypos - dist;
+                }
+                elem.style.left = xpos + "px";
+                elem.style.top = ypos + "px";
+                var repeat = "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
+                elem.movement = setTimeout(repeat,interval);
+              }
+              function classNormal(iFocusBtnID,iFocusTxID){
+                var iFocusBtns= $("#"+iFocusBtnID +  " li");
+                var iFocusTxs = $("#"+iFocusTxID + " li");
+                for(var i=0; i<iFocusBtns.length; i++) {
+                  iFocusBtns[i].className='normal';
+                  iFocusTxs[i].className='normal';
+                }
+              }
+              function classCurrent(iFocusBtnID,iFocusTxID,n){
+                var iFocusBtns= $("#"+iFocusBtnID + " li");
+                var iFocusTxs = $("#"+iFocusTxID + " li")
+                iFocusBtns[n].className='current';
+                iFocusTxs[n].className='current';
+              }
+              function iFocusChange() {
+                if(!$('#ifocus')) return false;
+                $('#ifocus').onmouseover = function(){atuokey = true};
+                $('#ifocus').onmouseout = function(){atuokey = false};
+                var iFocusBtns = $('#ifocus_btn li');
+                var listLength = iFocusBtns.length;
+                iFocusBtns[0].onmouseover = function() {
+                  moveElement('ifocus_piclist',0,0,5);
+                  classNormal('ifocus_btn','ifocus_tx');
+                  classCurrent('ifocus_btn','ifocus_tx',0);
+                }
+                if (listLength>=2) {
+                  iFocusBtns[1].onmouseover = function() {
+                    moveElement('ifocus_piclist',0,-259,5);
+                    classNormal('ifocus_btn','ifocus_tx');
+                    classCurrent('ifocus_btn','ifocus_tx',1);
+                  }
+                }
+                if (listLength>=3) {
+                  iFocusBtns[2].onmouseover = function() {
+                    moveElement('ifocus_piclist',0,-518,5);
+                    classNormal('ifocus_btn','ifocus_tx');
+                    classCurrent('ifocus_btn','ifocus_tx',2);
+                  }
+                }
+                if (listLength>=4) {
+                  iFocusBtns[3].onmouseover = function() {
+                    moveElement('ifocus_piclist',0,-777,5);
+                    classNormal('ifocus_btn','ifocus_tx');
+                    classCurrent('ifocus_btn','ifocus_tx',3);
+                  }
+                }
+                if (listLength>=5) {
+                  iFocusBtns[4].onmouseover = function() {
+                    moveElement('ifocus_piclist',0,-1036,5);
+                    classNormal('ifocus_btn','ifocus_tx');
+                    classCurrent('ifocus_btn','ifocus_tx',4);
+                  }
+                }
+              }
+              setInterval('autoiFocus()',5000);
+              var atuokey = false;
+              function autoiFocus() {
+                if(!$('#ifocus')) return false;
+                if(atuokey) return false;
+                var focusBtnList = $('#ifocus_btn li');
+                var listLength = focusBtnList.length;
+                for(var i=0; i<listLength; i++) {
+                  if (focusBtnList[i].className == 'current') var currentNum = i;
+                }
+                if (currentNum==0&&listLength!=1 ){
+                  moveElement('ifocus_piclist',0,-259,5);
+                  classNormal('ifocus_btn','ifocus_tx');
+                  classCurrent('ifocus_btn','ifocus_tx',1);
+                }
+                if (currentNum==1&&listLength!=2 ){
+                  moveElement('ifocus_piclist',0,-518,5);
+                  classNormal('ifocus_btn','ifocus_tx');
+                  classCurrent('ifocus_btn','ifocus_tx',2);
+                }
+                if (currentNum==2&&listLength!=3 ){
+                  moveElement('ifocus_piclist',0,-777,5);
+                  classNormal('ifocus_btn','ifocus_tx');
+                  classCurrent('ifocus_btn','ifocus_tx',3);
+                }
+                if (currentNum==3&&listLength!=4 ){
+                  moveElement('ifocus_piclist',0,-1036,5);
+                  classNormal('ifocus_btn','ifocus_tx');
+                  classCurrent('ifocus_btn','ifocus_tx',3);
+                }
+                if (currentNum==4 ){
+                  moveElement('ifocus_piclist',0,0,5);
+                  classNormal('ifocus_btn','ifocus_tx');
+                  classCurrent('ifocus_btn','ifocus_tx',0);
+                }
+                if (currentNum==1&&listLength==2 ){
+                  moveElement('ifocus_piclist',0,0,5);
+                  classNormal('ifocus_btn','ifocus_tx');
+                  classCurrent('ifocus_btn','ifocus_tx',0);
+                }
+                if (currentNum==2&&listLength==3 ){
+                  moveElement('ifocus_piclist',0,0,5);
+                  classNormal('ifocus_btn','ifocus_tx');
+                  classCurrent('ifocus_btn','ifocus_tx',0);
+                }
+                if (currentNum==3&&listLength==4 ){
+                  moveElement('ifocus_piclist',0,0,5);
+                  classNormal('ifocus_btn','ifocus_tx');
+                  classCurrent('ifocus_btn','ifocus_tx',0);
+                }
+              }
+              addLoadEvent(iFocusChange);
+            </script>
+            <div id="ifocus">
+              <div id="ifocus_pic">
+                <div id="ifocus_piclist" style="left:0; top:0;">
+                  <div id="sub_39">
+                    <ul>
+                      <li><a href="<%=sort("jiaodiantu_url1")%>" target="_blank"><img src="<%=sort("jiaodiantu_image_url1")%>" alt="<%=sort("jiaodiantu_title1")%>" /></a></li>
+                      <li><a href="<%=sort("jiaodiantu_url2")%>" target="_blank"><img src="<%=sort("jiaodiantu_image_url2")%>" alt="<%=sort("jiaodiantu_title2")%>" /></a></li>
+                      <li><a href="<%=sort("jiaodiantu_url3")%>" target="_blank"><img src="<%=sort("jiaodiantu_image_url3")%>" alt="<%=sort("jiaodiantu_title3")%>" /></a></li>
+                    </ul>
+                  </div>
+                </div>
+
+
+                <div id="ifocus_btn">
+                  <ul>
+                    <li class="current">1</li>
+                    <li class="normal">2</li>
+                    <li class="normal">3</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="ifocus_opdiv"><div id="ifocus_tx">
+                  <div id="sub_40">
+                    <ul>
+                      <li class="current"><%=ul(sort("jiaodiantu_title1"), 26)%>[<a href="<%=sort("jiaodiantu_url1")%>" target="_blank">详细</a>]</li>
+                      <li class="normal"><%=ul(sort("jiaodiantu_title2"), 26)%>[<a href="<%=sort("jiaodiantu_url2")%>" target="_blank">详细</a>]</li>
+                      <li class="normal"><%=ul(sort("jiaodiantu_title3"), 26)%>[<a href="<%=sort("jiaodiantu_url3")%>" target="_blank">详细</a>]</li>
+                    </ul>
+                  </div>
+                </div></div>
+            </div>
+          </div>
+        </div>
+        <div class="txt">
+          <div id="sub_06">
+            <ul>
+              <%ars = get_articles_by_editor_keyword(@kw, 10)%>
+              <%if ars.length > 0%>
+                <%for ar in ars%>
+                  <li>
+                    <a href="<%=ar["url"]%>" target="_blank" title="<%=ar["title"]%>"><%=ul(ar["title"], 13)%></a>
+                  </li>
+                <%end%>
+              <%else%>
+                <li>
+                  暂无数据
+                </li>
+              <%end%>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="topright">
+      <% #@zhuanxiu_stories = HejiaIndex.diaries_by_zhuanqu_sort_id(sort("id"), 10)%>
+      <% @zhuanxiu_stories = DecorationDiary.zixun_riji_diaoyong_3_1(@city_code) %>
+      <div id="sub_07">
+        <h2>网友装修故事推荐</h2>
+      </div>
+      <div class="toprightbox">
+        <div id="sub_08">
+          <ul>
+            <%@zhuanxiu_stories.each do |r|%>
+              <li><a href="<%=r.url%>" target="_blank" title="<%=r.title%>"><%=ul(r.title, 12)%></a></li>
+            <%end%>
+          </ul>
+        </div>
+      </div>
+
+      <div class="topright">
+        <div id="sub_09">
+          <h2><%=@kw%>相关专区推荐</h2>
+        </div>
+        <div class="toprightbox toprightbox_1">
+          <div id="sub_10">
+            <ul>
+              <%for tl in get_array_title_and_url(sort("xiangguan_links"))%>
+                <li><a href="<%=tl["url"]%>" target="_blank"><%=tl["title"]%></a></li>
+              <%end%>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div class="mleft">
+    <%=render :partial => "sort/index/kw1"%>
+    <%=render :partial => "sort/index/kw2"%>
+  </div>
+  <div class="mright">
+    <%=render :partial => "sort/index/kw3"%>
+    <%=render :partial => "sort/index/kw4"%>
+  </div>
+</div>
+
+<div class="main">
+  <div class="piclist clear">
+    <div id="sub_27">
+      <h2>
+        <%if trim(sort("image_more_url")).length > 1%>
+          <a href="<%=sort("image_more_url")%>" target="_blank" class="more"><img src="http://www.51hejia.com/images/woshi522/more.gif" border="0" /></a>
+          <a href="<%=sort("image_more_url")%>" target="_blank"><%=@kw%>图片</a>
+        <%else%>
+          <%=get_tuku_link(sort("image_keyword"), "more", "<img src='http://www.51hejia.com/images/woshi522/more.gif' border='0' />")%>
+          <%=get_tuku_link(sort("image_keyword"), "", "#{@kw}图片")%>
+        <%end%>
+      </h2>
+    </div>
+    <div class="list">
+      <div id="sub_28">
+        <%ars = get_tuku_taotu_or_dantu(sort("image_keyword"),12)  #获取图库套图%>
+        <%for ar in ars%>
+          <%title="#{ar[:title]}_#{@kw}(图)"%>
+          <dl>
+            <dt><a href="<%=ar[:url]%>" target="_blank"><img src="<%=ar[:image_url]%>" width="134" height="91" alt="<%=title%>" /></a></dt>
+            <dd><a href="<%=ar[:url]%>" target="_blank" title="<%=title%>"><%=title%></a></dd>
+          </dl>
+        <%end%>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+<%=render :partial => "sort/index/sort_bottom1"%>

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>右下角的弹窗</title>
+<style type="text/css">
+#winpop { width:190px; position:absolute; right:0; bottom:0; border:1px solid #999999; background:#fff; margin:0; padding:0 13px 13px 13px; overflow:hidden; display:none;}
+#winpop .title { width:100%; height:16px; line-height:16px; font-weight:bold; text-align:center; font-size:12px;opacity:0.60;filter:alpha(opacity=60); color:#000;}
+#winpop .con { width:100%; height:148px; line-height:148px; font-weight:bold; font-size:12px; color:#FF0000; text-decoration:underline; text-align:center}
+.close { position:absolute; right:8px; top:1px; color:#000; cursor:pointer; z-index:9999;}
+</style>
+<script type="text/javascript" SRC="http://js.51hejia.com/js/shanghai_every_day_ad.js"></script>
+<script type="text/javascript">
+function $(id){return document.getElementById(id);}
+function myPop(){
+        var MsgPop = $("winpop");
+        MsgPop.style.display = "block";
+        if (MsgPop.style.top){
+                //不清楚为什么这里不减去8px的话，会显示不完整
+                 MsgPop.style.top = document.documentElement.clientHeight + document.documentElement.scrollTop -8+ "px";
+        }
+        showPop();
+}
+function showPop(){
+        var MsgPop = $("winpop");
+        var popH = parseInt(MsgPop.style.height);
+        popH += 4;
+        if (popH < 168){
+                if (MsgPop.style.top){ //onscroll导致在ie下，top取到值
+                        var newTop = parseInt(MsgPop.style.top) - 4;
+                        MsgPop.style.top = newTop + "px";
+                }
+                MsgPop.style.height = popH + "px";
+                setTimeout(showPop,2);
+        }else{
+        }
+}
+function hidePop(){
+        var MsgPop = $("winpop");
+        var popH = parseInt(MsgPop.style.height);
+        popH -= 4;
+        if (popH > 0){
+                MsgPop.style.height = popH + "px";
+                if (MsgPop.style.top){ //onscroll导致在ie下，top取到值
+                        var newTop = parseInt(MsgPop.style.top) + 4;
+                        MsgPop.style.top = newTop + "px";
+                }
+                setTimeout(hidePop,2);
+        }else{
+                MsgPop.style.display = "none";
+        }
+}
+window.onscroll = function (){
+        if (document.all){
+                if ($("winpop").style.display == "block")
+                        $("winpop").style.top = $("winpop").oldTop + document.documentElement.scrollTop + "px";
+        }else{
+                $("winpop").style.position = "fixed";
+        }
+}
+</script>
+</head>
+<body>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>1111111111111</p>
+<p>11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</p>
+<div id="winpop" style="height:0;">
+        <div class="title"><span class="close" onclick="hidePop()"><img src="images/close.gif" width="40" height="15" /></span></div>
+    <div class="con">
+        <script type="text/javascript">
+        var flash_url = "http://js.51hejia.com/img/ad/tanb.swf";
+        if (Math.ceil(Math.random()*(100))<50) flash_url = "http://js.51hejia.com/img/ad/tanc.swf";
+        document.write("<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0' width='190' height='148'><param name='movie' value='" + flash_url + "' /><param name='quality' value='high' /><embed src='" + flash_url + "' quality='high' pluginspage='http://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash' width='190' height='148'></embed></object>");
+        </script>
+    </div>
+</div>
+</body>
+</html>

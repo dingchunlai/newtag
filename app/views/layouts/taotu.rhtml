@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv=Content-Type content="text/html;charset=utf-8" />
+    <title>【<%=@kv%>装修效果图】<%=@kv%>装修图片_<%=@kv%>装修效果图大全_和家网图库频道</title>
+    <meta name="keywords" content="<%=@kv%>装修图片, <%=@kv%>装修效果图" />
+    <meta name="description" content="和家网图片库，拥有最新流行的<%=@kv%>装修图片，<%=@kv%>装修效果图，为您家的装潢带来无限灵感。编辑们精心挑选的成套装潢装饰效果图，精美绝伦，让您的家庭装修梦想顺利达成！" />
+    <link href="http://js.51hejia.com/css/theme_2.css?3843242" media="screen" rel="stylesheet" type="text/css" />
+    <script src="http://js.51hejia.com/js/public.js"></script>
+    <%= javascript_include_tag "http://js.51hejia.com/js/jquery/1.5/jquery.min.js" %>
+    <%= javascript_include_tag "http://js.51hejia.com/js/jquery/plugins/tmpl/1.0.0/jquery.tmpl.min.js" %>
+  </head>
+  <body>
+
+    <%= render :partial => '/share/public_header' %>
+
+    <div class="width960 margin10">
+      <div class="ad01" id="index_ad1"><%=AdSpace.render("图库-列表页-通栏1")%></div>
+    </div>
+    <div class="main">
+      <div class="banner"><!--/* OpenX Javascript标签 v2.6.0 */-->
+
+        <script type='text/javascript'><!--//<![CDATA[
+          var m3_u = (location.protocol=='https:'?'https://a.51hejia.com/www/delivery/ajs.php':'http://a.51hejia.com/www/delivery/ajs.php');
+          var m3_r = Math.floor(Math.random()*99999999999);
+          if (!document.MAX_used) document.MAX_used = ',';
+          document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+          document.write ("?zoneid=69");
+          document.write ('&amp;cb=' + m3_r);
+          if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+          document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+          document.write ("&amp;loc=" + escape(window.location));
+          if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+          if (document.context) document.write ("&context=" + escape(document.context));
+          if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+          document.write ("'><\/scr"+"ipt>");
+          //]]>--></script><noscript><a href='http://a.51hejia.com/www/delivery/ck.php?n=a125fb1d&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://a.51hejia.com/www/delivery/avw.php?zoneid=69&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a125fb1d' border='0' alt='' /></a></noscript>
+
+      </div>
+    </div>
+
+    <%=yield%>
+
+    <div style="clear:both"></div>
+
+    <%= render :partial => '/share/public_footer' %>
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/103/51hejia/repos/newtag/release/script
+END
+console
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/103/51hejia/repos/newtag/release/script/console
+END
+breakpointer
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/103/51hejia/repos/newtag/release/script/breakpointer
+END
+server
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/103/51hejia/repos/newtag/release/script/server
+END
+destroy
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/103/51hejia/repos/newtag/release/script/destroy
+END
+runner
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/103/51hejia/repos/newtag/release/script/runner
+END
+about
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/103/51hejia/repos/newtag/release/script/about
+END
+generate
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/103/51hejia/repos/newtag/release/script/generate
+END
+plugin
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/103/51hejia/repos/newtag/release/script/plugin
+END

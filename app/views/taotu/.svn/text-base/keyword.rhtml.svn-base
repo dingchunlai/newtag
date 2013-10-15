@@ -1,0 +1,111 @@
+
+<div class="index-container">
+  <!--header-->
+  <div class="clear"></div>
+  <!--content-->
+  <div class="clear" style="margin-top:10px;"></div>
+  <div class="nav_m tleft">
+    <div class="left">当前位置：<a href="http://www.51hejia.com">和家首页</a>&nbsp;&gt;&nbsp;
+      <a href="http://tuku.51hejia.com" target="_blank">图库频道</a>&nbsp;&gt;&nbsp;
+      <a href="/zhuanqu/<%=@keywords%>.html"><%=@keywords.sub('_','')%>图片</a>
+    </div>
+
+    <div class="clear"></div>
+  </div>
+  <div class="right zsearch">
+    <form action="http://zhannei.baidu.com/cse/search" target="_blank">
+      <input name="s" type="hidden" value="7289350921164188503" />
+      <input type="text" name="q" size="30" style="width:115px;border:1px solid #e0e0e0;height:23px;height:21px;line-height:22px;margin-right:3px;" />
+      <input type="submit" value="搜索" class="inputss" />
+    </form>
+  </div>
+  <div class="clear" style="margin-bottom:5px;"></div>
+  <!--right-->
+  <%=render :partial => "keyword_right"%>
+
+  <!--left-->
+  <div class="right">
+    <div style="width:620px;overflow:hidden;">
+      <%@cases.each do |c|%>
+        <div class="topic-show">
+          <div class="borderb2 tleft"><h2 class="artitle">
+              <a href="<%=c.url%>" target="_blank"><%=c.NAME%></a>
+            </h2></div>
+
+          <p class="sourcestyle"><%=c.CREATEDATE.strftime("%Y-%m-%d") rescue ""%></p>
+          <div class="ts-content">
+            <%=ul(c.INTRODUCE,150)%>
+          </div>
+
+          <p class="thumb"><a href="<%=c.url%>" target="_blank"><img src="<%=c.image_url%>" onload="if (this.width>550) this.width=550;" alt="<%=c.NAME%>" /></a></p>
+
+          <p class="thumb">
+            <%for url in get_photos_by_case_id(c.ID)%>
+              <a href="<%=c.url%>" target="_blank"><img src="<%=url%>" width="120" height="90" /></a>
+            <%end%>
+          </p>
+
+          <div class="clear"></div>
+          <p class="lookall">» <a href="<%=c.url%>" target="_blank">查看成套图片</a></p>
+          <div class="borderb2b"></div>
+          <div class="clear"></div>
+          <div class="aboutarticle marginb20">
+            <ul class="toplr clear">
+              <li class="classtag">标签：
+                <%for tagname in get_case_tags_by_case_id(c.ID)%>
+                  <a href='/zhuanqu/<%=tagname%>.html' target='_blank'><%=tagname%></a>&nbsp;&nbsp;&nbsp;
+                <%end%>
+                <%if @keyword2.to_s.length > 0%>
+                  <a href='/zhuanqu/<%=@keywords%>.html' target='_blank'><%=@keywords.sub('_','')%></a>&nbsp;&nbsp;&nbsp;
+                <%end%>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      <%end%>
+
+      <div class="topic-page clearfix">
+        <div class="f_l"><%=will_paginate @cases, :previous_label => "上一页", :next_label => "下一页"%></div>
+        <% if @cases.total_pages > 1 %>
+          <%
+          cur_total_page = @cases.total_pages
+          cur_page = params[:page].to_i
+          if cur_page == 0
+            next_page = 2
+          else
+            if cur_page >= cur_total_page
+              next_page = 1
+            else
+              next_page = cur_page + 1
+            end
+          end
+        %>
+          <script type="text/javascript">
+            function jump_to(page) {
+              if (page == "") { page = 0; }
+              var total_pages = <%= cur_total_page %>;
+              var url = "/zhuanqu/<%= params[:keyword] %>";
+              page = parseInt(page);
+              if (page == 0) {
+                document.getElementById("jmp_page_no").focus();
+              } else {
+                if (page > total_pages) { page = 1; }
+                location.href = url + "-" + page + ".html";
+              }
+            }
+          </script>
+          <div class="f_l">
+            <form name="jmp_frm" onsubmit="jump_to(document.getElementById('jmp_page_no').value);return false;">
+              &nbsp;&nbsp;跳至第<input type="text" id="jmp_page_no" name="jmp_page_no" value="<%= next_page %>" size="2" maxlength="10"/>页
+              <input type="submit" id="btn_jmp" name="btn_jmp" value="GO!"/>
+            </form>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <!--header-->
+  <div class="clear"></div>
+</div>

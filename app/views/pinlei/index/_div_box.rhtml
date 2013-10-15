@@ -1,0 +1,21 @@
+<%
+      ul_class=parames[:ul_class]
+      href=parames[:href].nil? ? "#":parames[:href]
+      top_title=parames[:top_title]
+      times=parames[:times]
+      entity=parames[:entity]
+      show_count=parames[:show_count]
+      omit_symbol =parames[:omit_symbol].nil? ? "" : parames[:omit_symbol]
+      div_class=parames[:div_class].nil? ? "box":parames[:div_class]
+      entity_url="#{entity}_url"
+      show_title="#{entity}_title"
+%>
+
+<div class="<%=div_class%>">
+          <h3><a href="<%=href%>" target="_blank"><%=top_title%></a></h3>
+          <ul class="<%=ul_class%>">
+	    <%  1.upto times do |n| %>
+            <li><a href="<%=@ci["#{entity_url}#{n}"]%>" target="_blank" title="<%=@ci["#{show_title}#{n}"]%>"><%=ul(@ci["#{show_title}#{n}"],show_count,0,omit_symbol)%></a></li>
+            <% end %>
+          </ul>
+</div>

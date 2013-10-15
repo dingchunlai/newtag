@@ -1,0 +1,2 @@
+class HangyeController < ApplicationController
+end

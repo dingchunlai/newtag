@@ -1,0 +1,18 @@
+ <%
+  li_class=parames[:li_class]
+  i_class=parames[:i_class]
+  entity=parames[:entity]
+  show_count=parames[:show_count]
+  pic_width=parames[:pic_width]
+  pic_height=parames[:pic_height]
+  start_num=parames[:start_num].nil? ? 1:parames[:start_num]
+  end_num=parames[:end_num]
+  omit_symbol =parames[:omit_symbol].nil? ? "" : parames[:omit_symbol]
+%>
+<% start_num.upto(end_num) do |i| %>
+<li class="<%=li_class%>">
+          <a href="<%=@ci["#{entity}_url#{i}"]%>" target="_blank"><img src="<%=@ci["#{entity}_image_url#{i}"]%>" width="<%=pic_width%>" height="<%=pic_height%>" alt="<%=@ci["#{entity}_title#{i}"]%>" /></a>
+          <i><a href="<%=@ci["#{entity}_url#{i}"]%>" target="_blank"><%=ul(@ci["#{entity}_title#{i}"],show_count,0,omit_symbol)%></a></i>
+          <i class="<%=i_class%>"></i>
+</li>
+<% end %>

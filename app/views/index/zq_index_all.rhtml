@@ -1,0 +1,47 @@
+<div id="map">
+  <span style="float:right">
+    <a href="http://z.51hejia.com/" target="_blank">装修点评</a>　
+    <a href="http://bbs.51hejia.com" target="_blank">俱乐部</a>　
+    <a href="http://www.51hejia.com/maichang/" target="_blank">卖场</a>
+  </span>
+  当前位置：<a href="http://www.51hejia.com/" target="_blank">和家首页</a>&nbsp;&gt;&nbsp;
+  <a href="http://www.51hejia.com/zq/" target="_blank">专区首页</a>
+</div>
+
+<script type="text/javascript">
+  function hide_more(obj){
+    $(obj).find("li:gt(10)").hide();
+    $(obj).find("li:last").show().html("<h3><span><a href='javascript://'>显示更多</a></span></h3>").click(function(){show_more(obj)});
+  }
+
+  function show_more(obj){
+    $(obj).find("li:gt(10)").show();
+    $(obj).find("li:last").html("<h3><span><a href='javascript://'>隐藏更多</a></span></h3>").click(function(){hide_more(obj)});
+  }
+
+  $(function(){ $.each($("#top_map ul"), function(){ hide_more(this); }); })
+</script>
+<div id="top_map">
+  <% for tags in @tags %>
+    <div id="map">
+      <h2><a href="http://<%=ZHUANQU_BOARD_SPELL[tags[0]]%>.51hejia.com/zq/" title="<%=tags[1]%>" target="_blank"><%=tags[1]%>专区</a></h2>
+      <ul>
+        <% for tag in tags[2] %>
+          <li><h3><a href="http://<%=ZHUANQU_BOARD_SPELL[tags[0]]%>.51hejia.com/zq/<%= URI.escape(tag) %>/" title="<%= tag %>" target="_blank"><%= tag %></a></h3></li>
+        <% end %>
+        <li></li>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="map">
+    <h2><a href="javascript:void(0)" title="装修公司评论专区">装修公司评论专区</a></h2>
+    <ul>
+      <% for city in ZHUANQU_CITY %>
+        <li><h3><a href="http://<%= city[0] %>.z.51hejia.com/comment/relist" title="<%= city[1] %>" target="_blank"><%= "#{city[1]}装修公司评论" %></a></h3></li>
+      <% end %>
+      <li></li>
+    </ul>
+  </div>
+</div>
+

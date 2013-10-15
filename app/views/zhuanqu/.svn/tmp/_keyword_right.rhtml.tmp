@@ -1,0 +1,309 @@
+<div class="right" style="width:323px;">
+  <script type="text/javascript">
+    function g(o){
+      return document.getElementById(o);
+    }
+    function HoverLi(m,n,limited){
+      for(var i=0;i<limited;i++){
+        g("nav-"+m+i).className="";
+        g("tab-panel-"+m+i).style.display="none";
+      }
+      g("nav-"+m+n).className="hoveron";
+      g("tab-panel-"+m+n).style.display="block";
+    }
+  </script>
+
+  <style>
+    ul.news li{padding-left:10px;}
+  </style>
+
+  <% unless @zhuanqu.baoming_keyword_links.blank? %>
+    <script type="text/javascript" src="http://api.51hejia.com/statistics?code=ad_baoming_<%= @zhuanqu.baoming_keyword_links %>_gif&style=eject&source=http://www.51hejia.com/zq"></script>
+    <script type="text/javascript">
+      function open_ad_baoming(baoming)
+      {
+        var url_img = new Image();
+        url_img.onerror = url_img.onload = function() {
+          try {
+            delete url_img
+          } catch(e) {}
+        }
+        url_img.src = "http://api.51hejia.com/statistics?code=ad_baoming_"+baoming+"_gif&style=open&source=http://www.51hejia.com/zq"
+      }
+    </script>
+    <div style=" width:320px; padding-bottom:5px; cursor: pointer;" class="view_btn">
+      <%= link_to(image_tag("http://js.51hejia.com/img/baoming/ad_#{@zhuanqu.baoming_keyword_links}_s.gif"), "javascript:void(0)", :onclick => "open_ad_baoming('#{@zhuanqu.baoming_keyword_links}')") %>
+    </div>
+
+    <div style="text-align: center; display: none;" class="adview_box">
+      <div class="adcanceled close_btn">关闭</div>
+      <div>
+        <form action="http://bm.51hejia.com/index/zixun1" method="post">
+          <div class="adbox">
+            <p style="text-align:center;">
+              3位
+              <span style="color:#f60;"><%= [["dzh","地中海"],["jy","简约"],["ty","田园"],["os","欧式"],["zs","中式"],["yj","宜家"],["qt",""]].assoc(@zhuanqu.baoming_keyword_links)[1] %></span>
+              知名设计师，为您
+              <span style="color:#f60;">免费设计</span>
+              3套方案！
+            </p>
+            <p style="text-align:center;"><b>留下您的姓名和联系方式客服将尽快与您联系~！</b></p>
+          </div>
+          <div class="adbox_01">
+            <table width="320" cellspacing="0" cellpadding="0" border="0" align="center">
+              <tbody><tr>
+                  <td width="160" valign="bottom" height="30" align="left">
+                    姓名:
+                    <input type="text" name="name" class="input70" />
+                    <input type="hidden" value="资讯-文章页-通栏下1" name="from_term" />
+                  </td>
+                  <td width="160" valign="bottom" align="right" style="text-align:right;">
+                    联系方式:
+                    <input type="text" name="mobile" style="width:80px;" class="input70" />
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="bottom" height="30" align="left">
+                    面积:
+                    <input type="text" name="area" class="input70" />        平方
+                  </td>
+                  <td valign="bottom" align="right" style="text-align:right;">预算:
+                    <select style="width:70px;" name="budget" class="input70" id="budget">
+                      <option value="8万以下">8万以下</option>
+                      <option value="8-15万">8-15万</option>
+                      <option value="15-30万">15-30万</option>
+                      <option value="30-100万">30-100万</option>
+                      <option value="100万以上">100万以上</option>
+
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="bottom" height="30" align="left">
+                    户型:
+                    <select style="width:70px;" name="roomtype" class="input70" id="roomtype">
+                      <option value="小户型">小户型</option>
+                      <option value="公寓">公寓</option>
+                      <option value="别墅/复式">别墅/复式</option>
+                      <option value="挑高/LOFT">挑高/LOFT</option>
+                      <option value="四合院">四合院</option>
+                    </select>
+                  </td>
+                  <td valign="bottom" align="right" style="text-align:right;">
+                    意向风格:
+                    <select style="width:70px;" name="style" class="input70" id="style">
+                      <option value="地中海" <% if @zhuanqu.baoming_keyword_links == "dzh" %> selected <% end %> >地中海</option>
+                      <option value="简约" <% if @zhuanqu.baoming_keyword_links == "jy" %> selected <% end %> >简约</option>
+                      <option value="田园" <% if @zhuanqu.baoming_keyword_links == "ty" %> selected <% end %> >田园</option>
+                      <option value="欧式" <% if @zhuanqu.baoming_keyword_links == "os" %> selected <% end %> >欧式</option>
+                      <option value="中式" <% if @zhuanqu.baoming_keyword_links == "zs" %> selected <% end %> >中式</option>
+                      <option value="宜家" <% if @zhuanqu.baoming_keyword_links == "yj" %> selected <% end %> >宜家</option>
+                      <option value="其它" <% if @zhuanqu.baoming_keyword_links == "qt" %> selected <% end %> >其它</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody></table>
+          </div>
+          <div class="adbox_03 ">
+            <p style="text-align:center;color:#f60;"> 您希望的沟通的时间段为:</p>
+            <p style="color:#f60;">
+              <input type="checkbox" value="10:00-12:00" name="connect_time[]" />10:00-12:00
+              <input type="checkbox" value="13:00-17:00" name="connect_time[]" />13:00-17:00
+              <input type="checkbox" value="18:00-21:00" name="connect_time[]" />18:00-21:00
+            </p>
+          </div>
+          <div class="adbox_02">
+            <input type="submit" value="我要预约" name="" class="adconfirm" />
+          </div>
+        </form>
+      </div>
+      <iframe width="0" height="0" style="display: none;" name="hideiframe"></iframe>
+    </div>
+
+    <script type="text/javascript">
+      $(".view_btn").click(function(){
+        $(".adview_box").show();
+      });
+      $(".adcanceled").click(function(){
+        $(".adview_box").hide();
+      });
+    </script>
+  <% end %>
+
+  <div class="sidetag-main">
+    <div class="ltopno tleft">	<div class="sidetag-top">
+        <ul>
+          <li class="hoveron" style="_margin-left:5px">
+            <h2 style="font-size: 12px; padding-top: 0px;">
+              <%=@keyword_v%>专区描述
+            </h2>
+          </li>
+        </ul>
+      </div></div>
+    <div class="ltext">
+      <div>
+        <!--recommend news with pic-->
+        <p class="newsta">
+          <%=@zhuanqu.description rescue ""%>
+        </p>
+      </div>
+    </div><div class="clear"></div>
+    <div class="lbot"></div>
+  </div>
+
+  <div class="sidetag-main">
+    <div class="ltopno tleft">
+      <div class="sidetag-top">
+        <ul>
+          <li class="hoveron" style="_margin-left:5px">
+            <h2 style="font-size: 12px; padding-top: 0px;">
+              <%=@keyword_v%>相关专区
+            </h2>
+          </li>
+        </ul>
+      </div></div>
+    <div class="ltext">
+      <div style="font-size:14px;padding:10px 20px;text-align:left;">
+        <p class="tag-cloud">
+          <%
+          for rdzq in get_re_dian_zhuan_qu(@zhuanqu.sort_id)
+            i = rand(4)+1
+            if rdzq != @keyword_v
+              @about_kws << rdzq
+            %>
+              <a href="http://<%= URI.escape("#{request.host}/zq/#{@zhuanqu.sort_name}-#{rdzq}.html") %>" class="hot<%= i %>" target="_blank"><%= rdzq %></a>
+              &nbsp;&nbsp;
+            <%
+            end
+          end
+          @about_kws << "装修"
+        %>
+        </p>
+        <div class="clear"></div>
+
+      </div>
+    </div><div class="clear"></div>
+    <div class="lbot"></div>
+  </div>
+
+  <div class="sidetag-main">
+    <div class="ltopno tleft">	<div class="sidetag-top">
+        <ul>
+          <li class="hoveron" style="_margin-left:5px">
+            <h2 style="font-size: 12px; padding-top: 0px;">
+              <%=@keyword_v%>热门文章
+            </h2>
+          </li>
+        </ul>
+      </div></div>
+    <div class="ltext">
+      <div>
+        <!--recommend news with pic-->
+        <ul class="newst">
+          <li style="height:26px;"><span><a href="<%=@zhuanqu.ha_url1 rescue ""%>" target="_blank"><%=@zhuanqu.ha_title1 rescue ""%></a></span></li>
+          <li style="height:26px;"><span><a href="<%=@zhuanqu.ha_url2 rescue ""%>" target="_blank"><%=@zhuanqu.ha_title2 rescue ""%></a></span></li>
+          <li style="height:26px;"><span><a href="<%=@zhuanqu.ha_url3 rescue ""%>" target="_blank"><%=@zhuanqu.ha_title3 rescue ""%></a></span></li>
+          <%=render :partial => "zui_re_wen_zhang"%>
+        </ul>
+
+        <!-- <div class="stt-more">&raquo; <a href="http://tag.51hejia.com/<%#=@keyword%>.html" target="_blank">更多</a></div> -->
+
+      </div>
+    </div><div class="clear"></div>
+    <div class="lbot"></div>
+  </div>
+
+  <div class="sidetag-main">
+    <div class="ltopno tleft"><div class="sidetag-top">
+        <ul>
+          <li class="hoveron" onmouseover="HoverLi(22,1,2);" id="nav-221" style="_margin-left:5px">
+            <h2 style="font-size: 12px; padding-top: 0px;">
+              专题推荐
+            </h2>
+          </li>
+        </ul>
+      </div></div>
+    <div class="ltext">
+
+      <!-- 专题推荐 -->
+      <%=render :partial => "zhuan_ti_tui_jian"%>
+    </div>
+    <div class="clear"></div>
+    <div class="lbot"></div>
+    <div class="clear"></div>
+  </div>
+
+  <div class="sidetag-main">
+    <div class="ltopno tleft"><div class="sidetag-top">
+        <ul>
+          <li class="hoveron" style="_margin-left:5px">
+            <h2 style="font-size: 12px; padding-top: 0px;">
+              <%=@keyword_v%>相关图片
+            </h2>
+          </li>
+        </ul>
+      </div></div>
+    <!-- 图片相关 -->
+    <%=render :partial => "tu_pian_xiang_guan"%>
+    <div class="clear"></div>
+    <div class="lbot"></div>
+    <div class="clear"></div>
+  </div>
+
+
+  <div class="sidetag-main">
+    <div class="ltopno tleft"><div class="sidetag-top">
+        <ul>
+          <li class="hoveron" id="nav-250" style="_margin-left:5px">
+            <h2 style="font-size: 12px; padding-top: 0px;">
+              网友装修点评推荐
+            </h2>
+          </li>
+          <!-- <li onmouseover="HoverLi(21,1,2);" id="nav-211">热门标签</li> -->
+        </ul>
+      </div></div>
+    <div class="ltext">
+      <div id="tab-panel-250" class="">
+        <ul class="newst">
+          <%HejiaIndex.new_diaries(10).each do |r|%>
+            <li style="height:26px;"><a href="<%=r[:url]%>" target="_blank" rel="nofollow" class="grey" title="<%=r[:title]%>"><%=ul(r[:title],20)%></a></li>
+          <%end%>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="lbot"></div>
+  </div>
+
+  <div class="sidetag-main">
+    <div class="ltopno tleft"><div class="sidetag-top">
+        <ul>
+
+          <li class="hoveron" id="nav-230" style="_margin-left:5px">
+            <h2 style="font-size: 12px; padding-top: 0px;">
+              热门专区
+            </h2>
+          </li>
+        </ul>
+      </div></div>
+    <div class="ltext">
+      <div style="font-size:14px;padding:10px 20px;text-align:left;">
+        <p class="tag-cloud">
+          <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54136.xml",["title","url","image_url"],100)%>
+            <%i = rand(4)+1%>
+            <% if ["家具定制","尊皇软装","手工地毯"].include?(r["title"]) %>
+              <a rel="nofollow" href='<%=r["url"]%>' class="hot<%=i%>" target='_blank'><%=r["title"]%></a>&nbsp;&nbsp;
+            <% else %>
+              <a href='<%=r["url"]%>' class="hot<%=i%>" target='_blank'><%=r["title"]%></a>&nbsp;&nbsp;
+            <% end %>
+          <%end%>
+        </p>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="clear"></div><div class="lbot"></div>
+  </div>
+
+
+</div>
+

@@ -1,0 +1,2 @@
+module PinleiPindaoHelper
+end

@@ -1,0 +1,25 @@
+
+
+  <div id="map">
+
+  <div class="clear" style="margin-top:10px;"></div>
+  <div class="left">当前位置：<a href="http://www.51hejia.com" target="_blank">和家首页</a>&nbsp;&gt;&nbsp;
+  <a href="http://tuku.51hejia.com/zhuanqu" target="_blank">图库专区</a>&nbsp;&gt;&nbsp;
+  <a href="http://tuku.51hejia.com/zhuanqu/<%=@tag_id%>" target="_blank"><%=@tags[0]%></a>
+  </div>
+  <div class="clear" style="margin-top:10px;"></div>
+
+  <h2>关键词</h2>
+  <%last_sort_id = 0%>
+  <ul>
+    <%1.upto(@tags.length-1) do |i|%>
+      <%sort_id = @tags[i].split(",")[3].to_i%>
+      <%if sort_id != last_sort_id%>
+        <%last_sort_id = sort_id%>
+        </ul><h2><%=get_tagname_by_tag_id(sort_id)%>相关</h2><ul>
+      <%end%>
+      <%=get_tag_link(@tags[i])%> <%=%>
+    <%end%>
+  </ul>
+</div>
+

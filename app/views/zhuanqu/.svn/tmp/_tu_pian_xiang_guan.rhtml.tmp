@@ -1,0 +1,17 @@
+<div class="ltext">
+  <div>
+    <%ars = get_tuku_taotu_or_dantu(@zhuanqu.image_keyword, 4)  #获取图库套图%>
+    <%for ar in ars%>
+      <div class="pic-loop">
+        <div class="pic-12090">
+          <div class="pic-12090-img"><a href="<%=ar[:url]%>" target="_blank"><img src="<%=ar[:image_url]%>" width="114" height="84" alt="<%=ar[:title]%>" /></a></div>
+          <div class="pic-txt">
+            <p class="pt-title"><a href="<%=ar[:url]%>" target="_blank" class="black"><%=ul(ar[:title],9)%></a></p>
+          </div>
+        </div>
+      </div>
+    <%end%>
+    <div class='clear'></div>
+    <!--div class="stt-more">&raquo;</div-->
+  </div>
+</div>

@@ -1,0 +1,9 @@
+  <%ars = get_articles_by_editor_keyword(@keyword, 7)%>
+
+  <%if ars.length > 0%>
+    <%for ar in ars%>
+    <li style="height:26px;">
+      <a href="<%=ar["url"]%>" target="_blank" class="grey"><%=ar["title"]%></a>
+    </li>
+    <%end%>
+  <%end%>

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="http://js.51hejia.com/css/zhuangxiu1023.css" rel="stylesheet" type="text/css" />
+    <title>和家网-装修频道</title>
+  </head>
+
+
+  <ul class="iframe-list3">
+    <h3><a href="http://d.51hejia.com/zq/城市装修-上海装修.html" target="_blank">上海装修专区</a></h3>
+    <%for ar in get_articles_by_editor_keyword("上海装修", 4)%>
+      <li><a href="<%=ar["url"]%>" target="_blank"><%=ul(ar["title"],15)%></a></li>
+    <%end%>
+  </ul>
+  <ul class="iframe-list3 list7">
+    <h3><a href="http://d.51hejia.com/zq/城市装修-北京装修.html" target="_blank">北京装修专区</a></h3>
+    <%for ar in get_articles_by_editor_keyword("北京装修", 4)%>
+      <li><a href="<%=ar["url"]%>" target="_blank"><%=ul(ar["title"],15)%></a></li>
+    <%end%>
+  </ul>
+  <ul class="iframe-list3 list8">
+    <h3><a href="http://d.51hejia.com/zq/城市装修-广州装修.html" target="_blank">广州装修专区</a></h3>
+    <%for ar in get_articles_by_editor_keyword("广州装修", 4)%>
+      <li><a href="<%=ar["url"]%>" target="_blank"><%=ul(ar["title"],15)%></a></li>
+    <%end%>
+  </ul>
+  <ul class="iframe-list3 list9">
+    <h3><a href="http://d.51hejia.com/zq/城市装修/" target="_blank">其他城市装修专区</a></h3>
+    <li>
+      <a href="http://d.51hejia.com/zq/城市装修-成都装修.html" target="_blank">成都装修</a>&nbsp;&nbsp;
+      <a href="http://d.51hejia.com/zq/城市装修-深圳装修.html" target="_blank">深圳装修</a>&nbsp;&nbsp;
+      <a href="http://d.51hejia.com/zq/城市装修-西安装修.html" target="_blank">西安装修</a>
+    </li>
+    <li>
+      <a href="http://d.51hejia.com/zq/城市装修-青岛装修.html" target="_blank">青岛装修</a>&nbsp;&nbsp;
+      <a href="http://d.51hejia.com/zq/城市装修-无锡装修.html" target="_blank">无锡装修</a>&nbsp;&nbsp;
+      <a href="http://d.51hejia.com/zq/城市装修-南京装修.html" target="_blank">南京装修</a>
+    </li>
+    <li>
+      <a href="http://d.51hejia.com/zq/城市装修-重庆装修.html" target="_blank">重庆装修</a>&nbsp;&nbsp;
+      <a href="http://d.51hejia.com/zq/城市装修-天津装修.html" target="_blank">天津装修</a>&nbsp;&nbsp;
+      <a href="http://d.51hejia.com/zq/城市装修-沈阳装修.html" target="_blank">沈阳装修</a>
+    </li>
+    <li>
+      <a href="http://d.51hejia.com/zq/城市装修-大连装修.html" target="_blank">大连装修</a>&nbsp;&nbsp;
+      <a href="http://d.51hejia.com/zq/城市装修-杭州装修.html" target="_blank">杭州装修</a>&nbsp;&nbsp;
+      <a href="http://d.51hejia.com/zq/城市装修-哈尔滨装修.html" target="_blank">哈尔滨装修</a>
+    </li>
+    <li>
+      <a href="http://d.51hejia.com/zq/城市装修-武汉装修.html" target="_blank">武汉装修</a>&nbsp;&nbsp;
+      <a href="http://d.51hejia.com/zq/城市装修-香港装修.html" target="_blank">香港装修</a>&nbsp;&nbsp;
+      <a href="http://d.51hejia.com/zq/城市装修-济南装修.html" target="_blank">济南装修</a>
+    </li>
+    <li>
+      <a href="http://d.51hejia.com/zq/城市装修-苏州装修.html" target="_blank">苏州装修</a>&nbsp;&nbsp;
+      <a href="http://d.51hejia.com/zq/城市装修-台湾装修.html" target="_blank">台湾装修</a>&nbsp;&nbsp;
+      <a href="http://d.51hejia.com/zq/城市装修-澳门装修.html" target="_blank">澳门装修</a>
+    </li>
+  </ul>
+
+  <script type="text/javascript">
+    if (Math.ceil(Math.random()*(100))==1){  //有1%的概率会重新生成静态页面
+      document.write("<iframe style='display:none' width='0' height='0' src='/api/get_static?n=zq_articles_in_zhuangxiu'></iframe>");
+    }
+  </script>
+
+  <body>
+  </body>
+</html>

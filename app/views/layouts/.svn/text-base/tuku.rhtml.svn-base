@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv=Content-Type content="text/html;charset=utf-8" />
+<% if @action_name =='tuku_index' %>
+<title>【效果图】最新装修装饰效果图片, 装潢设计图_和家网图库频道</title>
+<meta name="keywords" content="室内装修效果图, 家装效果图,客厅效果图, 电视墙效果图, 餐厅效果图, 卧室装修图片, 厨房装修效果图, 卫生间装修效果图, 小户型装修效果图, 别墅效果图" />
+<meta name="description" content="一部最新最全的装修图片库,拥有最新流行的室内装修效果图,家装设计图片,为您带来无限灵感。精心挑选的客厅,餐厅,卧室,厨房,卫生间,书房,隔断,吧台装修效果图,小户型,别墅,建筑,办公室装修图片,以及电视背景墙,玄关,吊顶,鞋柜,酒柜,衣柜,橱柜效果图,精美绝伦,让您的家庭装潢梦想顺利达成！" />
+<% else %>
+  <%=render :partial => "h#{@tag_id}"%>
+<% end %>
+
+<link href="http://js.51hejia.com/css/theme_2.css?3843242" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://d.51hejia.com/css/news/sitemap/map.css" rel="stylesheet" type="text/css" />
+<script src="http://js.51hejia.com/js/public.js"></script>
+</head>
+<body>
+
+<%= render :partial => '/share/public_header' %>
+
+<div class="main">
+<div class="banner"><!--/* OpenX Javascript标签 v2.6.0 */-->
+
+<% if @action_name =='tuku_index' %>
+  <!--<iframe id='a1a1e94b' name='a1a1e94b' src='http://a.51hejia.com/www/delivery/afr.php?n=a1a1e94b&amp;zoneid=12&amp;cb=INSERT_RANDOM_NUMBER_HERE' framespacing='0' frameborder='no' scrolling='no' width='960' height='85'><a href='http://a.51hejia.com/www/delivery/ck.php?n=ad0df9e4&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://a.51hejia.com/www/delivery/avw.php?zoneid=12&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ad0df9e4' border='0' alt='' /></a></iframe> -->
+  <script type='text/javascript' src='http://a.51hejia.com/www/delivery/ag.php'></script>
+<% else %>
+    <script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://a.51hejia.com/www/delivery/ajs.php':'http://a.51hejia.com/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=69");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script>
+<noscript>
+  <a href='http://a.51hejia.com/www/delivery/ck.php?n=a125fb1d&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'>
+    <img src='http://a.51hejia.com/www/delivery/avw.php?zoneid=69&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a125fb1d' border='0' alt='' />
+    </a>
+</noscript>
+<% end %>
+</div>
+</div>
+
+<%=yield%>
+
+<div style="clear:both"></div>
+
+<%= render :partial => '/share/public_footer' %>
+
+</body>
+</html>

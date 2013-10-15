@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title><%= @ci["html_title"] %></title>
+  <meta name="keywords" content="<%= @ci["html_keywords"] %>"/>
+  <meta name="description" content="<%= @ci["html_description"] %>"/>
+  <link href="http://js.51hejia.com/css/2010/jusstyle.css?20100610" rel="stylesheet" type="text/css"/>
+  <link href="http://js.51hejia.com/css/zhuangxiu1123-b.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="http://js.51hejia.com/js/2010/tab.js"></script>
+  <script type="text/javascript" src="http://js.51hejia.com/js/picauto.js"></script>
+  <script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+  <script src="http://js2.51hejia.com/js/loopedslider.min.js" type="text/javascript"></script>
+
+  <script type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+  <!--script src="http://js.51hejia.com/js/zb-ad.js" type="text/javascript"></script-->
+  <script type="text/javascript">
+	function rember_cookies()
+	{
+		    document.cookie = "jie_sheng" + "="+ escape("jie_sheng") + ";path=/;domain=.51hejia.com";
+		    $('#jie_sheng_ad').hide();
+	}
+  </script>
+  <link href="http://js.51hejia.com/css/zb20120510.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<%= render :partial => '/share/public_header' %>
+
+<div class="width960 margin10">
+  <%= render_ad 54895, "时尚家居频道-首页顶部通栏", "afp" %>
+</div>
+
+<%# 居尚菜单显示开始 %>
+<script type="text/javascript">
+    function setFocus2(p, y, o, m) {
+        selectLayer2(p, y, o, m);
+    }
+    function selectLayer2(p, y, o, m) {
+        for (var i = 0; i < document.getElementById(y).getElementsByTagName(p).length;) {
+            document.getElementById(o + i).style.display = "none";
+            i++;
+        }
+        document.getElementById(o + m).style.display = "block";
+    }
+    function daohang(m) {
+        for (var z = 0; z <= 9;) {
+            document.getElementById(z + 1).style.backgroundImage = 'url(http://www.51hejia.com/images/jiaju1123/btn_bg_bk.gif)';
+            document.getElementById(z + 1).style.color = '#1a4176';
+            z++;
+        }
+        ;
+        document.getElementById(m).style.backgroundImage = 'url(http://www.51hejia.com/images/jiaju1123/btn_bg.gif)';
+        document.getElementById(m).style.color = '#fff';
+    }
+</script>
+<div class="top_menu clearfix" style="padding:0">
+  <div class="menu_main clearfix">
+    <div class="title clearfix">
+      <a href="http://www.51hejia.com" target="_blank"><img src="http://www.51hejia.com/images/zhuangxiu1126/51hejia.jpg"/></a>
+      <a href="http://www.51hejia.com/jushang/" target="_blank"><img src="http://www.51hejia.com/images/zhuangxiu1126/jslogo.jpg"/></a>
+      <ul>
+        <% for result in hejia_promotion_items(54303, :attributes => ['title', 'url'], :limit => 3) %>
+            <li><a href="<%= result["url"] %>" target="_blank"><%= result["title"] %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <style type="text/css">
+      .first_menu li a {
+          width: 92px;
+      }
+
+      .menubg .sc_menu .sc_tuig, .menubg .sc_menu .sc_tuig:hover {
+          font-size: 14px;
+          font-weight: bold;
+          color: white;
+          text-decoration: underline;
+          float: right;
+          background: none;
+      }
+  </style>
+
+  <div class="main_menu">
+    <div class="menubg">
+      <ul class="first_menu">
+        <li class="first">
+          <a id="1" href="http://www.51hejia.com/jushang/articleList/s-12428" onmouseover="javascript:setFocus2('li','U1','x',0);javascript:daohang(1);" target="_blank">新品介绍</a>
+        </li>
+        <li>
+          <a id="2" href="http://www.51hejia.com/jushang/articleList/s-12421" onmouseover="javascript:setFocus2('li','U1','x',1);javascript:daohang(2);" target="_blank">海外人家</a>
+        </li>
+        <li>
+          <a id="3" href="http://www.51hejia.com/jushang/articleList/s-12425" onmouseover="javascript:setFocus2('li','U1','x',2);javascript:daohang(3);" target="_blank">经典设计</a>
+        </li>
+        <li>
+          <a id="4" href="http://www.51hejia.com/jushang/articleList/s-12419" onmouseover="javascript:setFocus2('li','U1','x',3);javascript:daohang(4);" target="_blank">风格美家</a>
+        </li>
+        <li>
+          <a id="5" href="http://www.51hejia.com/jushang/articleList/s-12418" onmouseover="javascript:setFocus2('li','U1','x',4);javascript:daohang(5);" target="_blank">装饰搭配</a>
+        </li>
+        <li>
+          <a id="6" href="http://www.51hejia.com/jushang/articleList/s-12420" onmouseover="javascript:setFocus2('li','U1','x',5);javascript:daohang(6);" target="_blank">贴心买手</a>
+        </li>
+        <li>
+          <a id="7" href="http://www.51hejia.com/jushang/articleList/s-12429" onmouseover="javascript:setFocus2('li','U1','x',6);javascript:daohang(7);" target="_blank">家居风水</a>
+        </li>
+        <li>
+          <a id="8" href="http://deco.51hejia.com/zq/家居风格/" onmouseover="javascript:setFocus2('li','U1','x',7);javascript:daohang(8);" target="_blank">家居风格</a>
+        </li>
+        <li>
+          <a id="9" href="http://deco.51hejia.com/zq/家居收纳/" onmouseover="javascript:setFocus2('li','U1','x',8);javascript:daohang(9);" target="_blank">家居收纳 </a>
+        </li>
+        <li>
+          <a id="10" href="http://deco.51hejia.com/zq/" onmouseover="javascript:setFocus2('li','U1','x',9);javascript:daohang(10);" target="_blank">装饰专区 </a>
+        </li>
+        <script>
+            daohang(1);
+        </script>
+      </ul>
+      <ul class="sc_menu" id="U1">
+        <li id="x0" style="display:block;">
+          <% for result in hejia_promotion_items(54319, :attributes => ['title', 'url'], :limit => 10) %>
+              <a href="<%= result["url"] %>" target="_blank"><%= result["title"] %></a>
+          <% end %>
+
+          <%= render_ad(53075, "家居频道-文章终端页-顶部文字链") %>
+
+        </li>
+        <li id="x1" style="display:none;">
+          <% for result in hejia_promotion_items(54320, :attributes => ['title', 'url'], :limit => 10) %>
+              <a href="<%= result["url"] %>" target="_blank"><%= result["title"] %></a>
+          <% end %>
+        </li>
+        <li id="x2" style="display:none;">
+          <% for result in hejia_promotion_items(54321, :attributes => ['title', 'url'], :limit => 10) %>
+              <a href="<%= result["url"] %>" target="_blank"><%= result["title"] %></a>
+          <% end %>
+        </li>
+        <li id="x3" style="display:none;">
+          <% for result in hejia_promotion_items(54322, :attributes => ['title', 'url'], :limit => 10) %>
+              <a href="<%= result["url"] %>" target="_blank"><%= result["title"] %></a>
+          <% end %>
+        </li>
+        <li id="x4" style="display:none;">
+          <% for result in hejia_promotion_items(54323, :attributes => ['title', 'url'], :limit => 10) %>
+              <a href="<%= result["url"] %>" target="_blank"><%= result["title"] %></a>
+          <% end %>
+        </li>
+        <li id="x5" style="display:none;">
+          <% for result in hejia_promotion_items(54324, :attributes => ['title', 'url'], :limit => 10) %>
+              <a href="<%= result["url"] %>" target="_blank"><%= result["title"] %></a>
+          <% end %>
+        </li>
+        <li id="x6" style="display:none;">
+          <% for result in hejia_promotion_items(54326, :attributes => ['title', 'url'], :limit => 10) %>
+              <a href="<%= result["url"] %>" target="_blank"><%= result["title"] %></a>
+          <% end %>
+        </li>
+        <li id="x7" style="display:none;">
+          <% for result in hejia_promotion_items(54584, :attributes => ['title', 'url'], :limit => 10) %>
+              <a href="<%= result["url"] %>" target="_blank"><%= result["title"] %></a>
+          <% end %>                    </li>
+        <li id="x8" style="display:none;">
+          <% for result in hejia_promotion_items(54585, :attributes => ['title', 'url'], :limit => 10) %>
+              <a href="<%= result["url"] %>" target="_blank"><%= result["title"] %></a>
+          <% end %>
+        </li>
+        <li id="x9" style="display:none;">
+          <% for result in hejia_promotion_items(54586, :attributes => ['title', 'url'], :limit => 10) %>
+              <a href="<%= result["url"] %>" target="_blank"><%= result["title"] %></a>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="width960" style="margin-bottom: 5px;">
+  <%= render_ad 80881, "装修资讯-首页-通栏1+", "afp" %>
+  <!--embed align="middle" width="960" height="85" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" name="gamefile" quality="high" id="gamefile" src="http://js.51hejia.com/flash/zd.swf"-->
+</div>
+
+<%= render :partial => "dianxing/jushang/part1" %>
+
+<%= render :partial => "dianxing/jushang/part2" %>
+
+<div class="width960 clearfix" style="margin-bottom: 7px;">
+  <div class="f_l">
+    <%= render_ad(76485, "家居时尚-首页-大旗1", 'afp') %>
+  </div>
+  <div class="f_r">
+    <%= render_ad(76481, "家居时尚—首页—宽幅1", 'afp') %>
+  </div>
+</div>
+
+<%= render :partial => "dianxing/jushang/lanmu1" %>
+
+<div class="width960 margin10">
+  <%= render_ad(54849, "家居频道-首页中部通栏", 'afp') %>
+</div>
+
+<%= render :partial => "dianxing/jushang/lanmu2" %>
+
+<div class="width960 margin10">
+  <%= render_ad(84139, "居尚-首页-通栏3", 'afp') %>
+</div>
+
+<%= render :partial => "dianxing/jushang/lanmu3" %>
+
+<div class="width960 margin10">
+  <%= render_ad(54847, "家居频道-首页底部通栏", 'afp') %>
+</div>
+
+<%= render :partial => "dianxing/jushang/lanmu4" %>
+
+<%= render :partial => "dianxing/jushang/lanmu5" %>
+
+<div style="margin:0 auto; width:900px; padding:10px 0px 20px 0px">
+  <link href='http://js.51hejia.com/css/hejia_friendly_links1.css' rel='stylesheet' type='text/css'/>
+  <ul id="hejia_friendly_links">
+    <li><a href='http://www.51hejia.com/link/link/index.htm' target='_blank'>友情链接:</a></li>
+    <% @friendly_links.each do |r| %>
+        <li><a href='<%= r["url"] %>' target='_blank'><%= r["title"] %></a></li>
+    <% end %>
+  </ul>
+</div>
+<%= render :partial => '/share/public_footer' %>
+
+<script type="text/javascript">
+    function open_gongyi_ad_url() {
+        var url_img = new Image();
+        url_img.onerror = url_img.onload = function () {
+            try {
+                delete url_img
+            } catch (e) {
+            }
+        }
+        url_img.src = "http://api.51hejia.com/statistics?code=gongyi_ad_gif&style=open&source=www.51hejia.com/jushang/"
+        window.open("http://www.51hejia.com/zhuanti/daguanjia201206/index.html");
+    }
+</script>
+<style type="text/css">
+    .footer_ad {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
+        _position: absolute;
+        _left: expression(eval(document.documentElement.scrollLeft));
+        _top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+        background: url(http://js.51hejia.com/img/ad_bg.gif) no-repeat top center;
+    }
+
+    .footer_ad .footer_ad_img {
+        width: 1000px;
+        height: 84px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .footer_ad a.footer_ad_close {
+        width: 16px;
+        height: 16px;
+        margin: 0px;
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        background: url(http://js1.51hejia.com/img/zxdpimg/contrast_li_close.jpg) no-repeat;
+        z-index: 99;
+    }
+
+    .footer_ad a.footer_ad_link {
+        display: block;
+        width: 1000px;
+        height: 84px;
+        margin: 0 auto;
+    }
+</style>
+<div class="footer_ad" id="footer_ad">
+  <div class="footer_ad_img">
+    <%= render_ad(81063, '居尚频道-首页-飘带底', 'afp') %>
+    <a class="footer_ad_close" href="javascript:void(0);" onclick="$('#footer_ad').hide();"></a>
+  </div>
+</div>
+
+<% if render_ad(82301, '居尚-左漂浮', 'afp').include?("<span>") %>
+    <div style="left: 0px; position: absolute; top: 100px;" id="ALayer1">
+      <div align="left">
+        <img border="0" style="cursor:pointer" onclick="closeBanner();" src="http://js.51hejia.com/img/dl_close.gif">
+      </div>
+      <%= render_ad(82301, '居尚-左漂浮', 'afp') %>
+    </div>
+<% end %>
+<% if render_ad(82303, '居尚-右漂浮', 'afp').include?("<span>") %>
+    <div style="right: 0px; position: absolute; top: 100px;" id="ALayer2">
+      <div align="right"><img border="0" onclick="closeBanner();" src="http://js.51hejia.com/img/dl_close.gif"></div>
+      <%= render_ad(82303, '居尚-右漂浮', 'afp') %>
+    </div>
+<% end %>
+<% if render_ad(82301, '居尚-左漂浮', 'afp').include?("<span>") || render_ad(82303, '居尚-右漂浮', 'afp').include?("<span>") %>
+<script type="text/javascript">
+    if (remote_ip_info.city == '上海') {
+        lastScrollY = 0;
+        function heartBeat() {
+            var diffY;
+            if (document.documentElement && document.documentElement.scrollTop) {
+                diffY = document.documentElement.scrollTop;
+            }
+            else if (document.body) {
+                diffY = document.body.scrollTop
+            }
+            else {
+            }
+            percent = .1 * (diffY - lastScrollY);
+            if (percent > 0) {
+                percent = Math.ceil(percent);
+            }
+
+            else {
+                percent = Math.floor(percent);
+            }
+            document.getElementById("ALayer1").style.top = parseInt(document.getElementById("ALayer1").style.top) + percent + "px";
+            document.getElementById("ALayer2").style.top = parseInt(document.getElementById("ALayer1").style.top) + percent + "px";
+            lastScrollY = lastScrollY + percent;
+        }
+
+        window.setInterval("heartBeat()", 1);
+        function closeBanner() {
+            document.getElementById("ALayer1").style.display = 'none';
+            document.getElementById("ALayer2").style.display = 'none';
+        }
+    }
+</script>
+<% end %>
+<% if false #if cookies["jie_sheng"].blank? %>
+	<div id="jie_sheng_ad" style="bottom: 0px; right: 0px;_position:absolute; _top:expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight);" class="zb-ad" title="">
+		<%= render_ad(81065, '居尚频道-首页-弹窗右下', 'afp') %>
+		<a class="close" id="jie_sheng" onclick="rember_cookies();"></a>
+	</div>
+<% end %>
+<iframe width="0" scrolling="no" height="0" frameborder="0" noresize="" name="framelink" id="framelink" border="0" src=""></iframe>
+<script type="text/javascript" src="http://api.51hejia.com/analog_codes?code=SYVE5vGqkRtWvrJMd6AL"></script>
+</body>
+</html>

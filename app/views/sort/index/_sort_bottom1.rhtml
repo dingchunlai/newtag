@@ -1,0 +1,91 @@
+<%topics = get_about_list(3, @kw, 14)%>
+<%
+for t in get_about_list(3, "装修", 14-topics.length)
+  if t["url"].include?("/topic/")
+    t["url"] = "http://bbs.51hejia.com/forum.php?mod=viewthread&tid=" + t["url"].split("/topic/")[1] + "&extra=page%3D2"
+  end
+  topics << t
+end
+%>
+<div class="main clearfix margin10">
+
+  <div style="float:left">
+    <div class="bbox">
+      <div id="sub_29">
+        <h2>
+          <a href="http://bbs.51hejia.com" target="_blank" class="more">
+            <img src="http://www.51hejia.com/images/woshi522/more.gif" border="0" />
+          </a>
+          <a href="http://bbs.51hejia.com" target="_blank"><%=@kw%>网友交流区</a>
+        </h2>
+      </div>
+      <div class="bboxa01">
+        <div class="bbox01">
+          <div class="bboxleft">
+            <div id="sub_30">
+              <a href="http://bbs.51hejia.com" target="_blank"><img src="http://d.51hejia.com/api/images/0000/0843/1.jpg" alt="aaa" border="0" /></a>
+            </div>
+            <div id="sub_31">
+              <ul>
+                <%1.upto(4) do |i|%>
+                  <%break if topics[i].nil?%>
+                  <li><a href="<%=topics[i]["url"]%>" target="_blank"><%=ul(topics[i]["title"],18)%></a></li>
+                <%end%>
+              </ul>
+            </div>
+
+          </div>
+          <div class="bboxright">
+            <div id="sub_32">
+              <%unless topics[0].nil?%><h4><a href="<%=topics[0]["url"]%>" target="_blank"><%=ul(topics[0]["title"],18)%></a></h4><%end%>
+            </div>
+            <div id="sub_33">
+              <ul>
+                <%5.upto(9) do |i|%>
+                  <%break if topics[i].nil?%>
+                  <li><a href="<%=topics[i]["url"]%>" target="_blank"><%=ul(topics[i]["title"],18)%></a></li>
+                <%end%>
+              </ul>
+            </div>
+            <div id="sub_34">
+              <ul class="line">
+                <%10.upto(13) do |i|%>
+                  <%break if topics[i].nil?%>
+                  <li><a href="<%=topics[i]["url"]%>" target="_blank"><%=ul(topics[i]["title"],18)%></a></li>
+                <%end%>
+              </ul>
+            </div>
+            <div id="sub_35">
+              <p><a href="http://bbs.51hejia.com/new/471?parent_id=471" target="_blank">我要提问</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brbox" style="height:274px;">
+    <div id="sub_36">
+      <h2><a href="<%=sort("zt_url1")%>" target="_blank"><%=sort("zt_title1")%></a></h2>
+    </div>
+    <div id="sub_37">
+      <dl class="l">
+        <dt><a href="<%=sort("zt_url2")%>" target="_blank"><img src="<%=sort("zt_image_url2")%>" width="132" height="99" alt="<%=sort("zt_title2")%>" border="0" /></a></dt>
+        <dd><a href="<%=sort("zt_url2")%>" title="<%=sort("zt_title2")%>" target="_blank"><%=ul(sort("zt_title2"), 10)%></a></dd>
+      </dl>
+      <dl class="r">
+        <dt><a href="<%=sort("zt_url3")%>" target="_blank"><img src="<%=sort("zt_image_url3")%>" width="132" height="99" alt="<%=sort("zt_title3")%>" border="0" /></a></dt>
+        <dd><a href="<%=sort("zt_url3")%>" title="<%=sort("zt_title3")%>" target="_blank"><%=ul(sort("zt_title3"), 10)%></a></dd>
+      </dl>
+    </div>
+    <div id="sub_38">
+      <ul>
+        热门关键词<br/>
+        <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54136.xml",["title","url","image_url"],100)%>
+          <%i = rand(4)+1%>
+          <li><a href='<%=r["url"]%>' target='_blank'><%=r["title"]%></a></li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+</div>

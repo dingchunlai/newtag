@@ -1,0 +1,126 @@
+<div class="index-container">
+  <!--header-->
+  <div class="clear"></div>
+  <!--content-->
+  <div class="clear" style="margin-top:10px;"></div>
+  <div class="nav_m tleft" style="width:640px;">
+    <div class="left">
+      <div class="left">
+        当前位置：<a href="http://www.51hejia.com">和家首页</a>&nbsp;&gt;&nbsp;
+        <a href="http://<%= request.host %>/zq/<%=u(@zhuanqu.sort_name)%>" target="_blank"><%=@zhuanqu.sort_name%></a>&nbsp;&gt;&nbsp;
+      </div>
+      <h1 style="float:left;font-size: 14px;">
+        <a href="http://<%= request.host %>/zq/<%=u(@zhuanqu.sort_name)%>-<%=u(@keyword_v)%>.html" target="_blank"><%=@keyword_v%></a>
+      </h1>
+    </div>
+
+    <div class="clear"></div>
+  </div>
+  <div class="right">
+    <form action="http://zhannei.baidu.com/cse/search" target="_blank">
+      <input name="s" type="hidden" value="7289350921164188503" />
+      <input type="text" name="q" size="30" style="width:115px;border:1px solid #e0e0e0;height:23px;height:21px;line-height:22px;margin-right:3px;" />
+      <input type="submit" value="搜索" class="inputss" />
+    </form>
+  </div>
+  <div class="clear" style="margin-bottom:5px;"></div>
+  <!--right-->
+  <%=render :partial => "keyword_right"%>
+
+  <!--left-->
+  <div class="right">
+    <div style="width:620px;overflow:hidden;margin-right:10px;">
+
+      <%if @is_has_diaries%>
+        <div class="zhuanqu_tab <%= @entity_type_id==1 ? "zhuanqu_tabbg01" : "zhuanqu_tabbg02" %> margin10 clearfix">
+          <a href="<%="/zq/#{u(@zhuanqu.sort_name)}-#{@keyword_v}.html"%>" title="精选案例" <%='class="zhuanqu_tab_cur"' if @entity_type_id==7%> >精选案例</a>
+          <a href="<%="/zq/#{u(@zhuanqu.sort_name)}-#{@keyword_v}.html?entity_type=diaries"%>" title="网友秀家" <%='class="zhuanqu_tab_cur"' if @entity_type_id==1%> >网友秀家</a>
+        </div>
+      <%end%>
+
+      <%for ar in @ars%>
+        <% if ar.url and ar.url.include?("zhuangxiugushi") %>
+          <% ar.url = ar.url.split("/gs")[0] + "/stories" + ar.url.split("zhuangxiugushi")[1] %>
+        <% end %>
+        <div class="topic-show">
+          <div class="borderb2 tleft">
+            <div style="background: url('http://image.51hejia.com/images/tags/coint.gif') no-repeat scroll 2px 2px transparent;color: #FF6600;font-size: 16px;line-height: 22px;padding-left: 24px;padding-right: 18px;margin-bottom: 5px;">
+              [<%= @entity_type_id==1 ? "精选案例" : "网友秀家"%>]
+              <a href="<%=ar.url%>" target="_blank"><%=ar.title%></a>
+              <%if current_staff && current_staff.hejia_editor?%>
+                <%=link_to "[删除关联]", "/admin/relation_delete?keyword_id=#{@keyword_id}&entity_id=#{ar.entity_id}", :confirm => "您确定要删除该记录与本专区的关联吗？", :target => 'hideiframe_loginout'%>
+              <%end%>
+
+              <span style="float:right"><%= ar.entity_created_at.strftime("%Y-%m-%d") rescue "" %></span>
+            </div>
+          </div>
+          <div class="ts-content">
+            &nbsp;&nbsp;
+            <%= ul(ar.resume.to_s.sub("{==PAGE-BREAK==}", ""),140) %>
+            <a href="<%=ar.url%>" target="_blank">&gt;&gt;查看全文</a>
+          </div>
+          <%unless ar.image_url.nil?%>
+            <% ar.image_url = ar.image_url.gsub("http://image.51hejia.comhttp:","http:") %>
+            <p class="thumb"><a href="<%=ar.url%>" target="_blank"><img src="<%=ar.image_url%>" onload="if (this.width>550) this.width=550;" alt="<%=ar.title%>" /></a></p>
+            <%unless ar.image_url2.nil?%>
+              <p class="thumb">
+                <% if ar.image_url2.include?("http://image.51hejia.comhttp:") %>
+                  <% ar.image_url2 = ar.image_url2.gsub("http://image.51hejia.comhttp:","http:") %>
+                  <a href="<%=ar.url%>" target="_blank"><img src="<%=ar.image_url2%>" alt="<%=ar.title%>" width="120" height="90" /></a>
+                <% end %>
+                <%unless ar.image_url3.nil?%>
+                  <% if ar.image_url3.include?("http://image.51hejia.comhttp:") %>
+                    <% ar.image_url3 = ar.image_url3.gsub("http://image.51hejia.comhttp:","http:") %>
+                  <% end %>
+                  <a href="<%=ar.url%>" target="_blank"><img src="<%=ar.image_url3%>" alt="<%=ar.title%>" width="120" height="90" /></a>
+                <%end%>
+                <%unless ar.image_url4.nil?%>
+                  <% if ar.image_url4.include?("http://image.51hejia.comhttp:") %>
+                    <% ar.image_url4 = ar.image_url4.gsub("http://image.51hejia.comhttp:","http:") %>
+                  <%end%>
+                  <a href="<%=ar.url%>" target="_blank"><img src="<%=ar.image_url4%>" alt="<%=ar.title%>" width="120" height="90" /></a>
+                <%end%>
+                <%unless ar.image_url5.nil?%>
+                  <% if ar.image_url5.include?("http://image.51hejia.comhttp:") %>
+                    <% ar.image_url5 = ar.image_url5.gsub("http://image.51hejia.comhttp:","http:") %>
+                  <%end%>
+                  <a href="<%=ar.url%>" target="_blank"><img src="<%=ar.image_url5%>" alt="<%=ar.title%>" width="120" height="90" /></a>
+                <%end%>
+              </p>
+            <%end%>
+          <%end%>
+          <div class="clear"></div>
+          <div class="borderb2b"></div>
+          <div class="clear"></div>
+          <div class="aboutarticle marginb20">
+            <ul class="toplr clear">
+              <li class="classtag">标签：
+                <%ar.keywords.each do |kw|%>
+                  <% url = URI.escape(get_zq_inner_link(kw, '', '', true) + (@entity_type_id==7?"?entity_type=diaries":"")) %>
+                  <a href="<%= url %>"><%= kw %></a>
+                  &nbsp;&nbsp;&nbsp;
+                <%end%>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <%end%>
+
+      <div class="topic-page">
+        <span id="pagelist">
+          <%= will_paginate @ars,
+            :inner_window => 1,
+            :outer_window => 1,
+            :page_links => true,
+            :prev_label => '上一页',
+            :next_label => '下一页',
+            :separator => "　"
+        %>
+        </span>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <!--header-->
+  <div class="clear"></div>
+</div>

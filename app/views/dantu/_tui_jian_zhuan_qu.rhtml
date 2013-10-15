@@ -1,0 +1,13 @@
+<dl>
+  <%i = 1; links = []%>
+  <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/#{api_id}.xml", ["title", "url",], 12)%>
+    <%if i == 1%>
+      <dt><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=r["title"]%></a></dt><dd>
+    <%else%>
+      <%links << "<a href='#{r["url"]}' target='_blank'>#{r["title"]}</a>"%>
+    <%end%>
+    <%i += 1%>
+  <%end%>
+  <%=links.join("<span>|</span>")%>
+  </dd>
+</dl>

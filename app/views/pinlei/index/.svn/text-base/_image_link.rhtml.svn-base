@@ -1,0 +1,33 @@
+ <div class="box">
+          <h3><%=get_tuku_link(@ci["tuku_kw"], "", "#{@kw}图片相关")%></h3>
+          <ul class="list4 clearfix">
+            <%
+            rawnum=parames[:raws]
+            colnum=parames[:cols]
+            show_count=parames[:show_count]
+            omit_symbol =parames[:omit_symbol].nil? ? "" : parames[:omit_symbol]
+            li_class="clearfix"
+            pics=  get_tuku_taotu_or_dantu(@ci["tuku_kw"], rawnum*colnum)
+            0.upto(rawnum-1) do |i|
+            li_class="last clearfix" if i==rawnum-1
+            %>
+               <li class="<%=li_class%>">
+                 <%
+                 0.upto(colnum-1) do |n|
+                   pic=pics[i*colnum+n]
+                  %>
+                    <div class="refix">
+                      <% unless pic.nil? %>
+                          <a href="<%=pic[:url]%>" target="_blank">
+                            <img src="<%=pic[:image_url]%>" alt="<%=pic[:title]%>" width="90" height="88"/>
+                           </a>
+                          <p>
+                             <a href="<%=pic[:url]%>" target="_blank" title="<%=pic[:title]%>"><%=ul(pic[:title],show_count,0,omit_symbol)%></a>
+                          </p>
+                     <%end%>
+                   </div>
+                <%end%>
+               </li>
+             <%end%>
+            </ul>
+  </div>

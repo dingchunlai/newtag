@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/376/51hejia/repos/newtag/release/vendor/extensions/hejia/lib/hejia
+END
+sys_logger.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/103/51hejia/repos/newtag/release/vendor/extensions/hejia/lib/hejia/sys_logger.rb
+END
+cache.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/103/51hejia/repos/newtag/release/vendor/extensions/hejia/lib/hejia/cache.rb
+END
+fix_timestamp_zone.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/103/51hejia/repos/newtag/release/vendor/extensions/hejia/lib/hejia/fix_timestamp_zone.rb
+END
+db.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/376/51hejia/repos/newtag/release/vendor/extensions/hejia/lib/hejia/db.rb
+END
+impression.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/103/51hejia/repos/newtag/release/vendor/extensions/hejia/lib/hejia/impression.rb
+END
+location.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/103/51hejia/repos/newtag/release/vendor/extensions/hejia/lib/hejia/location.rb
+END

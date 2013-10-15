@@ -1,0 +1,12 @@
+<div class="ltop" style="background:url(http://www.51hejia.com/images/tags/t309X9bgf4.gif) no-repeat;"></div>
+
+<div class="ltext" style="background:#f4f4f4;"><style>p.webseo{padding:0 25px;text-align:left;background:#f4f4f4;margin:0px;line-height:200%;word-break:keep-all;}p.webseo a.topic_a:link,p.webseo a.topic_a:visited,p.webseo a.topic_a:active{margin-right:10px;border:0;},p.webseo a.topic_a:hover{text-decoration:underline;}</style>
+<h3 class="left clear" style="padding-left:10px;margin:4px 0 10px;">相关标签</h3><div class="clear"></div>
+<p class="webseo">
+  <%for kw in about_keywords()%>
+    <a href='/<%=u(kw.name)%>.html' class="topic_a" target='_blank'><%=kw.name%></a>&nbsp;&nbsp;
+  <%end%>
+</p>
+</div>
+
+<div class="lbot" style="background:url(http://www.51hejia.com/images/tags/b309X9bgf4.gif) no-repeat;"></div>

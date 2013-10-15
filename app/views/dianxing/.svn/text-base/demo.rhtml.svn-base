@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>demo</title>
+
+<!-- 公共头部与尾部所依赖的调用 开始 -->
+<link href="http://js.51hejia.com/css/header914.css?99170917" rel="stylesheet" type="text/css" />
+<link href="http://js.51hejia.com/css/sdeco-w.css?1313" rel="stylesheet" type="text/css" />
+<!-- 公共头部与尾部所依赖的调用 结束 -->
+
+</head>
+<body>
+
+<div class="top_menu clearfix">
+
+  <%=render :partial => "/share/channel/head"%>
+
+</div>
+
+  这是内容
+
+<%=render :partial => "/share/channel/bottom"%>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<div id="tab-panel-221" class="hidden">
+
+    <div class="pic-loop">
+        <div class="pic-12090">
+            <div class="pic-12090-img"><a href="<%=@zhuanqu.zt_url1%>" target="_blank"><img src="<%=@zhuanqu.zt_image_url1%>" alt="<%=@zhuanqu.zt_title1%>" width="114" height="84" /></a></div>
+            <div class="pic-txt">
+                <h3 class="pt-title"><a href="<%=@zhuanqu.zt_url1%>" target="_blank" class="black"><%=@zhuanqu.zt_title1%></a></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="pic-loop">
+        <div class="pic-12090">
+            <div class="pic-12090-img"><a href="<%=@zhuanqu.zt_url2%>" target="_blank"><img src="<%=@zhuanqu.zt_image_url2%>" alt="<%=@zhuanqu.zt_title2%>" width="114" height="84" /></a></div>
+            <div class="pic-txt">
+                <h3 class="pt-title"><a href="<%=@zhuanqu.zt_url2%>" target="_blank" class="black"><%=@zhuanqu.zt_title2%></a></h3>
+            </div>
+        </div>
+    </div>
+
+		<div class='clear'></div>
+
+    <div class="pic-loop">
+        <div class="pic-12090">
+            <div class="pic-12090-img"><a href="<%=@zhuanqu.zt_url3%>" target="_blank"><img src="<%=@zhuanqu.zt_image_url3%>" alt="<%=@zhuanqu.zt_title3%>" width="114" height="84" /></a></div>
+            <div class="pic-txt">
+                <h3 class="pt-title"><a href="<%=@zhuanqu.zt_url3%>" target="_blank" class="black"><%=@zhuanqu.zt_title3%></a></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="pic-loop">
+        <div class="pic-12090">
+            <div class="pic-12090-img"><a href="<%=@zhuanqu.zt_url4%>" target="_blank"><img src="<%=@zhuanqu.zt_image_url4%>" alt="<%=@zhuanqu.zt_title4%>" width="114" height="84" /></a></div>
+            <div class="pic-txt">
+                <h3 class="pt-title"><a href="<%=@zhuanqu.zt_url4%>" target="_blank" class="black"><%=@zhuanqu.zt_title4%></a></h3>
+            </div>
+        </div>
+    </div>
+
+		<div class='clear'></div>
+		
+			<!-- <div class="stt-more">&raquo; <a href="/topic/pic/506/">更多</a></div> -->
+</div>

@@ -1,0 +1,95 @@
+<div class="width960">
+  <div class="jus_ty clearfix">
+
+
+    <div class="jus_ty_tit">
+      <h2>┇<%=get_zq_inner_link(@lanmu4[0])%>
+        <label>Home</label>
+      </h2>
+      <span>
+        <%@lanmu4[1..5].each do |lanmu|%>
+          <%=get_zq_inner_link(lanmu)%> |
+        <%end%>
+        <%=get_zq_inner_link(@lanmu4[0],"jus_ty_more","more》")%>
+      </span>
+    </div>
+
+
+    <div class="jus_ty_l f_l">
+<%#栏目4 API推广大图文################################%>
+      <div class="jus_tyl_hot"><a href="<%=@lanmu4_tw[0]["url"]%>" target="_blank" title="<%=@lanmu4_tw[0]["title"]%>"><img src="<%=@lanmu4_tw[0]["image_url"]%>" alt="<%=@lanmu4_tw[0]["title"]%>" /></a>
+        <h3><a href="<%=@lanmu4_tw[0]["url"]%>" target="_blank" title="<%=@lanmu4_tw[0]["title"]%>"><%=@lanmu4_tw[0]["title"]%></a></h3>
+        <p><%=ul(@lanmu4_tw[0]["description"],28)%> [<a href="<%=@lanmu4_tw[0]["url"]%>" target="_blank">查看详情</a>]</p>
+      </div>
+<%#栏目4 API推广大图文################################%>
+      <div class="jus_tyl_tags">
+        <%@tuiguang[5]["title"].split(" ").each do |k|%>
+          <%=get_zq_inner_link(k)%>
+        <%end%>
+      </div>
+    </div>
+
+
+    <div class="jus_ty_c f_l">
+      <%@lanmu4[1..3].each do |lanmu|%>
+        <%rs = get_articles_by_editor_keyword(lanmu, 4)%>
+        <%ids = rs.map{ |r| r["entity_id"] }%>
+        <h3><%=get_zq_inner_link(lanmu)%></h3>
+        <div class="jus_tyc_txt clearfix">
+          <%unless rs[0].nil?%>
+            <div class="jus_tyc_img"><a href="<%=rs[0]["url"]%>" target="_blank"><img src="<%=HejiaArticle.get_one_image_url_by_any_ids(ids)%>" alt="<%=rs[0]["title"]%>" /></a></div>
+            <h4><a href="<%=rs[0]["url"]%>" target="_blank" title="<%=rs[0]["title"]%>"><%=rs[0]["title"]%></a></h4>
+            <p><%=ul(HejiaIndex.get_resume_by_id(rs[0]["id"]),20)%> [<a href="<%=rs[0]["url"]%>" target="_blank">查看详情</a>]</p>
+          <%end%>
+          <ul>
+            <%[1,2,3].each do |i|%>
+              <%unless rs[i].nil?%>
+                <li>>> <a href="<%=rs[i]["url"]%>" target="_blank" title="<%=rs[i]["title"]%>"><%=rs[i]["title"]%></a></li>
+              <%end%>
+            <%end%>
+          </ul>
+        </div>
+      <%end%>
+    </div>
+
+    <div class="jus_ty_r f_r">
+      <div class="jus_tyr_top">
+        <h3><%=get_zq_inner_link(@lanmu4[0])%></h3>
+        <div class="jus_lhqy_l f_l"><a href="<%=@lanmu4_tw[1]["url"]%>" target="_blank">
+            <img src="<%=@lanmu4_tw[1]["image_url"]%>" alt="<%=@lanmu4_tw[1]["title"]%>" /></a></div>
+        <div class="jus_lhqy_r f_l">
+          <h4><a href="<%=@lanmu4_tw[2]["url"]%>" target="_blank" title="<%=@lanmu4_tw[2]["title"]%>"><%=@lanmu4_tw[2]["title"]%></a></h4>
+          <p><a href="<%=@lanmu4_tw[2]["url"]%>" target="_blank">
+              <img src="<%=@lanmu4_tw[2]["image_url"]%>" alt="<%=@lanmu4_tw[2]["title"]%>" /></a>
+            <%=ul(@lanmu4_tw[2]["description"], 76)%>
+            [<a href="<%=@lanmu4_tw[2]["url"]%>" target="_blank">查看详情</a>]</p>
+        </div>
+      </div>
+
+      <%lanmu = @lanmu4[4]%>
+      <%rs = get_articles_by_editor_keyword(lanmu, 3)%>
+      <div class="jus_tyr_bottom">
+        <h3><%=get_zq_inner_link(lanmu)%></h3>
+        <div>
+
+          <div class="jus_tyrb_img">
+            <a href="<%=@lanmu4_tw[3]["url"]%>" target="_blank">
+              <img src="<%=@lanmu4_tw[3]["image_url"]%>" alt="<%=@lanmu4_tw[3]["title"]%>" />
+            </a></div>
+
+          <h4><a href="<%=@lanmu4_tw[3]["url"]%>" target="_blank" title="<%=@lanmu4_tw[3]["title"]%>">
+              <%=@lanmu4_tw[3]["title"]%></a></h4>
+          <p><%=ul(@lanmu4_tw[3]["description"], 34)%>
+            [<a href="<%=@lanmu4_tw[3]["url"]%>" target="_blank">查看详情</a>]</p>
+          <ul>
+            <%[0,1,2].each do |i|%>
+              <%unless rs[i].nil?%>
+                <li>>> <a href="<%=rs[i]["url"]%>" target="_blank" title="<%=rs[i]["title"]%>"><%=rs[i]["title"]%></a></li>
+              <%end%>
+            <%end%>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

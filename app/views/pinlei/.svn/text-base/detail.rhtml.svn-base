@@ -1,0 +1,108 @@
+<%cache do%>
+
+  <div class="main" id="class01">
+    <div class="banner">
+      <div id="sub_00"><img src="<%= ne(@pinlei.bgimg_url) ? @pinlei.bgimg_url : "http://member.51hejia.com/images/nil.gif"%>" height="242" width="960" /></div>
+      <div class="bannerbg" id="sub_01"><img src="<%= ne(@pinlei.img_url) ? @pinlei.img_url : "http://member.51hejia.com/images/nil.gif"%>" height="167" width="245" /></div>
+      <div id="sub_03"><h1 style="font-family:'黑体';font-weight:normal;color:<%=@title_color%>"><%=@keyword%></h1></div>
+      <div class="tittext" id="sub_04">
+        <p style="color:<%=@intro_color%>"><%=@pinlei.intro%></p>
+      </div>
+    </div>
+    <div class="box01">
+      <div id="sub_05"><h3><%=@keyword%>产品属性</h3></div>
+      <div class="text01" id="sub_06" style="height:258px;">
+        <%=@pinlei.property%>
+      </div>
+    </div>
+    <div class="box02">
+      <div id="sub_07"><h3><%=@keyword%>精华文章</h3></div>
+      <div id="sub_08"><ul>
+          <%for r in get_rs_by_any_keywords("#{@keyword},#{PINLEI_SORT[@pinlei.sort_id]}", 10){|kw, limit| get_articles_by_editor_keyword(kw, limit)}%>
+            <li>&#8226; <a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=ul(r["title"],17)%></a></li>
+          <%end%>
+        </ul></div>
+    </div>
+
+  <%#品牌与产品，因产品的图片链接取得方法有问题，暂时注释%>
+  <%#=render :partial => "pinlei/detail/brands"%>
+
+    <div class="box04">
+      <div id="sub_13"><h3><%=@keyword%>样板图片搭配</h3></div>
+      <div class="text01 clearfix" id="sub_14">
+        <%for r in get_rs_by_any_keywords("#{@keyword},#{PINLEI_SORT[@pinlei.sort_id]}", 12){|kw, limit| get_tuku_taotu_or_dantu(kw, limit)}%>
+          <dl><dt><a href="<%=r[:url]%>" target="_blank"><img src="<%=r[:image_url]%>" alt="<%=r[:title]%>" width="139" height="103" /></a></dt>
+            <dd><a href="<%=r[:url]%>" target="_blank" title="<%=r[:title]%>">
+                <%=ul(r[:title],11)%>
+              </a></dd>
+          </dl>
+        <%end%>
+      </div>
+    </div>
+
+    <div class="box01">
+      <div id="sub_15"><h3>网友交流区</h3></div>
+      <div class="text03 clearfix">
+        <div class="text03_left">
+          <span><a href="http://bbs.51hejia.com/new/471?parent_id=471" target="_blank" title="我要提问">我要提问</a></span>
+          <div id="sub_16"><h5>和家论坛</h5></div>
+          <div class="pic" id="sub_17"><a href="http://bbs.51hejia.com" target="_blank" title="论坛"><img src="http://image.51hejia.com/api/images/0000/1985/nuobeier2.jpg" width="120" height="90" alt="论坛" /></a></div>
+          <div id="sub_18"><ul>
+              <%topics = get_rs_by_any_keywords("#{@keyword},#{PINLEI_SORT[@pinlei.sort_id]}", 16){|kw, limit| get_about_list(3, kw, limit)}%>
+              <%0.upto(3) do |i|%>
+                <%break if topics[i].nil?%>
+                <li><a href="<%=topics[i].url%>" target="_blank" title="<%=topics[i].title%>">[论坛] <%=ul(topics[i].title,12)%></a></li>
+              <%end%>
+            </ul></div>
+          <div class="pic" id="sub_19"><a href="http://bbs.51hejia.com" target="_blank" title="论坛"><img src="http://image.51hejia.com/api/images/0000/1774/wodile3.jpg" width="120" height="90" alt="论坛" /></a></div>
+          <div id="sub_20">
+            <ul>
+              <%4.upto(7) do |i|%>
+                <%break if topics[i].nil?%>
+                <li><a href="<%=topics[i].url%>" target="_blank" title="<%=topics[i].title%>">[论坛] <%=ul(topics[i].title,12)%></a></li>
+              <%end%>
+            </ul></div>
+        </div>
+        <div class="text03_right">
+          <span><a href="http://wb.51hejia.com/detail/new_topic" target="_blank" title="我要提问">我要提问</a></span>
+          <div id="sub_21"><h5>和家问吧</h5></div>
+          <div id="sub_22"><ul>
+              <%8.upto(15) do |i|%>
+                <%break if topics[i].nil?%>
+                <li><a href="<%=topics[i].url%>" target="_blank" title="<%=topics[i].title%>">[社区] <%=ul(topics[i].title,21)%></a></li>
+              <%end%>
+            </ul></div>
+        </div>
+      </div>
+    </div>
+    <div class="box03">
+      <div id="sub_23"><h3>最新热点专题</h3></div>
+      <div id="sub_24"><ul>
+          <!-- 53979 -->
+          <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/55705.xml",["title","url","text-style-id"],10)%>
+            <li><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=ul(r["title"],16)%></a></li>
+          <%end%>
+        </ul></div>
+    </div>
+    <div class="box04">
+      <div id="sub_25"><h3>想了解其他<%=PINLEI_SORT[@pinlei.sort_id]%></h3></div>
+      <div class="text02 clearfix" id="sub_26">
+        <dl class="clearfix">
+          <dt><%=PINLEI_SORT1[@pinlei.sort_id.to_i]%></dt><dd>
+            <%for sort in get_sortlist_by_sort_id(@pinlei.sort_id, 1)%>
+              <a href="<%="http://www.51hejia.com/#{PINLEI_URL[@pinlei.sort_id]}/#{u(trim(sort.name))}.html"%>" target="_blank" title="<%=sort.name%>"><%=sort.name%></a> |
+            <%end%>
+          </dd>
+        </dl>
+        <dl>
+          <dt><%=PINLEI_SORT2[@pinlei.sort_id.to_i]%></dt><dd>
+            <%for sort in get_sortlist_by_sort_id(@pinlei.sort_id, 2)%>
+              <a href="<%="http://www.51hejia.com/#{PINLEI_URL[@pinlei.sort_id]}/#{u(trim(sort.name))}.html"%>" target="_blank" title="<%=sort.name%>"><%=sort.name%></a> |
+            <%end%>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+<%end%>

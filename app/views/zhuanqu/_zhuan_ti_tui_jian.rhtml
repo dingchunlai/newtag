@@ -1,0 +1,17 @@
+<div id="tab-panel-221" class="">
+  <%i = 1%>
+  <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54138.xml",["title","url","image_url"],4)%>
+    <div class="pic-loop">
+      <div class="pic-12090">
+        <div class="pic-12090-img"><a href="<%=r["url"]%>" target="_blank"><img src="<%=r["image_url"]%>" alt="<%=r["title"]%>" width="114" height="84" /></a></div>
+        <div class="pic-txt">
+            <a href="<%=r["url"]%>" target="_blank" class="black" title="<%= r["title"] %>"><%= truncate(r["title"], 10) %></a>
+        </div>
+      </div>
+    </div>
+    <%if i==2%><div class='clear'></div><%end%>
+    <%i += 1%>
+  <%end%>
+
+  <div class='clear'></div>
+</div>

@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate
+END
+012_create_zhuanqu_cws.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/012_create_zhuanqu_cws.rb
+END
+017_create_photo_photos_tags.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/017_create_photo_photos_tags.rb
+END
+014_create_photo_tags.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/014_create_photo_tags.rb
+END
+001_create_hejia_count_keywords.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/001_create_hejia_count_keywords.rb
+END
+018_create_zhuanqu_hangyes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/018_create_zhuanqu_hangyes.rb
+END
+007_create_zhuanqu_kws.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/007_create_zhuanqu_kws.rb
+END
+011_create_photo_photos.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/011_create_photo_photos.rb
+END
+016_create_dianxings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/016_create_dianxings.rb
+END
+008_create_zhuanqu_sorts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/008_create_zhuanqu_sorts.rb
+END
+006_create_havenot_result_keywords.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/006_create_havenot_result_keywords.rb
+END
+019_create_user_notes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/019_create_user_notes.rb
+END
+004_create_hejia_cases.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/004_create_hejia_cases.rb
+END
+005_create_ask_zhidao_topics.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/005_create_ask_zhidao_topics.rb
+END
+015_create_radmin_fdatas.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/015_create_radmin_fdatas.rb
+END
+002_create_pinleis.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/002_create_pinleis.rb
+END
+009_create_hejia_tags.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/009_create_hejia_tags.rb
+END
+010_create_hejia_tag_entity_links.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/010_create_hejia_tag_entity_links.rb
+END
+013_create_ip_addresses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/013_create_ip_addresses.rb
+END
+003_create_hejia_articles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/103/51hejia/repos/newtag/release/db/migrate/003_create_hejia_articles.rb
+END

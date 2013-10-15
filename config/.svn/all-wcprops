@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/267/51hejia/repos/newtag/release/config
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/267/51hejia/repos/newtag/release/config/environment.rb
+END
+newrelic.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/103/51hejia/repos/newtag/release/config/newrelic.yml
+END
+database.yml.bak
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/103/51hejia/repos/newtag/release/config/database.yml.bak
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/103/51hejia/repos/newtag/release/config/routes.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/160/51hejia/repos/newtag/release/config/database.yml
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/103/51hejia/repos/newtag/release/config/boot.rb
+END

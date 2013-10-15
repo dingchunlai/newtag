@@ -1,0 +1,70 @@
+<div class="width960 margin10">
+  <div class="jus_xhx">
+    <ul class="clearfix">
+      <%r1 = @lanmu5[0]%>
+      <li class="clearfix">
+        <h3><a href="http://www.51hejia.com/xiaohuxing/" target="_blank" title="小户型">小户型</a></h3>
+        <span><a href="http://www.51hejia.com/bieshu/" target="_blank" title="别墅">别墅</a><a href="http://www.51hejia.com/chufang/" target="_blank" title="厨房">厨房</a></span>
+        <div class="jus_xhx_img clear clearfix">
+          <a href="<%= r1[0]["url"]%>" target="_blank"<%= r1[0]["title"]%>>
+            <img src="<%= r1[0]["image_url"]%>" alt="<%= r1[0]["resume"]%>" />
+          </a>
+          <span><a href="<%= r1[0]["url"]%>" target="_blank" <%= r1[0]["title"]%>><%= r1[0]["title"]%></a></span>
+        </div>
+        <div class="jus_xhx_txt clear">         
+          <% r1[1...r1.length].each do |y| %>
+            <a href="<%= y["url"]%>" target="_blank"><%= y["title"]%> </a>
+          <% end %>
+        </div>
+      </li>
+      <%r2 = @lanmu5[1]%>
+      <li class="clearfix">
+        <h3><a href="http://www.51hejia.com/beijingqiang/" target="_blank" title="背景墙">背景墙</a></h3>
+        <span><a href="http://www.51hejia.com/weiyu/" target="_blank" title="卫浴">卫浴</a><a href="http://www.51hejia.com/huayuanshenghuo/" target="_blank" title="花园">花园</a></span>
+        <div class="jus_xhx_img clear clearfix">
+          <a href="<%=r2[0]["url"]%>" target="_blank"<%= r2[0]["title"]%>>
+            <img src="<%=r2[0]["image_url"]%>" alt="<%=r2[0]["resume"]%>" />
+          </a>
+          <span><a href="<%=r2[0]["url"]%>" target="_blank" <%= r2[0]["title"]%>><%= r2[0]["title"]%></a></span>
+        </div>
+        <div class="jus_xhx_txt clear">
+          <% r2[1...r2.length].each do |y| %>
+            <a href="<%=  y["url"]%>" target="_blank"><%= y["title"]%> </a>
+          <% end %>
+        </div>
+      </li>
+      <%r3 = @lanmu5[2]%>
+      <li class="clearfix">
+        <h3><a href="http://www.51hejia.com/keting/" target="_blank" title="客厅">客厅</a></h3>
+        <span><a href="http://www.51hejia.com/shufang/" target="_blank" title="书房">书房</a><a href="http://www.51hejia.com/ertongfang" target="_blank" title="儿童房">儿童房</a></span>
+        <div class="jus_xhx_img clear clearfix">
+          <a href="<%=r3[0]["url"]%>" target="_blank"<%= r3[0]["title"]%>>
+            <img src="<%=r3[0]["image_url"]%>" alt="<%=r3[0]["resume"]%>" />
+          </a>
+          <span><a href="<%=r3[0]["url"]%>" target="_blank" <%= r3[0]["title"]%>><%= r3[0]["title"]%></a></span>
+        </div>
+        <div class="jus_xhx_txt clear">
+          <% r3[1...r3.length].each do |y| %>
+            <a href="<%= y["url"]%>" target="_blank"><%= y["title"]%> </a>
+          <% end %>
+        </div>
+      </li>
+      <%r4 = @lanmu5[3]%>
+      <li class="clearfix">
+        <h3><a href="http://www.51hejia.com/woshi/" target="_blank" title="卧室">卧室</a></h3>
+        <span><a href="http://deco.51hejia.com/zq/名人家居/" target="_blank" title="明星家居">明星家居</a></span>
+        <div class="jus_xhx_img clear clearfix">
+          <a href="<%=r4[0]["url"]%>" target="_blank"<%= r4[0]["title"]%>>
+            <img src="<%=r4[0]["image_url"]%>" alt="<%=r4[0]["resume"]%>" />
+          </a>
+          <span><a href="<%=r4[0]["url"]%>" target="_blank" <%= r4[0]["title"]%>><%= r4[0]["title"]%></a></span>
+        </div>
+        <div class="jus_xhx_txt clear">
+          <% r4[1...r4.length].each do |y| %>
+            <a href="<%= y["url"]%>" target="_blank"><%= y["title"]%> </a>
+          <% end %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

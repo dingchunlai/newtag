@@ -1,0 +1,22 @@
+<div class="ltext">
+<div>
+  <%i = 0%>
+  <%for ar in parse_xml("http://api.51hejia.com/rest/build/xml/114.xml",["title","url","image_url"], 4)%>
+  <div class="pic-loop">
+    <div class="pic-12090">
+    <div class="pic-12090-img"><a href="<%=ar["url"]%>" target="_blank"><img src="<%=ar["image_url"]%>" width="114" height="84" alt="<%=ar["title"]%>" /></a></div>
+      <div class="pic-txt">
+        <h3 class="pt-title"><a href="<%=ar["url"]%>" target="_blank" class="black"><%=ar["title"]%></a></h3>
+      </div>
+    </div>
+  </div>
+  <%i += 1%>
+  <%break if i == 4%>
+  <%end%>
+
+  <div class='clear'></div>
+
+  <div class="stt-more">&raquo; <a href="http://tuku.51hejia.com/zhuanti/tuku.html">更多</a></div>
+
+</div>
+</div>

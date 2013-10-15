@@ -1,0 +1,96 @@
+
+<div class="index-container">
+  <!--header-->
+  <div class="clear"></div>
+  <!--content-->
+  <div class="clear" style="margin-top:10px;"></div>
+  <div class="nav_m tleft" style="width:640px;">
+    <div class="left">当前位置：<a href="http://www.51hejia.com">和家首页</a>&nbsp;&gt;&nbsp;
+      <a href="/" target="_blank">站内导航</a>&nbsp;&gt;&nbsp;
+      <%=@keyword_v%>
+    </div>
+
+    <div class="clear"></div>
+  </div>
+  <div class="right">
+    <form action="http://zhannei.baidu.com/cse/search" target="_blank">
+      <input name="s" type="hidden" value="7289350921164188503" />
+      <input type="text" name="q" size="30" style="width:115px;border:1px solid #e0e0e0;height:23px;height:21px;line-height:22px;margin-right:3px;" />
+      <input type="submit" value="搜索" class="inputss" />
+    </form>
+  </div>
+  <div class="clear" style="margin-bottom:5px;"></div>
+  <!--right-->
+  <%=render :partial => "keyword_right"%>
+
+  <!--left-->
+  <div class="right">
+    <div style="width:620px;overflow:hidden;">
+      <%for ar in @lists%>
+        <div class="topic-show">
+          <div class="borderb2 tleft">
+            <h2 class="artitle">
+              [<%=ENTITY_TYPE[ar.entity_type_id]%>]
+              <a href="<%=ar.url%>" target="_blank"><%=ar.title%></a>
+              <%if current_staff && current_staff.hejia_editor?%>
+                <%=link_to "[删除]", "/admin/hejia_index_delete?id=#{ar.id}", :confirm => "您确定要删除这条记录吗？", :target => "hideiframe"%>
+              <%end%>
+            </h2>
+          </div>
+          <p class="sourcestyle"><%=ar.entity_created_at.strftime("%Y-%m-%d") rescue ""%></p>
+          <div class="ts-content">
+            <%=ul(ar.resume,150)%>
+          </div>
+          <%unless ar.image_url.nil?%>
+            <p class="thumb"><a href="<%=ar.url%>" target="_blank"><img src="<%=ar.image_url%>" onload="if (this.width>550) this.width=550;" alt="<%=ar.title%>" /></a></p>
+            <%unless ar.image_url2.nil?%>
+              <p class="thumb">
+                <a href="<%=ar.url%>" target="_blank"><img src="<%=ar.image_url2%>" alt="<%=ar.title%>" width="120" height="90" /></a>
+                <%unless ar.image_url3.nil?%>
+                  <a href="<%=ar.url%>" target="_blank"><img src="<%=ar.image_url3%>" alt="<%=ar.title%>" width="120" height="90" /></a>
+                <%end%>
+                <%unless ar.image_url4.nil?%>
+                  <a href="<%=ar.url%>" target="_blank"><img src="<%=ar.image_url4%>" alt="<%=ar.title%>" width="120" height="90" /></a>
+                <%end%>
+                <%unless ar.image_url5.nil?%>
+                  <a href="<%=ar.url%>" target="_blank"><img src="<%=ar.image_url5%>" alt="<%=ar.title%>" width="120" height="90" /></a>
+                <%end%>
+              </p>
+            <%end%>
+          <%end%>
+          <div class="clear"></div>
+          <p class="lookall">» <a href="<%=ar.url%>" target="_blank">查看全文</a></p>
+          <div class="borderb2b"></div>
+          <div class="clear"></div>
+          <div class="aboutarticle marginb20">
+            <ul class="toplr clear">
+              <li class="classtag">标签：
+                <%for kw in HejiaIndexKeyword.get_keywords_by_index_id(ar.id)%>
+                  <%=get_zq_inner_link(kw)%>&nbsp;&nbsp;&nbsp;
+                <%end%>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <%end%>
+
+      <div class="topic-page">
+        <span id="pagelist">
+          <%= will_paginate @lists,
+            :inner_window => 1,
+            :outer_window => 1,
+            :page_links => true,
+            :prev_label => '上一页',
+            :next_label => '下一页',
+            :separator => "　"
+        %>
+        </span>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <!--header-->
+  <div class="clear"></div>
+</div>
+
+<!-- <%=@rrr%> keyword001: <%=@keyword%> -->

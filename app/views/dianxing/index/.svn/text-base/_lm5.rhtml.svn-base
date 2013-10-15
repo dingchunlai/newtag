@@ -1,0 +1,43 @@
+<%kws = trim(@ci["lm5_kws"]).split(" ")%>
+<div class="leftbox00 leftbox01 clearfix">
+      <span class="span01">
+        <%for kw in trim(@ci["lm5_tags"]).split(" ")%>
+          <%=get_zq_inner_link(kw)%>
+        <%end%>
+      </span>
+      <h2><a href="<%=@ci["lm5_bigurl"]%>" target="_blank"><%=@ci["lm5_bigtitle"]%></a></h2>
+      <div class="box01">
+        <a href="<%=@ci["lm5_url1"]%>" target="_blank"><img src="<%=@ci["lm5_image_url1"]%>" alt="<%=@ci["lm5_title1"]%>" width="212" height="249" /></a>
+        <a href="<%=@ci["lm5_url1"]%>" target="_blank"><%=ul(@ci["lm5_title1"],12)%></a></div>
+      <div class="text">
+        <h3><a href="<%=@ci["lm5_url"]%>" target="_blank" title="<%=@ci["lm5_title"]%>"><%=ul(@ci["lm5_title"],20)%></a></h3>
+        <p><%=ul(@ci["lm5_resume"],60)%></p>
+        <span class="span02">[<a href="<%=@ci["lm5_url"]%>" target="_blank" title="详细">详细</a>]</span></div>
+      <div class="list">
+        <dl>
+          <%unless kws[0].nil?%>
+              <dt><strong><%=get_zq_inner_link(kws[0])%></strong></dt>
+              <%for r in get_articles_by_editor_keyword(kws[0], 3)%>
+                <dd><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=ul(r["title"],12)%></a></dd>
+              <%end%>
+          <%end%>
+        </dl>
+        <div class="pic01">
+          <a href="<%=@ci["lm5_url2"]%>" target="_blank"><img src="<%=@ci["lm5_image_url2"]%>" alt="<%=@ci["lm5_title2"]%>" width="143" height="96" /></a>
+        </div>
+      </div>
+      <div class="list">
+        <dl>
+          <%unless kws[1].nil?%>
+              <dt><strong><%=get_zq_inner_link(kws[1])%></strong></dt>
+              <%for r in get_articles_by_editor_keyword(kws[1], 3)%>
+                <dd><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=ul(r["title"],12)%></a></dd>
+              <%end%>
+          <%end%>
+        </dl>
+        <div class="pic01">
+          <a href="<%=@ci["lm5_url3"]%>" target="_blank"><img src="<%=@ci["lm5_image_url3"]%>" alt="<%=@ci["lm5_title3"]%>" width="143" height="96" /></a>
+        </div>
+      </div>
+
+    </div>

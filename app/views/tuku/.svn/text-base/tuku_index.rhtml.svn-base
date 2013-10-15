@@ -1,0 +1,13 @@
+
+<%for tags in @tags%>
+  <div id="map">
+  <h2><a href="/zhuanqu/<%=tags[0]%>" target="_blank"><%=tags[1]%></a></h2>
+  <ul>
+    <%for tag in tags[2]%>
+      <%=get_tag_link(tag)%>
+    <%end%>
+    <li><h3><span><a href="/zhuanqu/<%=tags[0]%>" title="更多<%=tags[1]%>" target="_blank">更多 >></a></span></h3></li>
+  </ul>
+</div>
+<%end%>
+

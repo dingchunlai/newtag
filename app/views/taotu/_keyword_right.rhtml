@@ -1,0 +1,164 @@
+<div class="right" style="width:323px;">
+<script type="text/javascript">
+function g(o){
+	return document.getElementById(o);
+}
+function HoverLi(m,n,limited){
+	for(var i=0;i<limited;i++){
+		g("nav-"+m+i).className="";
+		g("tab-panel-"+m+i).style.display="none";
+	}
+	g("nav-"+m+n).className="hoveron";
+	g("tab-panel-"+m+n).style.display="block";
+}
+</script>
+<style>
+ul.news li{padding-left:10px;}
+</style>
+
+<div class="sidetag-main">
+	<div class="ltopno tleft">	<div class="sidetag-top">
+	<ul>
+		<li class="hoveron" _onmouseover="HoverLi(21,0,2);" id="nav-210" style="_margin-left:5px"><%=@keywords.sub('_','')%>图片专区描述</li>
+		<!-- <li onmouseover="HoverLi(21,1,2);" id="nav-211">热门标签</li> -->
+	</ul>
+	</div></div>
+	<div class="ltext">
+		<!-- 专区描述 -->
+        <%=render :partial => "zhuan_qu_miao_shu"%>
+
+		<!-- 热门标签 -->
+        <%#=render :partial => "re_men_biao_qian"%>
+
+	</div><div class="clear"></div>
+	<div class="lbot"></div>
+</div>
+
+<div class="sidetag-main">
+	<div class="ltopno tleft"><div class="sidetag-top">
+	<ul>
+		<li class="hoveron" _onmouseover="HoverLi(22,0,2);" id="nav-220" style="_margin-left:5px"><%=@keywords.sub('_','')%>图片相关专区</li>
+		<!-- <li onmouseover="HoverLi(22,1,2);" id="nav-221">专题推荐</li> -->
+	</ul>
+	</div></div>
+	<div class="ltext">
+		<!-- 图片相关专区 -->
+        <%=render :partial => "tu_pian_xiang_guan_zhuan_qu"%>
+
+        <!-- 专题推荐 -->
+        <%#=render :partial => "zhuan_ti_tui_jian"%>
+	</div>
+	<div class="clear"></div>
+	<div class="lbot"></div>
+<div class="clear"></div>
+</div>
+<div class="sidetag-main">
+	<%=render :partial => "diaries"%>	
+</div>
+<div class="sidetag-main">
+	<%=render :partial => "cases"%>	
+</div>
+
+<div class="sidetag-main">
+	<div class="ltopno tleft"><div class="sidetag-top">
+	<ul>
+            <li class="hoveron" id="nav-230" style="_margin-left:5px">
+              <%=get_zq_inner_link(@keyword1, "", "#{@keywords.sub('_','')}热门文章")%>
+            </li>
+            <!-- <li onmouseover="HoverLi(21,1,2);" id="nav-211">热门标签</li> -->
+	</ul>
+	</div></div>
+
+        <div class="ltext">
+        <ul class="newst">
+        <%ars = get_articles_by_editor_keyword(@keyword1, 10)%>
+        <%if ars.length > 0%>
+        <%for ar in ars%>
+        <li style="height:26px;">
+        <a href="<%=ar["url"]%>" target="_blank" class="grey"><%=ar["title"]%></a>
+        </li>
+        <%end%>
+        <%end%>
+        </ul>
+        <div class="stt-more">&raquo; <%=get_zq_inner_link(@keyword1, "", "更多")%></div>
+        </div>
+
+    <div class="clear"></div>
+    <div class="lbot"></div>
+</div>
+
+<div class="sidetag-main">
+	<div class="ltopno tleft"><div class="sidetag-top">
+	<ul>
+            <li class="hoveron" style="_margin-left:5px">
+              <a href="http://tuku.51hejia.com/zhuanti/tuku.html" target="_blank">热点专题</a>
+            </li>
+	</ul>
+	</div></div>
+	<!-- 图片相关 -->
+        <%=render :partial => "re_dian_zhuan_ti"%>
+	<div class="clear"></div>
+	<div class="lbot"></div>
+<div class="clear"></div>
+</div>
+
+<div class="sidetag-main">
+	<div class="ltopno tleft"><div class="sidetag-top">
+	<ul>
+		<li class="hoveron" id="nav-230" style="_margin-left:5px">图片热门专区</li>
+	    <!-- <li onmouseover="HoverLi(21,1,2);" id="nav-211">热门标签</li> -->
+	</ul>
+	</div></div>
+    <div class="ltext">
+		<div style="font-size:14px;padding:10px 20px;text-align:left;">
+		<p class="tag-cloud">
+                  <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54141.xml",["title","url"],30)%>
+                  <%i = rand(2)+1%>
+                  <a href='<%=r["url"]%>' class="hot<%=i%>" target='_blank'><%=r["title"]%></a>&nbsp;&nbsp;
+                  <%end%>
+		</p>
+		<div class="clear"></div>
+
+		</div>
+	</div>
+    <div class="clear"></div><div class="lbot"></div>
+</div>
+
+<div class="sidetag-main">
+	<div class="ltopno tleft"><div class="sidetag-top">
+	<ul>
+		<li class="hoveron" id="nav-230" style="_margin-left:5px">资讯热门专区</li>
+	    <!-- <li onmouseover="HoverLi(21,1,2);" id="nav-211">热门标签</li> -->
+	</ul>
+	</div></div>
+    <div class="ltext">
+		<div style="font-size:14px;padding:10px 20px;text-align:left;">
+		<p class="tag-cloud">
+                  <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54136.xml",["title","url"],30)%>
+                  <%i = rand(2)+1%>
+                  <a href='<%=r["url"]%>' class="hot<%=i%>" target='_blank'><%=r["title"]%></a>&nbsp;&nbsp;
+                  <%end%>
+		</p>
+		<div class="clear"></div>
+
+		</div>
+	</div>
+    <div class="clear"></div><div class="lbot"></div>
+</div>
+
+<%ets = [5, 3]%>
+<%ets.each do |i|%>
+<div class="sidetag-main">
+	<div class="ltopno tleft"><div class="sidetag-top">
+	<ul>
+		<li class="hoveron" id="nav-2<%=i%>0" style="_margin-left:5px"><%=@keywords.sub('_','')%><%=ENTITY_TYPE[i]%>相关</li>
+	    <!-- <li onmouseover="HoverLi(21,1,2);" id="nav-211">热门标签</li> -->
+	</ul>
+	</div></div>
+    <%=render :partial => "tab_panel", :locals => {:panel_id => "2#{i}0", :classname => "", :type => i, :keyword => @keyword1}%>
+    <div class="clear"></div><div class="lbot"></div>
+	<%#=render :partial => "ad"%>
+</div>
+<%end%>
+
+</div>

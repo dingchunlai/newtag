@@ -1,0 +1,91 @@
+<div class="main" style="margin-top:10px;">
+
+  <div style="float:left">
+  <div class="bbox">
+  <div id="sub_29">
+  <h1>
+  <a href="http://bbs.51hejia.com" target="_blank" class="more">
+    <img src="http://www.51hejia.com/images/woshi522/more.gif" border="0" />
+    </a><a href="#" target="_blank">网友交流区</a></h1>
+  </div>
+  <div class="bboxa01">
+	  <div class="bbox01">
+	    <div class="bboxleft">
+      <div id="sub_30">
+	    <a href="http://bbs.51hejia.com" target="_blank"><img src="http://d.51hejia.com/api/images/0000/0843/1.jpg" alt="aaa" border="0" /></a>
+        </div>
+        <div id="sub_31">
+        <ul>
+            <li><a href="http://bbs.51hejia.com/btopic/227786" target="_blank">·喜克索教您-----卧室应该如何布...</a></li>
+          <li><a href="http://bbs.51hejia.com/btopic/227786" target="_blank">·喜克索教您-----卧室应该如何布...</a></li>
+          <li><a href="http://bbs.51hejia.com/btopic/227786" target="_blank">·喜克索教您-----卧室应该如何布...</a></li>
+          <li><a href="http://bbs.51hejia.com/btopic/227786" target="_blank">·喜克索教您-----卧室应该如何布...</a></li>
+            </ul>
+        </div>
+
+  		</div>
+  		<div class="bboxright">
+        <div id="sub_32">
+		<h4><a href="http://bbs.51hejia.com/btopic/229934" target="_blank">·十款时尚简约的卧室装修图片</a></h4>
+        </div>
+        <div id="sub_33">
+		<ul>
+
+            <li>[论坛]<a href="http://bbs.51hejia.com/btopic/229866" target="_blank">·【居乐装潢】总有一款卧室属...</a></li>
+
+            <li>[论坛]<a href="http://bbs.51hejia.com/btopic/229449" target="_blank">·本人有一套全新客厅、卧室、...</a></li>
+
+            <li>[论坛]<a href="http://bbs.51hejia.com/btopic/228463" target="_blank">·年前奉献最后一贴！北京市质...</a></li>
+
+            <li>[论坛]<a href="http://bbs.51hejia.com/btopic/228064" target="_blank">·装修温馨家居 打造“诱人卧...</a></li>
+
+            <li>[论坛]<a href="http://bbs.51hejia.com/btopic/227936" target="_blank">·十款时尚简约的卧室装修图片</a></li>
+
+		</ul>
+        </div>
+        <div id="sub_34">
+		<ul class="line">
+
+            <li>[论坛]<a href="http://bbs.51hejia.com/btopic/227397" target="_blank">·立秋了　一起来给给卧室换换...</a></li>
+
+            <li>[论坛]<a href="http://bbs.51hejia.com/btopic/227381" target="_blank">·绝美卧室 细数女孩们的法国...</a></li>
+
+            <li>[论坛]<a href="http://bbs.51hejia.com/btopic/227344" target="_blank">·老人卧室风水注意事项</a></li>
+
+            <li>[论坛]<a href="http://bbs.51hejia.com/btopic/227116" target="_blank">·进来说说你们家卧室多大面积...</a></li>
+
+		</ul>
+        </div>
+        <div id="sub_35">
+		<p><a href="http://bbs.51hejia.com/new/471?parent_id=471" target="_blank">我要提问</a></p>
+        </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  </div>
+
+  <div class="brbox" style="height:274px;">
+  <div id="sub_36">
+    <h1><a href="<%=@si.pp_url1%>" target="_blank"><%=@si.pp_title1%></a></h1>
+	  </div>
+      <div id="sub_37">
+	  <dl class="l">
+	    <dt><a href="<%=@si.pp_url2%>" target="_blank"><img src="<%=@si.pp_image_url2%>" width="132" height="99" alt="<%=@si.pp_title2%>" border="0" /></a></dt>
+		<dd><a href="<%=@si.pp_url2%>" title="<%=@si.pp_title2%>" target="_blank"><%=@si.pp_title2%></a></dd>
+	  </dl>
+	  <dl class="r">
+	    <dt><a href="<%=@si.pp_url3%>" target="_blank"><img src="<%=@si.pp_image_url3%>" width="132" height="99" alt="<%=@si.pp_title3%>" border="0" /></a></dt>
+		<dd><a href="<%=@si.pp_url3%>" title="<%=@si.pp_title3%>" target="_blank"><%=@si.pp_title3%></a></dd>
+	  </dl>
+	  </div>
+      <div id="sub_38">
+      <ul>
+      热门关键词<br/>
+      <%for tl in get_array_title_and_url(@si.pp_links)%>
+    	<li><a href="<%=tl["url"]%>" target="_blank"><%=tl["title"]%></a></li>
+      <%end%>
+      </ul>
+      </div>
+  </div>
+</div>

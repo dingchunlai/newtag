@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><%=@dantu_info["html_title"] rescue ""%></title>
+    <meta name="keywords" content="<%=@dantu_info["html_keywords"] rescue ""%>" />
+    <meta name="description" content="<%=@dantu_info["html_description"] rescue ""%>" />
+    <link href="http://js.51hejia.com/css/home.css?99251482" rel="stylesheet" type="text/css" />
+    <link href="http://js.51hejia.com/css/picstyle.css" rel="stylesheet" type="text/css" />
+    <script src="http://js.51hejia.com/js/photobucket.js" type="text/javascript"></script>
+    <script src="http://js.51hejia.com/js/findstuff.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+    <%= render :partial => '/share/public_header' %>
+
+    <%
+    tab1 = parse_xml("http://api.51hejia.com/rest/build/xml/54346.xml", ["title", "url",], 15)
+    tab2 = parse_xml("http://api.51hejia.com/rest/build/xml/54253.xml", ["title", "url",], 15)
+    tab3 = parse_xml("http://api.51hejia.com/rest/build/xml/54254.xml", ["title", "url",], 15)
+    tab4 = parse_xml("http://api.51hejia.com/rest/build/xml/54255.xml", ["title", "url",], 15)
+    tab5 = parse_xml("http://api.51hejia.com/rest/build/xml/54256.xml", ["title", "url",], 15)
+    tab6 = parse_xml("http://api.51hejia.com/rest/build/xml/54257.xml", ["title", "url",], 15)
+    tab7 = parse_xml("http://api.51hejia.com/rest/build/xml/54258.xml", ["title", "url",], 15)
+    tab8 = parse_xml("http://api.51hejia.com/rest/build/xml/54259.xml", ["title", "url",], 15)
+  %>
+
+    <div id="main" class="clearfix">
+      <div id="menu">
+
+        <a href="http://tuku.51hejia.com/" target="_blank"><img src="http://js.51hejia.com/images/banner-tuku.jpg" alt="和家图库频道" /></a>
+
+        <ul class="tab-cha clearfix">
+          <li id="s1" onMouseover="show_intro('s','tab',8,1);" class="menu-on"><a href="<%=tab1[0]["url"] rescue ""%>" target="_blank"><%=tab1[0]["title"] rescue ""%></a></li>
+          <li id="s2" onMouseover="show_intro('s','tab',8,2);" class="menu-off"><a href="<%=tab2[0]["url"] rescue ""%>" target="_blank"><%=tab2[0]["title"] rescue ""%></a></li>
+          <li id="s3" onMouseover="show_intro('s','tab',8,3);" class="menu-off"><a href="<%=tab3[0]["url"] rescue ""%>" target="_blank"><%=tab3[0]["title"] rescue ""%></a></li>
+          <li id="s4" onMouseover="show_intro('s','tab',8,4);" class="menu-off"><a href="<%=tab4[0]["url"] rescue ""%>" target="_blank"><%=tab4[0]["title"] rescue ""%></a></li>
+          <li id="s5" onMouseover="show_intro('s','tab',8,5);" class="menu-off"><a href="<%=tab5[0]["url"] rescue ""%>" target="_blank"><%=tab5[0]["title"] rescue ""%></a></li>
+          <li id="s6" onMouseover="show_intro('s','tab',8,6);" class="menu-off"><a href="<%=tab6[0]["url"] rescue ""%>" target="_blank"><%=tab6[0]["title"] rescue ""%></a></li>
+          <li id="s7" onMouseover="show_intro('s','tab',8,7);" class="menu-off"><a href="<%=tab7[0]["url"] rescue ""%>" target="_blank"><%=tab7[0]["title"] rescue ""%></a></li>
+          <li id="s8" onMouseover="show_intro('s','tab',8,8);" class="menu-off"><a href="<%=tab8[0]["url"] rescue ""%>" target="_blank"><%=tab8[0]["title"] rescue ""%></a></li>
+        </ul>
+<%#*<div id="tab1" class="tab" style="height:5px; background:none;"></div>%>
+        <%=render :partial => "menu_tab", :locals => {:rs =>tab1, :div_id => "tab1"}%>
+        <%=render :partial => "menu_tab", :locals => {:rs =>tab2, :div_id => "tab2"}%>
+        <%=render :partial => "menu_tab", :locals => {:rs =>tab3, :div_id => "tab3"}%>
+        <%=render :partial => "menu_tab", :locals => {:rs =>tab4, :div_id => "tab4"}%>
+        <%=render :partial => "menu_tab", :locals => {:rs =>tab5, :div_id => "tab5"}%>
+        <%=render :partial => "menu_tab", :locals => {:rs =>tab6, :div_id => "tab6"}%>
+        <%=render :partial => "menu_tab", :locals => {:rs =>tab7, :div_id => "tab7"}%>
+        <%=render :partial => "menu_tab", :locals => {:rs =>tab8, :div_id => "tab8"}%>
+      </div>
+      <script type="text/javascript">
+        function show_intro(pree,pre, n, select_n) {
+          for (i = 1; i <= n; i++) {
+            var intro = document.getElementById(pre + i);
+            var cha = document.getElementById(pree + i);
+            intro.style.display = "none";
+            cha.className="menu-off";
+            if (i == select_n) {
+              intro.style.display = "block";
+              cha.className="menu-on";
+            }
+          }
+        }
+      </script>
+      <div id="sidebar">
+        <div class="intro">
+          <h2><%=@kw%>图片简介</h2>
+          <p><span><%=@kw%></span>
+            <%=dantu_info("description", 80)%>
+          </p>
+          <div class="tags">
+            <span>相关专区</span>
+            <%for tl in get_dantu_about_links(dantu_info("about_links"))%>
+              <%=get_tuku_link(tl)%>
+            <%end%>
+          </div>
+        </div>
+        <div class="search">
+          <div class="out clearfix">
+            <div class="in">
+              <form action="http://zhannei.baidu.com/cse/search" target="_blank">
+                <input name="s" type="hidden" value="7289350921164188503" />
+                <input type="text" name="q" size="30" class="txt" />
+                <input type="submit" value="" class="button01" />
+              </form>
+
+              <div class="tags">
+                <%for dantu in parse_xml("http://api.51hejia.com/rest/build/xml/54136.xml", ["title", "url",], 8)%>
+                  <a href="<%=dantu["url"]%>" target="_blank" title="<%=dantu["title"]%>"><%=dantu["title"]%></a><span>|</span>
+                <%end%>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="key">
+          <h3><a href="http://tuku.51hejia.com/zhuanqu/" target="_blank" title="更多">更多>></a>图库推荐专区</h3>
+          <div class="box">
+            <div class="key01">
+              <%=render :partial => "tui_jian_zhuan_qu", :locals => {:api_id => 54253}%>
+              <hr />
+              <%=render :partial => "tui_jian_zhuan_qu", :locals => {:api_id => 54256}%>
+              <hr />
+              <%=render :partial => "tui_jian_zhuan_qu", :locals => {:api_id => 54254}%>
+              <hr />
+              <%=render :partial => "tui_jian_zhuan_qu", :locals => {:api_id => 54257}%>
+            </div>
+            <div class="key02">
+              <h3><a href="http://tuku.51hejia.com/zhuanti/tuku.html" target="_blank" title="更多">更多>></a>热点专题</h3>
+              <ul>
+                <%for dantu in parse_xml("http://api.51hejia.com/rest/build/xml/114.xml", ["title", "url",], 6)%>
+                  <li><a href="<%=dantu["url"]%>" target="_blank" title="<%=dantu["title"]%>"><%=ul(dantu["title"],14)%></a></li>
+                <%end%>
+              </ul>
+            </div>
+            <div class="key03">
+              <h3><%=get_zq_inner_link(@kw,"","更多>>")%> <%=@kw%>热点文章</h3>
+              <ul>
+                <%for rs in get_articles_by_editor_keyword(@kw, 6)%>
+                  <li><a href="<%=rs["url"]%>" target="_blank" title="<%=rs["title"]%>"><%=ul(rs["title"],15)%></a></li>
+                <%end%>
+              </ul>
+            </div>
+          </div>
+          <div class="keybottom"></div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="list">
+          <div class="page01">
+            <span style="letter-spacing:1px; font-size:12px">
+
+              <%= mypage_entries_info @rs, :entry_name => '图片记录', :show_total_entries => false %>
+
+            </span>
+            <h2>共有 <b><%=@rs.total_entries%></b> 张 <strong><%=@kw%></strong> 图片</h2>
+          </div>
+          <ul class="clearfix">
+            <%@rs.each do |dantu|%>
+              <%
+              dantu_tags = get_dantu_tags_by_photo_id(dantu.id, 3)
+              case_title, case_url = (hcase = dantu.hejia_case) ? [hcase.title, hcase.url] : ['', '']
+              photo_detail_url = "/pic/#{@kw}/#{dantu.id}.html"
+            %>
+              <li class="thumbContainer">
+                <a href="<%=photo_detail_url%>" target="_blank" title="<%=case_title%>"><img src="<%=get_tuku_photo_url(dantu.type_id, dantu.filepath)%>" width="140" height="105" alt="<%="#{@kw}-#{case_title}"%>" /></a>
+                <span>
+                  <%for tag in dantu_tags%><a href="/pic/<%=tag%>.html" target="_blank"><%=tag%></a><%end%>
+                </span>
+                <div class="flyout">
+                  <a href="<%=photo_detail_url%>" target="_blank" title="<%=case_title%>"><img src="<%=get_tuku_photo_url(dantu.type_id, dantu.filepath)%>" width="140" height="105" alt="<%="#{@kw}-#{case_title}"%>" /></a><span>
+                    <%for tag in dantu_tags%><a href="/pic/<%=tag%>.html" target="_blank"><%=tag%></a><%end%>
+                    <a href="<%=case_url%>" title="<%=case_title%>" target="_blank" class="tit"><%=ul(case_title,10)%></a>
+                  </span></div>
+              </li>
+            <%end%>
+
+          </ul>
+          <div class="con_bottom" style="height: 30px;">
+            <span style="float:right; letter-spacing:1px; font-size:14px">
+              <div class="f_l"><%= will_paginate @rs,
+                  :inner_window => 1,
+                  :outer_window => 1,
+                  :page_links => true,
+                  :prev_label => '上一页',
+                  :next_label => '下一页',
+                  :separator => "　"
+              %></div>
+              <% if @rs.total_pages > 1 %>
+                <%
+                cur_total_page = @rs.total_pages
+                cur_page = params[:page].to_i
+                if cur_page == 0
+                  next_page = 2
+                else
+                  if cur_page >= cur_total_page
+                    next_page = 1
+                  else
+                    next_page = cur_page + 1
+                  end
+                end
+              %>
+                <script type="text/javascript">
+                  function jump_to(page) {
+                    if (page == "") {
+                      page = 0;
+                    }
+                    var total_pages = <%= cur_total_page %>;
+                    var url = "/pic/<%= params[:keyword] %>";
+                    page = parseInt(page);
+                    if (page == 0) {
+                      document.getElementById("jmp_page_no").focus();
+                    } else {
+                      if (page > total_pages) {
+                        page = 1;
+                      }
+                      location.href = url + "-" + page + ".html";
+                    }
+                  }
+                </script>
+                <div class="f_l">
+                  <form name="jmp_frm" onsubmit="jump_to(document.getElementById('jmp_page_no').value);return false;">
+                    &nbsp;&nbsp;跳至第<input type="text" id="jmp_page_no" name="jmp_page_no" value="<%= next_page %>" size="2" maxlength="10"/>页
+                    <input type="submit" id="btn_jmp" name="btn_jmp" value="GO!"/>
+                  </form>
+                </div>
+              <% end %>
+            </span>
+          </div>
+          <script type="text/javascript">
+            ThumbController.getInstance().bindHandlers();
+          </script>
+        </div>
+      </div>
+      <div id="label">
+        <ul class="clearfix">
+          <%for tl in get_dantu_about_links(dantu_info("about_links"))%>
+            <li><%=get_tuku_link(tl)%></li>
+          <%end%>
+        </ul>
+      </div>
+    </div>
+
+    <%= render :partial => '/share/public_footer' %>
+
+  </body>
+</html>

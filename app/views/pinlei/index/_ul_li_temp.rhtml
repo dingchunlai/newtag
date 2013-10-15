@@ -1,0 +1,25 @@
+<%
+ul_class=parames[:ul_class]
+end_num=parames[:end_num]
+entity=parames[:entity]
+show_count=parames[:show_count]
+omit_symbol =parames[:omit_symbol].nil? ? "" : parames[:omit_symbol]
+start_num=parames[:start_num].nil? ? 1:parames[:start_num]
+entity_url="#{entity}_url"
+show_title="#{entity}_title"
+
+%>
+
+<ul class="<%=ul_class%>">
+  <% start_num.upto end_num do |n| %>
+    <li>
+      <% if @ci["#{entity_url}#{n}"] == "http://sh.58.com/jiadian/" %>
+        <a href="<%=@ci["#{entity_url}#{n}"]%>" target="_blank" title="<%=@ci["#{show_title}#{n}"]%>" onclick="_gaq.push(['_trackEvent','导流效果', '家电首页', '海量低价', 1]);"><%=ul(@ci["#{show_title}#{n}"],show_count,0,omit_symbol) %></a>
+      <% elsif @ci["#{entity_url}#{n}"] == "http://sh.58.com/jiadian/0/" %>
+        <a href="<%=@ci["#{entity_url}#{n}"]%>" target="_blank" title="<%=@ci["#{show_title}#{n}"]%>" onclick="_gaq.push(['_trackEvent','导流效果', '家电首页', '闲置家电', 1]);"><%=ul(@ci["#{show_title}#{n}"],show_count,0,omit_symbol) %></a>
+      <% else %>
+        <a href="<%=@ci["#{entity_url}#{n}"]%>" target="_blank" title="<%=@ci["#{show_title}#{n}"]%>"><%=ul(@ci["#{show_title}#{n}"],show_count,0,omit_symbol) %></a>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

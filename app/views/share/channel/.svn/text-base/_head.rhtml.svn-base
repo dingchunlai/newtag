@@ -1,0 +1,95 @@
+<link href="http://js1.51hejia.com/css/2010/header.css?10031527" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://js.51hejia.com/js/jquery/plugins/bgiframe/jquery.bgiframe.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#dropmenu0').bgiframe();  //#floatingBox为浮动的层，即挡住select的那个层。
+  });
+</script>
+<!--small_header_code-->
+<div class="header_n">
+  <div class="header_menu f_l">
+    <ul>
+      <li class="header_sy"><a href="http://www.51hejia.com/" target="_blank">和家首页</a></li>
+      <script type="text/javascript" src="http://js2.51hejia.com/js/chrome.js"></script>
+
+      <li><a href="http://z.51hejia.com/" rel="nofollow" target="_blank" class="f_l"><strong>装修</strong></a>
+        <div class="header_citynew">
+          <div id="city"> <a rel="dropmenu0">[城市<small>&#9660;</small>]</a>
+            <div id="dropmenu0" class="header_citydiv">
+              <p>[城市<small>&#9660;</small>]</p>
+              <div class="header_citybox">
+
+                <dl class="clearfix">
+                  <dt>[A-C]</dt>
+                  <dd> <span><a target="_blank" href="http://beijing.z.51hejia.com/">北京</a></span> <span><a target="_blank" href="http://chengdu.z.51hejia.com/">成都</a></span> <span><a target="_blank" href="http://changsha.z.51hejia.com/">长沙</a></span> <span><a target="_blank" href="http://chongqing.z.51hejia.com/">重庆</a></span> <span><a target="_blank" href="http://changchun.z.51hejia.com/">长春</a></span> </dd>
+
+                </dl>
+                <dl class="clearfix">
+                  <dt>[D-H]</dt>
+                  <dd> <span><a target="_blank" href="http://dalian.z.51hejia.com/">大连</a></span> <span><a target="_blank" href="http://guangzhou.z.51hejia.com/">广州</a></span> <span class="f_f00"><a target="_blank" href="http://z.hangzhou.51hejia.com/">杭州</a></span> <span><a target="_blank" href="http://hefei.z.51hejia.com/">合肥</a></span> <span><a target="_blank" href="http://haikou.z.51hejia.com/">海口</a></span> <span><a target="_blank" href="http://haerbin.z.51hejia.com/">哈尔滨</a></span> </dd>
+
+                </dl>
+                <dl class="clearfix">
+                  <dt>[J-R]</dt>
+                  <dd> <span><a target="_blank" href="http://kunming.z.51hejia.com/">昆明</a></span> <span class="f_f00"><a target="_blank" href="http://z.ningbo.51hejia.com/">宁波</a></span> <span class="f_f00"><a target="_blank" href="http://nanjing.z.51hejia.com/">南京</a></span> <span class="f_f00"><a target="_blank" href="http://qingdao.z.51hejia.com/">青岛</a></span> </dd>
+
+                </dl>
+                <dl class="clearfix">
+                  <dt>[S-Z]</dt>
+                  <dd> <span class="f_f00"><a target="_blank" href="http://z.shanghai.51hejia.com/">上海</a></span> <span><a target="_blank" href="http://shenzhen.z.51hejia.com/">深圳</a></span> <span class="f_f00"><a target="_blank" href="http://z.suzhou.51hejia.com/">苏州</a></span> <span><a target="_blank" href="http://shijiazhuang.z.51hejia.com/">石家庄</a></span> <span><a target="_blank" href="http://tianjin.z.51hejia.com/">天津</a></span> <span><a target="_blank" href="http://taiyuan.z.51hejia.com/">太原</a></span> <span class="f_f00"><a target="_blank" href="http://z.wuxi.51hejia.com/">无锡</a></span> <span><a target="_blank" href="http://wuhan.z.51hejia.com/">武汉</a></span> <span><a target="_blank" href="http://xiamen.z.51hejia.com/">厦门</a></span> <span><a target="_blank" href="http://xian.z.51hejia.com/">西安</a></span> <span><a target="_blank" href=" http://zhengzhou.z.51hejia.com/">郑州</a></span> </dd>
+
+                </dl>
+              </div>
+            </div>
+            <script type="text/javascript">
+              cssdropdown.startchrome("city")
+            </script>
+          </div>
+        </div>
+      </li>
+      <li><a href="http://youhui.51hejia.com" rel="nofollow" target="_blank" class="f_l"><strong>优惠券</strong></a>
+
+        <div class="header_city"><span id="city1"> <a rel="dropmenu1">[城市<small>&#9660;</small>]</a>
+            <div id="dropmenu1" class="header_citydiv"><a href="http://shanghai.youhui.51hejia.com/" target="_blank" >上海</a><a href="http://nanjing.youhui.51hejia.com/" target="_blank" >南京</a><a href="http://ningbo.youhui.51hejia.com/" target="_blank" >宁波</a><a href="http://wuxi.youhui.51hejia.com/" target="_blank" >无锡</a><a href="http://suzhou.youhui.51hejia.com/" target="_blank" >苏州</a><a href="http://hangzhou.youhui.51hejia.com/" target="_blank" >杭州</a><a href="http://hefei.youhui.51hejia.com/" target="_blank" >合肥</a><a href="http://qingdao.youhui.51hejia.com/" target="_blank" >青岛</a><a href="http://wuhan.youhui.51hejia.com/" target="_blank" >武汉</a><a href="http://changsha.youhui.51hejia.com/" target="_blank" >长沙</a></div>
+
+            <script type="text/javascript">
+              cssdropdown.startchrome("city1")
+            </script>
+          </span></div>
+      </li>
+      <li><a href="http://b.51hejia.com/" target="_blank"><strong>建材 家具 家电</strong></a></li>
+      <li><a href="http://d.51hejia.com/" target="_blank"><strong>图文资讯</strong></a></li>
+      <li><a href="http://tuku.51hejia.com/" target="_blank"><strong>图库</strong></a></li>
+      <li><a href="http://www.51hejia.com/jushang/" target="_blank"><strong>居尚</strong></a></li>
+
+      <li><a href="http://bbs.51hejia.com/" target="_blank"><strong>社区</strong></a></li>
+    </ul>
+  </div>
+  <div class="header_login f_r">
+    <ul>
+      <li><a href="http://z.shanghai.51hejia.com/zhuangxiugongsi" target="_blank">网友评论千家装修公司</a></li>
+      <li>
+        <script type="text/javascript" src="http://js2.51hejia.com/js/login_area.js?20100203"></script>
+
+        <iframe name="hideiframe_loginout" width="0" height="0" id="hideiframe_loginout" style="display: none;"></iframe>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="width960 header_ygbox">
+  <div class="header_nav margin10"> <a href="http://diban.51hejia.com/" target="_blank">地板</a>|<a href="http://weiyu.51hejia.com/" target="_blank">卫浴</a>|<a href="http://www.51hejia.com/cizhuan/" target="_blank">瓷砖</a>|<a href="http://youqituliao.51hejia.com/" target="_blank">油漆涂料</a>|<a href="http://www.yougong.51hejia.com/" target="_blank">油漆施工</a>|<a href="http://chugui.51hejia.com/" target="_blank">橱柜</a>|<a href="http://chufangdianqi.51hejia.com/" target="_blank">厨房电器</a>|<a href="http://diaoding.51hejia.com/" target="_blank">吊顶</a>|<a href="http://www.51hejia.com/zhaomingpindao/" target="_blank">照明</a>|<a href="http://www.51hejia.com/jiadian/" target="_blank">家电</a>|<a href="http://www.51hejia.com/jiajuchanpin/" target="_blank">家具</a>|<a href="http://www.51hejia.com/buyi/" target="_blank">布艺</a>|<a href="http://www.51hejia.com/kongtiao/" target="_blank">中央空调</a>|<a href="http://www.51hejia.com/cainuan/" target="_blank">采暖</a>|<a href="http://www.51hejia.com/shuichuli/" target="_blank">水处理</a>|<a href="http://www.51hejia.com/xinwen/" target="_blank">行业新闻</a>|<a href="http://www.51hejia.com/zq/" target="_blank">专区</a>|<a href="http://zt.51hejia.com/" target="_blank">专题</a></div>
+
+  <div class="header_ygicon04"></div>
+</div>
+<div id="Login" style="display:none;border:0"> <a href="#guanbi" title="关闭" class="Divopop-nonenei"><img src="http://img3.51hejia.com/css/newback/images/x.png" alt="关闭" /></a>
+  <iframe id="dengluiframe" style="width:222px;height:224px;border:0;overflow:hidden" frameborder="0" scrolling="No"></iframe>
+  <script type="text/javascript">
+    function denglula()
+    {
+      var time = Math.random();
+      document.getElementById('dengluiframe').src='http://member.51hejia.com/member/userlogin?forward=' + location.href;
+    }
+  </script>
+  <script type="text/javascript" src="http://js1.51hejia.com/js/2010/login_n.js"></script>
+</div>
+<!--end_small_header_code-->

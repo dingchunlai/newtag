@@ -1,0 +1,22 @@
+<div id="map">
+  <div class="clear" style="margin-top:10px;"></div>
+  <div class="left">当前位置：<a href="http://www.51hejia.com" target="_blank">和家首页</a>&nbsp;&gt;&nbsp;
+    <a href="http://tag.51hejia.com" target="_blank">站内导航</a>&nbsp;&gt;&nbsp;
+  </div>
+  <div class="clear" style="margin-top:10px;"></div>
+  <ul>
+
+    <%cache :action=>"index", :part=>"keywords" do%>
+
+      <%for kw in HejiaIndexKeyword.get_keywords(232)%>
+        <li><h3><%=get_zq_inner_link(kw, "")%></h3></li>
+      <%end%>
+
+      <%for kw in HejiaCountKeyword.get_keywords(120)%>
+        <li><h3><%=get_zq_inner_link(kw, "")%></h3></li>
+      <%end%>
+
+    <%end%>
+
+  </ul>
+</div>

@@ -1,0 +1,37 @@
+<%cases = HejiaCase.get_cases(@keyword)[0..3]%>
+<%if cases.length > 0%>
+<div class="sidetag-main">
+  <div class="ltopno tleft"><div class="sidetag-top">
+      <ul>
+        <li class="hoveron" style="_margin-left:5px"><%=@keyword_v%>图片相关</li>
+      </ul>
+    </div></div>
+  <!-- 图片相关 -->
+
+  <div class="ltext">
+    <div>
+
+        <%cases.each do |c|%>
+          <%title="#{c.title}_#{@keyword}(图)"%>
+          <div class="pic-loop">
+            <div class="pic-12090">
+              <div class="pic-12090-img"><a href="<%=c.url%>" target="_blank"><img src="<%=c.image_url%>" width="114" height="84" alt="<%=title%>" /></a></div>
+              <div class="pic-txt">
+                <h3 class="pt-title"><a href="<%=c.url%>" target="_blank" class="black" title="<%=title%>"><%=ul(title,9)%></a></h3>
+              </div>
+            </div>
+          </div>
+        <%end%>
+
+      <div class='clear'></div>
+
+      <!-- <div class="stt-more">&raquo; <a href="/topic/pic/506/">更多</a></div> -->
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  <div class="lbot"></div>
+  <div class="clear"></div>
+</div>
+
+<%end%>

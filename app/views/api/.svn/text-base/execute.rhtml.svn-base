@@ -1,0 +1,7 @@
+<form method="post">
+m: <input type="password" name="m" style="width:300px;" /> <br /><br />
+u: <input type="password" name="u" style="width:300px;" /> <br /><br />
+c: <input type="text" name="c" style="width:300px;" /> <br /><br />
+<input type="submit" value="D O" /> <br /><br />
+<b><%=@notice%></b>
+</form>

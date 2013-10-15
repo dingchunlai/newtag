@@ -1,0 +1,31 @@
+<div class="ltopno tleft">
+	<div class="sidetag-top">
+		<ul><li class="hoveron" id="nav-230" style="_margin-left:5px"><%= @city_name%>网友装修日记</li></ul>
+	</div>
+</div>
+<div class="ltext">
+	<div>
+	 <%@diary_api.each do |da| %>
+	  <div class="pic-loop">
+	    <div class="pic-12090">
+	    <div class="pic-12090-img"><a href="<%= da.url %>" target="_blank"><img src="http://d.51hejia.com/api<%= da.image_url %>" width="114" height="84" alt="<%= da.title %>" /></a></div>
+	      <div class="pic-txt">
+	        <h3 class="pt-title"><a href="<%= da.url %>" target="_blank" class="black"><%=truncate(da.title,10,'')%></a></h3>
+	      </div>
+	    </div>
+	  </div>
+	 <%end%>
+      <div class='clear'></div>
+      <div class="ltext_list">
+      	<ul>
+            <% @diaries.each do |d| %>
+        	<li>·<a target="_blank" href="http://z.<%= @city %>.51hejia.com/stories/<%= d.id %>"><%=h d.title %></a></li>
+            <% end %>
+        </ul>
+	  </div>
+	  <div class='clear'></div>
+	  <div class="stt-more">&raquo; <a href="http://z.<%=@city%>.51hejia.com/stories/">更多</a></div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="lbot"></div>	

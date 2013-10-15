@@ -1,0 +1,43 @@
+<link href=" http://js.51hejia.com/css/searchtags.css" rel="stylesheet" type="text/css">
+
+<div id="main">
+  
+  <div class="search_results">
+
+    <div id="full_con">
+      <div id="tag_body">
+        <div class="section">
+          <h1>
+          当前位置：<a href="http://www.51hejia.com">和家首页</a>&nbsp;&gt;&nbsp;
+  <a href="/" target="_blank">站内导航</a>
+
+       
+          </h1>
+          <div class="tag_index">
+            <ul>
+              
+                <%
+                i = 1
+                for kw in index_keywords(232)
+                %>
+                  <span style="margin: 0px 10px">
+                  <%if i < 15%>
+                    <%=get_zq_inner_link(kw.name, "tag1")%>
+                  <%elsif i >= 15 and i < 45%>
+                    <%=get_zq_inner_link(kw.name, "tag2")%>
+                  <%else%>
+                    <%=get_zq_inner_link(kw.name, "tag3")%>
+                  <%end%>
+                  </span>
+                <%
+                  i += 1
+                end
+                %>
+
+               <%for kw in about_keywords()%>
+                  <span style="margin: 0px 10px"><a href="/<%=u(kw.name)%>.html" class="tag3"><%=kw.name%></a></span>
+               <%end%>
+
+
+</ul>
+</div></div></div></div></div></div>

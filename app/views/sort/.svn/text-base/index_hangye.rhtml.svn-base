@@ -1,0 +1,128 @@
+<link href="http://js.51hejia.com/css/hangye.css?1234" rel="stylesheet" type="text/css" />
+
+<div style="width:960px; margin:5px auto 5px auto;">
+  <!--/* OpenX Javascript标签 v2.6.2 */-->
+
+  <script type='text/javascript'><!--//<![CDATA[
+    var m3_u = (location.protocol=='https:'?'https://a.51hejia.com/www/delivery/ajs.php':'http://a.51hejia.com/www/delivery/ajs.php');
+    var m3_r = Math.floor(Math.random()*99999999999);
+    if (!document.MAX_used) document.MAX_used = ',';
+    document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+    document.write ("?zoneid=320");
+    document.write ('&amp;cb=' + m3_r);
+    if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+    document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+    document.write ("&amp;loc=" + escape(window.location));
+    if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+    if (document.context) document.write ("&context=" + escape(document.context));
+    if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+    document.write ("'><\/scr"+"ipt>");
+    //]]>--></script><noscript><a href='http://a.51hejia.com/www/delivery/ck.php?n=aa52fe9f&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://a.51hejia.com/www/delivery/avw.php?zoneid=320&amp;n=aa52fe9f' border='0' alt='' /></a></noscript>
+
+</div>
+<div  id="hy" class="clearfix">
+  <div class="side">
+    <div class="box01">
+      <img src="<%=hangye("big_image_url")%>" width="280" height="280" alt="<%=@kw%>" />
+
+      <h3>品牌：<%=@kw%></h3>
+    </div>
+    <div class="box02">
+      <h3><%=hangye("tj_title")%></h3>
+      <ul>
+        <li>
+          <%for tj in get_array_title_and_url(hangye("tj_tags"))%>
+            <a href="<%=tj["url"]%>" target="_blank"><%=tj["title"]%></a>
+          <%end%>
+        </li>
+      </ul>
+    </div>
+    <div class="ad1">
+      <a href="http://www.51hejia.com" target="_blank"><img src="http://js.51hejia.com/img/hangye/pic_23.jpg" /></a>
+    </div>
+    <div class="box03 clearfix">
+      <h3><%=hangye("xg_title")%></h3>
+      <ul>
+        <li><a href="#" target="_blank"><img src="http://js.51hejia.com/img/hangye/pic_24.jpg" /></a><p><a href="#" target="_blank">方太电器</a></p></li>
+        <li><a href="#" target="_blank"><img src="http://js.51hejia.com/img/hangye/pic_24.jpg" /></a><p><a href="#" target="_blank">方太电器</a></p></li>
+        <li><a href="#" target="_blank"><img src="http://js.51hejia.com/img/hangye/pic_24.jpg" /></a><p><a href="#" target="_blank">方太电器</a></p></li>
+        <li><a href="#" target="_blank"><img src="http://js.51hejia.com/img/hangye/pic_24.jpg" /></a><p><a href="#" target="_blank">方太电器</a></p></li>
+        <li><a href="#" target="_blank"><img src="http://js.51hejia.com/img/hangye/pic_24.jpg" /></a><p><a href="#" target="_blank">方太电器</a></p></li>
+
+      </ul>
+    </div>
+    <!--大事记 -->
+    <div class="box04" style="height:200px">
+      <h3><%=hangye("resume_title")%></h3>
+      <p><%=ul(hangye("resume"), 170)%></p>
+    </div>
+    <div class="box04" style="height:550px">
+      <h3><%=hangye("content_title")%>大事记</h3>
+      <p><%=ul(hangye("content"), 600)%></p>
+    </div>
+    <!--热门关键词推荐 -->
+    <div class="box05 clearfix">
+      <h3>热门关键词推荐</h3>
+      <ul>
+        <li>
+          <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54136.xml",["title","url","image_url"],14)%>
+            <a href='<%=r["url"]%>' target='_blank'><%=r["title"]%></a>
+          <%end%>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 最新资讯 -->
+  <div class="hy_content">
+    <div class="box01">
+      <span><a href="http://tag.51hejia.com/<%=@kw%>.html" target="_blank"><img src="http://js.51hejia.com/img/hangye/more.jpg" /></a></span>
+      <h3><a href="http://tag.51hejia.com/<%=@kw%>.html" target="_blank"><%=@kw%>最新资讯</a></h3>
+      <ul class="hy_list1">
+        <%for r in get_about_list_have_images(1, @kw, 4)%>
+          <li>
+            <a href="<%=r["url"]%>" target="_blank"><img src="<%=r["image_url"]%>" width="140" height="90" /></a>
+            <h4><a href="<%=r["url"]%>" target="_blank"><%=r["title"]%></a></h4>
+            <p><%=ul(HejiaIndex.get_resume_by_id(r["id"]),112)%> <a href="<%=r["url"]%>" target="_blank">[详细]</a></p>
+          </li>
+        <%end%>
+      </ul>
+    </div>
+    <!-- 相关图片 -->
+    <div class="box01">
+      <span><a href="<%=get_tuku_link(hangye("tuku_kw"),"","",true)%>" target="_blank"><img src="http://js.51hejia.com/img/hangye/more.jpg" /></a></span>
+      <h3><%=get_tuku_link(hangye("tuku_kw"),"",hangye("tuku_title"))%></h3>
+      <ul class="hy_list2 clearfix">
+        <%= render :partial => "sort/index_hangye/li_image_temp", :locals => {:kw => hangye("tuku_kw"),:num=>6}-%>
+      </ul>
+    </div>
+    <!-- 相关产品 -->
+    <div class="box01">
+      <span><a href="<%=get_tuku_link(hangye("chanpin_kw"),"","",true)%>" target="_blank"><img src="http://js.51hejia.com/img/hangye/more.jpg" /></a></span>
+      <h3><%=get_tuku_link(hangye("chanpin_kw"),"",hangye("chanpin_title"))%></h3>
+      <ul class="hy_list2 clearfix">
+        <% for pic in get_about_list_have_images(1,hangye("chanpin_kw"), 6)%>
+          <li>
+            <a href="<%=pic[:url]%>" target="_blank"><img src="<%=pic[:image_url]%>" alt="<%=pic[:title]%>"  width="200" height="150"/></a>
+            <a href="<%=pic[:url]%>" target="_blank" title="<%=pic[:title]%>"><%=ul(pic[:title],15,0,"")%></a>
+          </li>
+        <%end%>
+      </ul>
+    </div>
+    <!-- 相关品论 -->
+    <div class="box01" style="height: 417px">
+      <span><a href="http://bbs.51hejia.com/" target="_blank"><img src="http://js.51hejia.com/img/hangye/more.jpg" /></a></span>
+      <h3><a href="http://bbs.51hejia.com/" target="_blank"><%=@kw%>相关评论</a></h3>
+      <ul class="hy_list3">
+        <%for r in get_about_list(3, @kw, 5)%>
+          <li>
+            <h4><a href="<%=r["url"]%>" target="_blank"><%=r["title"]%></a></h4>
+            <p><%=ul(HejiaIndex.get_resume_by_id(r["id"]),100)%> <a href="<%=r["url"]%>" target="_blank">[详细]</a></p>
+          </li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<%= render :partial => '/share/foot' %>
+

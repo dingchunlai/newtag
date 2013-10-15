@@ -1,0 +1,20 @@
+<%
+      ul_class=parames[:ul_class]
+      times=parames[:times]
+      entity=parames[:entity]
+      type=parames[:type] #type定义： 1.文章 2.博客 3.论坛 4.图片 5.产品 6.问吧
+      omit_symbol =parames[:omit_symbol].nil? ? "" : parames[:omit_symbol]
+      show_count=parames[:show_count]
+%>
+       <ul class="<%=ul_class%>">
+          <%
+          entity_tags = get_array_title_and_url(@ci["#{entity}_tags"], times)
+          rs = get_articles_by_ids(@ci["tuijian_ids1"], 7)
+         %>
+          <%  0.upto(times-1) do |i|  %>
+         <li style="overflow:hidden; white-space: nowrap">
+            <%unless entity_tags[i].nil?%><span><a href="<%=entity_tags[i]["url"]%>" target="_blank" title=""><%=entity_tags[i]["title"]%></a></span><%end%>
+            <%unless rs[i].nil?%><a href="<%=rs[i]["url"]%>" title="<%=rs[i]["title"]%>" target="_blank"><%=rs[i]["title"]%></a><%end%>
+          </li>
+          <%end%>   
+        </ul>

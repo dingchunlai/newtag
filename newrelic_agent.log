@@ -1,0 +1,5 @@
+# Logfile created on Mon Jul 15 17:21:52 +0800 2013 by logger.rb/1.2.6
+[07/15/13 17:21:52 +0800 dingchunlai-ubuntu (7513)] INFO : Dispatcher: thin
+[07/15/13 17:21:52 +0800 dingchunlai-ubuntu (7513)] INFO : Application: newtag_production
+[07/15/13 17:21:52 +0800 dingchunlai-ubuntu (7513)] INFO : New Relic RPM Agent 2.12.0 Initialized: pid = 7513
+[07/15/13 17:21:52 +0800 dingchunlai-ubuntu (7513)] INFO : Agent Log found in /home/dingchunlai/hejia/newtag/release/newrelic_agent.log

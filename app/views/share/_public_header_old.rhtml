@@ -1,0 +1,33 @@
+<%
+file_path = "#{RAILS_ROOT}/app/views/share/_public_header_data.rhtml" #本地模板文件的路径
+
+is_update = false #是否执行本地模板文件更新操作
+
+if rand(7) == 1 #有7分之1的概率执行更新检查
+  if File.exist?(file_path)
+    #如果本地模板文件存在,且更新时间已操作3个小时，则执行更新操作。
+    is_update = true if File.mtime(file_path) < 3.hours.ago
+  else
+    #如果本地模板文件不存在，则通过执行更新操作来创建本地模板文件。
+    is_update = true
+  end
+end
+
+if is_update || params[:regain].to_i == 1
+  #执行更新操作
+  begin
+    require 'open-uri'
+    header = open("http://js.51hejia.com/common/header.html?#{rand(99999)}").read.to_s
+    if header.length > 100
+      file = File.new(file_path, "w")
+      file.print(header)
+      file.close_write
+    end
+  rescue
+  end
+end
+%>
+
+
+<%= render :partial => "share/ga201004" %>
+<%= render :partial => "share/public_header_data" rescue "" %>

@@ -1,0 +1,21 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 10
+/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/!svn/ver/788/51hejia/repos/newtag/release
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/103/51hejia/repos/newtag/release/.project
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/103/51hejia/repos/newtag/release/Rakefile
+END

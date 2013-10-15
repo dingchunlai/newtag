@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv=Content-Type content="text/html;charset=utf-8" />
+<title>【多图】<%=@keyword_v%>_和家网</title>
+<meta name="keywords" content="<%=@keyword_v%>资讯,<%=@keyword_v%>图片,<%=@keyword_v%>互动,<%=@keyword_v%>问答,<%=@keyword_v%>装修图片,<%=@keyword_v%>室内装修效果图,<%=@keyword_v%>室内设计效果图" />
+<meta name="description" content="和家网编辑与工作人员为读者精心提供了<%=@keyword_v%>最新，最全的资讯，<%=@keyword_v%>最丰富的图片，还有<%=@keyword_v%>各种互动信息等你参与，当然，还有<%=@keyword_v%>最实用的问答知识。" />
+<link href="http://js.51hejia.com/css/theme_2.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="http://js.51hejia.com/js/public.js"></script>
+</head>
+<body>
+
+<%= render :partial => '/share/public_header' %>
+
+<div class="main">
+<div class="banner">
+
+  <%=adspace("站内导航-列表页-通栏1")%>
+  
+</div>
+</div>
+
+<%=yield%>
+
+<div style="clear:both"></div>
+
+<%= render :partial => '/share/public_footer' %>
+
+<iframe name="hideiframe" width="0" height="0" id="hideiframe" style="display: none;"></iframe>
+
+</body>
+</html>

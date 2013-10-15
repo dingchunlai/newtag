@@ -1,0 +1,656 @@
+<%get_siteindex_rs%>
+<%get_siteindex_tuku_rs%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>【<%=@keywords%>】<%=@keywords%>推荐,<%=@keywords%>效果图片</title>
+    <meta name="keywords" content="<%=@keywords%>图片,<%=@keywords%>效果图,<%=@keywords%>样板图,<%=@keywords%>品牌,<%=@keywords%>产品" />
+    <meta name="description" CONTENT="在<%=@keywords%>专区中，和家网为你提供了<%=@keywords%>的最新资讯内容，<%=@keywords%>的产品介绍，<%=@keywords%>的精美图片，<%=@keywords%>的品牌相关，还有来自网友的<%=@keywords%>论坛内容，当然，我们还有大量的在线专家，回答关于<%=@keywords%>的所有问题。" />
+    <link href="http://js.51hejia.com/css/zhuangxiu1023.css?99173" rel="stylesheet" type="text/css" />
+    <SCRIPT LANGUAGE="JavaScript" SRC="http://d.51hejia.com/js/adv20090721.js"></SCRIPT>
+  </head>
+  <body>
+    <style type="text/css">
+      .ad_2 {
+        height: 140px;
+
+      }
+    </style>
+    <%= render :partial => '/share/public_header' %>
+
+    <div style="width:960px; margin:5px auto 5px auto;">
+      <!--/* OpenX Javascript标签 v2.6.2 */-->
+
+      <script type='text/javascript'><!--//<![CDATA[
+        var m3_u = (location.protocol=='https:'?'https://a.51hejia.com/www/delivery/ajs.php':'http://a.51hejia.com/www/delivery/ajs.php');
+        var m3_r = Math.floor(Math.random()*99999999999);
+        if (!document.MAX_used) document.MAX_used = ',';
+        document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+        document.write ("?zoneid=320");
+        document.write ('&amp;cb=' + m3_r);
+        if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+        document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+        document.write ("&amp;loc=" + escape(window.location));
+        if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+        if (document.context) document.write ("&context=" + escape(document.context));
+        if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+        document.write ("'><\/scr"+"ipt>");
+        //]]>--></script><noscript><a href='http://a.51hejia.com/www/delivery/ck.php?n=aa52fe9f&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://a.51hejia.com/www/delivery/avw.php?zoneid=320&amp;n=aa52fe9f' border='0' alt='' /></a></noscript>
+
+    </div>
+
+    <script language="javascript">
+      function setFocus2(p,y,o,m)
+      {
+        selectLayer2(p,y,o,m);
+
+      }
+      function selectLayer2(p,y,o,m)
+      {
+        for (var i=0;i<document.getElementById(y).getElementsByTagName(p).length;)
+        {
+          document.getElementById(o+i).style.display="none";
+          i++;
+        }
+        document.getElementById(o+m).style.display="block";
+        /*switch(m)
+    {
+    case 1:
+    document.getElementById("X1").style.display="block";
+    document.getElementById("X2").style.display="none";
+    break;
+    case 2:
+    document.getElementById("X1").style.display="none";
+    document.getElementById("X2").style.display="block";
+    break;
+    }*/
+      }
+      function daohang(m)
+      {
+        for(var z=0;z<9;)
+        {
+          document.getElementById(z+1).style.background='';
+          document.getElementById(z+1).style.color='#4a4a4a'
+          z++;
+        };
+        if(m!=6)
+        {
+          document.getElementById(m).style.backgroundImage='url(http://www.51hejia.com/images/zhuangxiu1023/btn_bg.gif)';
+
+        }
+        else {document.getElementById(m).style.backgroundImage='url(http://www.51hejia.com/images/zhuangxiu1023/btn2_bg.gif)';};
+        document.getElementById(m).style.color='#fff';
+      }
+
+    </script>
+
+    <div class="content">
+
+
+      <div class="page_1 clearfix">
+        <div class="left">
+          <div class="jiaodian">
+            <style type="text/css">
+              <!--
+              #f_div{width:320px; height:420px; overflow:hidden; padding-left:10px; padding-top:9px; float:left;}
+              #f_adDiv{width:100%; height:25px; overflow:hidden;}
+              #f_imgDiv{width:100%; height:420px; overflow:hidden;}
+              #f_img{filter:progid:DXImageTransform.Microsoft.Fade(Overlap=1.00); border:0;}
+              #f_infoDiv{width:100%;top:-18px; position:relative;}
+              #f_buttonDiv{width:100%; margin-right:1px; height:18px; overflow:hidden; text-align:left;}
+              #f_line{margin-left:230px; width:140px;height:1px;background:#000; overflow:hidden;filter:progid:DXImageTransform.Microsoft.Alpha(startX=0, startY=0, finishX=0, finishY=100,style=1,opacity=0,finishOpacity=100)}
+              #f_buttonDiv div{width:1px;height:18px; background:#fff; float:right;}
+              #f_buttonDiv .bg{width:20px; height:18px; background:#9c9c9c; float:right; filter:Alpha(Opacity=40);-moz-opacity:0.5;}
+              #f_buttonDiv a{width:20px;height:18px;float:right; line-height:14px; color:#fff;font-family:Arial, Helvetica, sans-serif;font-size:12px;text-align:center;display:block;overflow:hidden;text-decoration:none; position:absolute;}
+              #f_buttonDiv a:link,#f_buttonDiv a:visited,#f_buttonDiv a:active{color:#fff;}
+              #f_buttonDiv a:hover{background:#dedede;color:#000;}
+              #f_buttonDiv a.on:link,#f_buttonDiv a.on:visited,#f_buttonDiv a.on:active,#f_buttonDiv a.on:hover{background:#dedede;color:#000;}
+              #f_buttonDiv a.on:hover{background:#dedede;}
+              #f_text{height:34px; line-height:34px; overflow:hidden;text-align:left; margin-top:1px; padding-left:25px; color:#FFFFFF}
+              #f_text a:link,#f_text a:visited,#f_text a:active{color:#ffffff;}
+              #f_text a:hover{color:#FF6600;text-decoration: none;}
+              -->
+            </style>
+            <div id="f_div">
+              <!--图片区域-->
+              <div id="f_imgDiv"></div>
+              <div id="f_infoDiv">
+                <!--数字按钮区域-->
+                <div id="f_buttonDiv"></div>
+              </div>
+            </div>
+            <!--焦点文字区域-->
+
+            <div id="f_text" class="f12b" style="display:none;"></div>
+            <p><script>
+              //可修改区域
+              var imgWidth=320;
+              var imgHeight=420;
+              var _timeOut_=7000;
+              var show_text = true; //是否显示焦点文字
+              var timeOut=_timeOut_;
+              var timeOut2=_timeOut_/2;//onmouseout img后需要切换的时间
+              var now=0;              //第一张图
+              var target="_blank";   //打开方式
+              var button_on ='on'; //当前焦点对应按钮的样式名
+              var button_off ='';//非当前焦点对应按钮的样式名
+              //不可修改区域
+              var imgUrl = new Array();
+              var imgText = new Array();
+              var imgLink = new Array();
+              var imgAlt= new Array();
+              //var menuList = new Array();//菜单menu
+              var ver=2; //兼容浏览器版本 默认2 为非ie
+              var firstTime=true;
+              var n =-1;
+
+<% for r in parse_xml("http://api.51hejia.com/rest/build/xml/54276.xml", ["title", "url", "image_url", "description"], 7) %>
+    imgUrl[++n] = '<%=r["image_url"]%>';
+    imgText[n] = '<%=r["title"]%>';
+    imgLink[n] = '<%=r["url"]%>';
+    imgAlt[n] = '<%=r["title"]%>';
+<% end %>
+
+  var count=0;
+  for (i=0;i<imgUrl.length;i++) {
+    if( (imgUrl[i]!="") && (imgText[i]!="")&& (imgLink[i]!="")&& (imgAlt[i]!="")) {
+      count++;
+    } else {
+      break;
+    }
+  }
+  function p$(string){
+    document.write(string);
+  }
+  function $(id){
+    return document.getElementById(id);
+  }
+  //固定图片size
+  p$("<style> #f_img { width:"+imgWidth+"px;height:"+imgHeight+"px;</style>");
+  function change(){
+    if (ver==1){
+      with($('f_img').filters[0]){
+        Transition=1;
+        apply();
+        play();
+      }
+    }
+    if (firstTime){ firstTime=false;timeOut=_timeOut_/1000;}
+    else{
+      $('f_img').src=imgUrl[now];
+      $('f_img').alt=imgAlt[now];
+      $('f_imgLink').href=imgLink[now];
+      if (show_text) $('f_text').innerHTML=imgText[now];
+      for (var i=0;i<count;i++) {
+        $('b'+i).className="button";
+        //$('f_menu'+i).className="";
+      }
+      $('b'+now).className="on";
+      //$('f_menu'+now).className="on";
+      now=(now>=imgUrl.length-1)?0:now+1;
+      timeOut=_timeOut_;
+    }
+    theTimer=setTimeout("change()", timeOut);
+  }
+  function b_change(num){
+    window.clearInterval(theTimer);
+    now=num;
+    firstTime=false;
+    change();
+  }
+  //draw 渐变line （即css:f_line)
+  function draw_line(){
+    var div = document.createElement("div");
+    div.id = 'f_line';
+    $('f_infoDiv').insertBefore(div,$('f_infoDiv').childNodes.item(0));
+  }
+  //表现层 start
+  //图片
+  var a = document.createElement("a");
+  a.id="f_imgLink";
+  a.target=target;
+  a.href=imgLink[now];
+  $('f_imgDiv').appendChild(a);
+  var img = document.createElement("img");
+  img.id="f_img";
+  img.width=imgWidth;
+  img.height=imgHeight;
+  img.src=imgUrl[now];
+  img.alt=imgAlt[now];
+  a.appendChild(img);
+  //数字按钮
+  for (var i=count-1;i>=0;i--){
+    var div_bg = document.createElement("div");
+    div_bg.id = 'div_bg'+i;
+    div_bg.className='bg';
+    $('f_buttonDiv').appendChild(div_bg);
+    var a = document.createElement("a");
+    a.id = 'b'+i;
+    a.className = (i==now+1)?"button_on":"button_off";
+    a.title=imgAlt[i];
+    a.innerHTML=i+1;
+    a.href='javascript:b_change('+i+')';
+    $('div_bg'+i).appendChild(a);
+    var div= document.createElement("div");
+    $('f_buttonDiv').appendChild(div);
+  }
+  if (show_text) $('f_text').innerHTML = imgText[now];
+  //表现层 end
+  $('f_img').onmouseover=function(){window.clearInterval(theTimer);}
+  $('f_img').onmouseout=function(){theTimer=setTimeout("change()", timeOut2);}
+  try{  //滤镜版本
+    new ActiveXObject("DXImageTransform.Microsoft.Fade");
+    $('f_img').filters[0].play();
+    ver=1;
+    draw_line();
+  }
+  catch (e){ver=2;}
+  var theTimer = setTimeout("change()", _timeOut_/1000);
+              </script></p>
+          </div>
+          <div class="box rebox">
+            <h3 class="noindent">
+              <%=get_zq_inner_link(@keywords, "noindent", "相关关键字")%>
+            </h3>
+            <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54278.xml", ["title", "url", "image_url"], 4)%>
+              <a href="<%=r["url"]%>" target="_blank"><img src="<%=r["image_url"]%>" alt="<%=r["title"]%>" /></a>
+            <%end%>
+            <ul>
+              <li>
+                <%zq_sort_id=get_zq_sort_id_by_siteindex_keywords(@keywords, @kw1, @kw2)%>
+                <!-- zq_sort_id: <%=zq_sort_id%> -->
+                <%for kw in get_re_dian_zhuan_qu(zq_sort_id).first(16)%>
+                  <%=get_zq_inner_link(kw, "") unless kw == @keywords%>
+                <%end%>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="box">
+            <%unless @rs[0].nil?%>
+              <h3 class="noindent"><a class="noindent" href="<%= @rs[0]["url"] %>" target="_blank"><%=ul(@rs[0]["title"],19)%></a></h3>
+              <p><%=ul(HejiaIndex.get_resume_by_id(@rs[0]["id"]),66)%>        <a href="<%= @rs[0]["url"] %>" target="_blank">[查看详细]</a></p>
+            <%end%>
+          </div>
+          <ul>
+
+            <%0.upto(3) do |i|%>
+              <%unless @irs[i].nil?%>
+                <li class=" clearfix">
+                  <a href="<%=@irs[i]["url"]%>" target="_blank"><img class="img-1" width="90" height="90" src="<%=@irs[i]["image_url"]%>" /></a>
+                  <div class="inbox">
+                    <h3 class="noindent"><a class="noindent" href="<%=@irs[i]["url"]%>" target="_blank"><%=ul(@irs[i]["title"],12)%></a></h3>
+                    <p><%=ul(HejiaIndex.get_resume_by_id(@irs[i]["id"]),42)%> <a href="<%=@irs[i]["url"]%>" target="_blank">【查看详细】</a></p>
+
+                    <p class="tags">
+                      <img src="http://www.51hejia.com/images/zhuangxiu1023/tag.gif" />
+                      <%for kw in HejiaIndexKeyword.get_keywords_by_index_id(@irs[i]["id"], 3)%>
+                        <%=get_zq_inner_link(kw)%>&nbsp;&nbsp;
+                      <%end%>
+                    </p>
+                  </div>
+                </li>
+              <%end%>
+            <% end %>
+
+          </ul>
+        </div>
+        <div class="right">
+          <%rs = parse_xml("http://api.51hejia.com/rest/build/xml/54277.xml", ["title", "url", "image_url", "description"], 4)%>
+          <%unless rs[0].nil?%>
+            <div class="ad_2"><a href="<%= rs[0]["url"] %>" target="_blank"><img src="<%= rs[0]["image_url"] %>" width="250" height="130" /></a></div>
+          <%end%>
+          <ul class="box1">
+            <%1.upto(3) do |i|%>
+              <%unless rs[i].nil?%>
+                <li><a href="<%= rs[i]["url"] %>" target="_blank"><%=ul(rs[i]["title"],18)%> </a></li>
+              <%end%>
+            <% end %>
+          </ul>
+          <div class="search">
+            <form action="http://zhannei.baidu.com/cse/search" target="_blank">
+              <input name="s" type="hidden" value="7289350921164188503" />
+              <input type="text" name="q" size="30" class="txt" />
+              <input type="submit" value="" class="button01" />
+            </form>
+          </div>
+          <div class="box2">
+            <h3 class="noindent"><%=get_zq_inner_link(@keywords, "noindent", "#{@keywords}文章排行榜")%></h3>
+            <div class="box2-1" id="U2">
+
+              <div id="y0" style="display:block;">
+                <p><a  href="#" class="btn btn2" onmouseover="javascript:setFocus2('div','U2','y',0);" >最新更新</a><a href="#" class="btn" onmouseover="javascript:setFocus2('div','U2','y',1);" target="_blank">本周排行</a></p>
+                <ul>
+                  <%1.upto(5) do |i|%>
+                    <li><a href="<%=@rs[i]["url"]%>" target="_blank" title="<%=@rs[i]["title"]%>"><%=ul(@rs[i]["title"],14)%></a></li>
+                  <%end%>
+                </ul>
+              </div>
+              <div id="y1" style="display:none;">
+                <p><a href="#" class="btn" onmouseover="javascript:setFocus2('div','U2','y',0);" >最新更新</a><a href="#" class="btn btn2" onmouseover="javascript:setFocus2('div','U2','y',1);" >本周排行</a></p>
+                <ul>
+                  <%6.upto(10) do |i|%>
+                    <li><a href="<%=@rs[i]["url"]%>" target="_blank" title="<%=@rs[i]["title"]%>"><%=ul(@rs[i]["title"],14)%></a></li>
+                  <%end%>
+                </ul>
+              </div>
+            </div>
+
+            <div class="box2-1 box2-4" id="U4">
+              <span>
+                <%=get_zq_inner_link(@keywords, "", ">>更多")%>
+              </span>
+
+              <h3><%=@keywords%>相关内容</h3>
+
+              <div id="g0" style="display:block;">
+
+
+                <p><a href="<%=zq_url(@keywords)%>" class="btn btn2" onmouseover="javascript:setFocus2('div','U4','g',0);" target="_blank">资讯</a><a href="<%=get_case_url%>" class="btn" onmouseover="javascript:setFocus2('div','U4','g',1);" target="_blank">图库</a><a href="http://p.51hejia.com/" class="btn" onmouseover="javascript:setFocus2('div','U4','g',2);" target="_blank">产品</a></p>
+                <ul>
+                  <%11.upto(15) do |i|%>
+                    <li><a href="<%=@rs[i]["url"]%>" target="_blank" title="<%=@rs[i]["title"]%>"><%=ul(@rs[i]["title"],14)%></a></li>
+                  <%end%>
+                </ul>
+              </div>
+              <div id="g1" style="display:none;">
+                <p><a href="<%=zq_url(@keywords)%>" class="btn" onmouseover="javascript:setFocus2('div','U4','g',0);" target="_blank">资讯</a><a href="<%=get_case_url%>" class="btn btn2" onmouseover="javascript:setFocus2('div','U4','g',1);" target="_blank">图库</a><a href="http://p.51hejia.com/" class="btn" onmouseover="javascript:setFocus2('div','U4','g',2);" target="_blank">产品</a></p>
+                <ul>
+                  <%for r in get_about_list(4, @kw1, 5)%>
+                    <li><a href="<%=r["url"]%>" target="_blank"><%=ul(r["title"],14)%></a></li>
+                  <%end%>
+                </ul>
+              </div>
+              <div id="g2" style="display:none;">
+                <p><a href="<%=zq_url(@keywords)%>" class="btn" onmouseover="javascript:setFocus2('div','U4','g',0);" target="_blank">资讯</a><a href="<%=get_case_url%>" class="btn" onmouseover="javascript:setFocus2('div','U4','g',1);" target="_blank">图库</a><a href="http://p.51hejia.com/" class="btn btn2" onmouseover="javascript:setFocus2('div','U4','g',2);" target="_blank">产品</a></p>
+                <ul>
+                  <%for r in get_about_list(5, @kw1, 5)%>
+                    <li><a href="<%=r["url"]%>" target="_blank"><%=ul(r["title"],14)%></a></li>
+                  <%end%>
+                </ul>
+              </div>
+              <!-- <span><a href="http://www.51hejia.com/articleList/s-32689" target="_blank">>>更多</a></span> -->
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+    <div class="page_2 clearfix" id="f1" >
+      <div class="box clearfix" id="U5">
+        <div class="title"><span>
+            <% for result in parse_xml("http://api.51hejia.com/rest/build/xml/54280.xml", ["title", "url", "image_url", "description"], 10) %>
+              <a href="<%= result["url"] %>" target="_blank"><%=ul(result["title"],5)%></a>
+            <% end %>
+
+
+            <a href="http://d.51hejia.com/" class="more" target="_blank">>>更多</a> </span><h2 class="noindent"><a class="noindent" href="http://d.51hejia.com/" target="_blank">最新装修美家</a></h2>
+        </div>
+        <ul class="inbox" style="display:none" id="h0">
+          <p class="btnbox">
+
+            <a href="http://d.51hejia.com/zq/城市装修/" class="btn" onmouseover="javascript:setFocus2('ul','U5','h',1);" target="_blank">网友晒家</a>
+            <a href="http://z.51hejia.com/" class="btn2" onmouseover="javascript:setFocus2('ul','U5','h',0);" target="_blank">网友装修公司点评</a>
+          </p>
+          <% for result in parse_xml("http://api.51hejia.com/rest/build/xml/54279.xml", ["title", "url", "image_url", "description"], 4) %>
+            <li>
+              <a href="<%= result["url"] %>" target="_blank"><img src="<%= result["image_url"] %>" /></a>
+              <i><a href="<%= result["url"] %>" target="_blank"><%= result["title"] %></a></i>
+              <i class="li1"></i>
+            </li>
+          <% end %>
+        </ul>
+
+        <ul class="inbox" style="display:block" id="h1">
+          <p class="btnbox">
+
+            <a href="http://d.51hejia.com/zq/城市装修/" class="btn2" onmouseover="javascript:setFocus2('ul','U5','h',1);" target="_blank">网友晒家</a>
+            <a href="http://z.51hejia.com/" class="btn" onmouseover="javascript:setFocus2('ul','U5','h',0);" target="_blank">网友装修公司点评</a>
+          </p>
+          <% for result in parse_xml("http://api.51hejia.com/rest/build/xml/54285.xml", ["title", "url", "image_url", "description"], 4) %>
+            <li>
+              <a href="<%= result["url"] %>" target="_blank"><img src="<%= result["image_url"] %>" /></a>
+              <i><a href="<%= result["url"] %>" target="_blank"><%= result["title"] %></a></i>
+              <i class="li1"></i>
+            </li>
+          <% end %>
+
+
+        </ul>
+      </div>
+      <div style="width:960px; margin:8px auto 8px auto;">
+        <!--/* OpenX Javascript标签 v2.6.0 */-->
+
+        <script type='text/javascript'><!--//<![CDATA[
+          var m3_u = (location.protocol=='https:'?'https://a.51hejia.com/www/delivery/ajs.php':'http://a.51hejia.com/www/delivery/ajs.php');
+          var m3_r = Math.floor(Math.random()*99999999999);
+          if (!document.MAX_used) document.MAX_used = ',';
+          document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+          document.write ("?zoneid=120");
+          document.write ('&amp;cb=' + m3_r);
+          if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+          document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+          document.write ("&amp;loc=" + escape(window.location));
+          if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+          if (document.context) document.write ("&context=" + escape(document.context));
+          if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+          document.write ("'><\/scr"+"ipt>");
+          //]]>--></script><noscript><a href='http://a.51hejia.com/www/delivery/ck.php?n=a4501fdb&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://a.51hejia.com/www/delivery/avw.php?zoneid=120&amp;n=a4501fdb' border='0' alt='' /></a></noscript>
+
+      </div>
+
+      <div class="box_1">
+        <div class="title">
+          <h3>
+            <span><%=@keywords%></span>小编推荐
+          </h3>
+          <span class="more"><%=get_zq_inner_link(@keywords, "", ">>更多")%></span>
+          <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54282.xml", ["title", "url"], 3) %>
+            <a href="<%=r["url"]%>" class="spaces last" target="_blank"><%=ul(r["title"],10)%></a>
+          <%end%>
+        </div>
+        <div class="box1_L clear">
+          <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54281.xml", ["title", "url", "image_url"], 1) %>
+            <a href="<%=r["url"]%>" target="_blank"><img src="<%=r["image_url"]%>" width="345" height="155" /></a>
+            <p><a href="<%=r["url"]%>" target="_blank"><%=r["title"]%></a></p>
+          <%end%>
+        </div>
+
+        <ul>
+          <%16.upto(23) do |i|%>
+            <li><a href="<%=@rs[i]["url"]%>" target="_blank" title="<%=@rs[i]["title"]%>"><%=ul(@rs[i]["title"],20)%></a></li>
+          <%end%>
+        </ul>
+      </div>
+
+      <div id="side" class="f1_side clearfix">
+        <div class="sidebox_2" id="z0" style="display:block;">
+          <h3> <span><a href="http://d.51hejia.com/" target="_blank">>>更多</a></span>资讯top5</h3>
+          <p class="title clearfix">
+            <a href="http://d.51hejia.com/" class="now" onmouseover="javascript:setFocus2('div','side','z',0);" target="_blank">装修</a>
+            <a href="http://www.51hejia.com/jushang/" onmouseover="javascript:setFocus2('div','side','z',1);" target="_blank">装饰</a>
+            <a href="http://www.51hejia.com/diban/" onmouseover="javascript:setFocus2('div','side','z',2);" target="_blank">产品</a>
+            <a href="http://www.51hejia.com/xinwen/" onmouseover="javascript:setFocus2('div','side','z',3);" target="_blank">行业</a>
+          </p>
+          <ul>
+            <% for r in parse_xml("http://api.51hejia.com/rest/build/xml/54260.xml", ["title", "url", "image_url"]).first(6) %>
+              <li><a href="<%= r["url"] %>" target="_blank" title="<%= r["title"] %>"><%= ul(r["title"], 12) %></a></li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="sidebox_2" id="z1" style="display:none;">
+          <h3> <span><a href="http://www.51hejia.com/jushang/" target="_blank">>>更多</a></span>资讯top5</h3>
+          <p class="title clearfix">
+            <a href="http://d.51hejia.com/" onmouseover="javascript:setFocus2('div','side','z',0);" target="_blank">装修</a>
+            <a href="http://www.51hejia.com/jushang/" class="now" onmouseover="javascript:setFocus2('div','side','z',1);" target="_blank">装饰</a>
+            <a href="http://www.51hejia.com/diban/" onmouseover="javascript:setFocus2('div','side','z',2);" target="_blank">产品</a>
+            <a href="http://www.51hejia.com/xinwen/" onmouseover="javascript:setFocus2('div','side','z',3);" target="_blank">行业</a>
+          </p>
+          <ul>
+            <% for r in parse_xml("http://api.51hejia.com/rest/build/xml/54272.xml", ["title", "url", "image_url"]).first(6) %>
+              <li><a href="<%= r["url"] %>" target="_blank" title="<%= r["title"] %>"><%= ul(r["title"], 12) %></a></li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="sidebox_2" id="z2" style="display:none;">
+          <h3> <span><a href="http://www.51hejia.com/diban/" target="_blank">>>更多</a></span>资讯top5</h3>
+          <p class="title clearfix">
+            <a href="http://d.51hejia.com/" onmouseover="javascript:setFocus2('div','side','z',0);" target="_blank">装修</a>
+            <a href="http://www.51hejia.com/jushang/" onmouseover="javascript:setFocus2('div','side','z',1);" target="_blank">装饰</a>
+            <a href="http://www.51hejia.com/diban/" class="now" onmouseover="javascript:setFocus2('div','side','z',2);" target="_blank">产品</a>
+            <a href="http://www.51hejia.com/xinwen/" onmouseover="javascript:setFocus2('div','side','z',3);" target="_blank">行业</a>
+          </p>
+          <ul>
+            <% for r in parse_xml("http://api.51hejia.com/rest/build/xml/54262.xml", ["title", "url", "image_url"]).first(6) %>
+              <li><a href="<%= r["url"] %>" target="_blank" title="<%= r["title"] %>"><%= ul(r["title"], 12) %></a></li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="sidebox_2" id="z3" style="display:none;">
+          <h3> <span><a href="http://www.51hejia.com/xinwen/" target="_blank">>>更多</a></span>资讯top5</h3>
+          <p class="title clearfix">
+            <a href="http://d.51hejia.com/" onmouseover="javascript:setFocus2('div','side','z',0);" target="_blank">装修</a>
+            <a href="http://www.51hejia.com/jushang/" onmouseover="javascript:setFocus2('div','side','z',1);" target="_blank">装饰</a>
+            <a href="http://www.51hejia.com/diban/" onmouseover="javascript:setFocus2('div','side','z',2);" target="_blank">产品</a>
+            <a href="http://www.51hejia.com/xinwen/" class="now" onmouseover="javascript:setFocus2('div','side','z',3);" target="_blank">行业</a>
+          </p>
+          <ul>
+            <% for r in parse_xml("http://api.51hejia.com/rest/build/xml/54263.xml", ["title", "url", "image_url"]).first(6) %>
+              <li><a href="<%= r["url"] %>" target="_blank" title="<%= r["title"] %>"><%= ul(r["title"], 12) %></a></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="box2 clearfix clear">
+        <div class="title">
+          <h3>更多<span><%=@keywords%></span>图片</h3>
+          <span class="more">
+            <a href="<%=get_case_url%>" target="_blank">>>更多</a>
+          </span>
+          <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54283.xml", ["title", "url"], 5) %>
+            <a href="<%=r["url"]%>" class="spaces last" target="_blank"><%=ul(r["title"],10)%></a>
+          <%end%>
+
+        </div>
+        <ul class="clear">
+
+          <%if @trs.length > 0%>
+            <%@trs.each do |c|%>
+              <%title="#{c.title}_#{@keywords}(图)"%>
+              <li>
+                <a href="<%=c.url%>" target="_blank"><img src="<%=c.image_url%>" alt="<%=title%>" width="130" height="120" /></a>
+                <p><a href="<%=c.url%>" target="_blank" title="<%=title%>"><%=ul(title,10)%></a></p>
+              </li>
+            <%end%>
+          <%end%>
+
+        </ul>
+      </div>
+
+      <%get_siteindex_bbs_rs%>
+
+      <div class="box2 box3 clear">
+        <div class="title">
+          <h3><span><%=@keywords%></span>论坛相关</h3>
+          <span class="more"><a href="http://bbs.51hejia.com" target="_blank">>>更多</a></span>
+        </div>
+
+        <div class="left">
+          <%unless @bbsrs[0].nil?%>
+            <a href="<%=@bbsrs[0]["url"]%>" target="_blank"><img src="http://www.51hejia.com/images/zhuangxiu1023/pic_21.jpg" /></a>
+            <p><a href="<%=@bbsrs[0]["url"]%>" target="_blank"><%=ul(@bbsrs[0]["title"],7)%></a></p>
+          <%end%>
+        </div>
+
+        <ul class="right">
+          <%1.upto(6) do |i|%>
+            <%unless @bbsrs[i].nil?%>
+              <li><a href="<%=@bbsrs[i]["url"]%>" target="_blank"><%=ul(@bbsrs[i]["title"],14)%></a></li>
+            <%end%>
+          <%end%>
+        </ul>
+        <ul class="clear bottom">
+          <%7.upto(10) do |i|%>
+            <%unless @bbsrs[i].nil?%>
+              <li><a href="<%=@bbsrs[i]["url"]%>" target="_blank"><%=ul(@bbsrs[i]["title"],20)%></a></li>
+            <%end%>
+          <%end%>
+        </ul>
+
+      </div>
+
+      <%get_siteindex_wenba_rs%>
+
+      <div class="box2 box3 box4">
+        <div class="title">
+          <h3><span><%=@keywords%></span>博客相关</h3>
+          <span class="more"><a href="http://blog.51hejia.com" target="_blank">>>更多</a></span>
+        </div>
+
+        <div class="left">
+          <%unless @wenbars[0].nil?%>
+            <a href="<%=@wenbars[0]["url"]%>" target="_blank"><img src="http://www.51hejia.com/images/zhuangxiu1023/091123.jpg" /></a>
+            <p><a href="<%=@wenbars[0]["url"]%>" target="_blank"><%=ul(@wenbars[0]["title"],7)%></a></p>
+          <%end%>
+        </div>
+
+        <ul class="right">
+          <%1.upto(6) do |i|%>
+            <%unless @wenbars[i].nil?%>
+              <li><a href="<%=@wenbars[i]["url"]%>" target="_blank"><%=ul(@wenbars[i]["title"],14)%></a></li>
+            <%end%>
+          <%end%>
+        </ul>
+        <ul class="clear bottom">
+          <%7.upto(10) do |i|%>
+            <%unless @wenbars[i].nil?%>
+              <li><a href="<%=@wenbars[i]["url"]%>" target="_blank"><%=ul(@wenbars[i]["title"],20)%></a></li>
+            <%end%>
+          <%end%>
+        </ul>
+      </div>
+
+      <div class="box5">
+        <div class="box_01">
+          <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54284.xml", ["title", "url", "image_url","description"], 1) %>
+            <a href="<%=r["url"]%>" target="_blank"><img src="<%=r["image_url"]%>" width="125" height="130" /></a>
+            <div class="right">
+              <p class="title"><%=ul(r["title"],6)%></p>
+              <p><%=ul(r["description"],35)%></p>
+              <span><a href="<%=r["url"]%>" target="_blank">[查看详细]</a></span>
+            </div>
+          <%end%>
+        </div>
+        <p class="title_2">热门推荐</p>
+        <ul>
+          <li>
+            <%for r in parse_xml("http://api.51hejia.com/rest/build/xml/54136.xml", ["title", "url", "image_url","description"], 24).first(15) %>
+              <a href="<%=r["url"]%>" target="_blank"><%=r["title"]%></a>
+            <%end%>
+          </li>
+        </ul>
+      </div>
+
+      <div class="box2 clear">
+        <div class="title">
+          <h3><span><%=@keywords%></span>相关介绍</h3>
+        </div>
+        <p class="text">在<%=@keywords%>专区中，和家网为你提供了<%=@keywords%>的最新资讯内容，<%=@keywords%>的产品介绍，<%=@keywords%>的精美图片，<%=@keywords%>的品牌相关，还有来自网友的<%=@keywords%>论坛内容，当然，我们还有大量的在线专家，回答关于<%=@keywords%>的所有问题。</p>
+      </div>
+
+
+
+
+    </div>
+    <div class="clearfix"></div>
+
+    <%= render :partial => '/share/public_footer' %>
+
+  </body>
+</html>

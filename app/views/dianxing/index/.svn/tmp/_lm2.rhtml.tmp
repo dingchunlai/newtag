@@ -1,0 +1,151 @@
+<%kws = trim(@ci["lm2_kws"]).split(" ")%>
+<div class="leftbox00 leftbox02 clearfix">
+      <span class="span01">
+        <%for kw in trim(@ci["lm2_tags"]).split(" ")%>
+          <%=get_zq_inner_link(kw)%>
+        <%end%>
+      </span>
+      <h2><a href="<%=@ci["lm2_bigurl"]%>" target="_blank"><%=@ci["lm2_bigtitle"]%></a></h2>
+      <div class="box01">
+        <a href="<%=@ci["lm2_url1"]%>" target="_blank"><img src="<%=@ci["lm2_image_url1"]%>" alt="<%=@ci["lm2_title1"]%>" width="212" height="249" /></a>
+        <a href="<%=@ci["lm2_url1"]%>" target="_blank"><%=ul(@ci["lm2_title1"],12)%></a></div>
+      <div class="text">
+        <h3><a href="<%=@ci["lm2_url"]%>" target="_blank" title="<%=@ci["lm2_title"]%>"><%=ul(@ci["lm2_title"],20)%></a></h3>
+        <p><%=ul(@ci["lm2_resume"],60)%></p>
+        <span class="span02">[<a href="<%=@ci["lm2_url"]%>" target="_blank" title="详细">详细</a>]</span></div>
+      <div class="list">
+		  <% if kws[0] == "小户型客厅" and !Article::promotion_articles(4, "小户型客厅").blank? %>
+            <% ids = Article::promotion_articles(4, "小户型客厅") %>
+			<dl>
+				<dt><strong><%=get_zq_inner_link(kws[0])%></strong></dt>
+				<% unless ids[0,3].blank? %>
+					<% for id in ids[0,3] %>
+						<% article = Article.get_article(id) %>
+						<dd><a href="<%= article.detail_url %>" target="_blank" title="<%= article.title %>"><%=ul(article.title,18)%></a></dd>
+					<% end %>
+					<% limit = 3 - ids[0,3].size %>
+					<% if limit > 0 %>
+						<%unless kws[0].nil?%>
+							<%for r in get_articles_by_editor_keyword(kws[0], limit)%>
+								<dd><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=ul(r["title"],18)%></a></dd>
+							<%end%>
+						<%end%>
+					<% end %>
+				<% else %>
+					<%unless kws[0].nil?%>
+						<%for r in get_articles_by_editor_keyword(kws[0], 3)%>
+							<dd><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=ul(r["title"],18)%></a></dd>
+						<%end%>
+					<%end%>
+				<%end%>
+			</dl>
+			<div class="pic01">
+				<% unless ids[3].blank? %>
+					<% article = Article.get_article(ids[3]) %>
+					<a href="<%= article.detail_url %>" target="_blank"><img src="<%= HejiaArticle::image_url(article.ID) %>" alt="<%= article.title %>" width="143" height="96" /></a>				
+				<% else %>
+			        <a href="<%=@ci["lm2_url2"]%>" target="_blank"><img src="<%=@ci["lm2_image_url2"]%>" alt="<%=@ci["lm2_title2"]%>" width="143" height="96" /></a>
+				<% end %>
+			</div>		  
+		  <% else %>
+			<dl>
+				<%unless kws[0].nil?%>
+					<dt><strong><%=get_zq_inner_link(kws[0])%></strong></dt>
+					<%for r in get_articles_by_editor_keyword(kws[0], 3)%>
+						<dd><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=ul(r["title"],18)%></a></dd>
+					<%end%>
+				<%end%>
+			</dl>
+			<div class="pic01">
+	          <a href="<%=@ci["lm2_url2"]%>" target="_blank"><img src="<%=@ci["lm2_image_url2"]%>" alt="<%=@ci["lm2_title2"]%>" width="143" height="96" /></a>
+			</div>
+          <% end %>
+      </div>
+      <div class="list">
+		  <% if kws[1] == "小户型厨房" and !Article::promotion_articles(4, "小户型厨房").blank? %>
+            <% ids = Article::promotion_articles(4, "小户型厨房") %>
+			<dl>
+				<dt><strong><%=get_zq_inner_link(kws[1])%></strong></dt>
+				<% for id in ids[0,3] %>
+					<% article = Article.get_article(id) %>
+					<dd><a href="<%= article.detail_url %>" target="_blank" title="<%= article.title %>"><%=ul(article.title,18)%></a></dd>
+				<% end %>
+				<% limit = 3 - ids[0,3].size %>
+				<% if limit > 0 %>
+					<%unless kws[1].nil?%>
+						<%for r in get_articles_by_editor_keyword(kws[1], limit)%>
+							<dd><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=ul(r["title"],18)%></a></dd>
+						<%end%>
+					<%end%>
+				<% end %>
+			</dl>
+			<div class="pic01">
+				<% unless ids[3].blank? %>
+					<% article = Article.get_article(ids[3]) %>
+					<a href="<%= article.detail_url %>" target="_blank"><img src="<%= HejiaArticle::image_url(article.ID) %>" alt="<%= article.title %>" width="143" height="96" /></a>				
+				<% else %>
+		            <a href="<%=@ci["lm2_url3"]%>" target="_blank"><img src="<%=@ci["lm2_image_url3"]%>" alt="<%=@ci["lm2_title3"]%>" width="143" height="96" /></a>
+				<% end %>
+			</div>		  
+		  <% else %>
+			<dl>
+				<%unless kws[1].nil?%>
+					<dt><strong><%=get_zq_inner_link(kws[1])%></strong></dt>
+					<%for r in get_articles_by_editor_keyword(kws[1], 3)%>
+						<dd><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=ul(r["title"],18)%></a></dd>
+					<%end%>
+				<%end%>
+			</dl>
+			<div class="pic01">
+	            <a href="<%=@ci["lm2_url3"]%>" target="_blank"><img src="<%=@ci["lm2_image_url3"]%>" alt="<%=@ci["lm2_title3"]%>" width="143" height="96" /></a>
+			</div>
+          <% end %>      	
+      </div>
+      <div class="list list01">
+		  <% if kws[2] == "小户型卧室" and !Article::promotion_articles(4, "小户型卧室").blank? %>
+            <% ids = Article::promotion_articles(4, "小户型卧室") %>
+			<dl>
+				<dt><strong><%=get_zq_inner_link(kws[2])%></strong></dt>
+				<% for id in ids[0,3] %>
+					<% article = Article.get_article(id) %>
+					<dd><a href="<%= article.detail_url %>" target="_blank" title="<%= article.title %>"><%=ul(article.title,18)%></a></dd>
+				<% end %>
+				<% limit = 3 - ids[0,3].size %>
+				<% if limit > 0 %>
+					<%unless kws[2].nil?%>
+						<%for r in get_articles_by_editor_keyword(kws[2], limit)%>
+							<dd><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=ul(r["title"],18)%></a></dd>
+						<%end%>
+					<%end%>
+				<% end %>
+			</dl>
+			<div class="pic01">
+				<% unless ids[3].blank? %>
+					<% article = Article.get_article(ids[3]) %>
+					<a href="<%= article.detail_url %>" target="_blank"><img src="<%= HejiaArticle::image_url(article.ID) %>" alt="<%= article.title %>" width="143" height="96" /></a>				
+				<% else %>
+		            <a href="<%=@ci["lm2_url4"]%>" target="_blank"><img src="<%=@ci["lm2_image_url4"]%>" alt="<%=@ci["lm2_title4"]%>" width="143" height="96" /></a>
+				<% end %>
+			</div>		  
+		  <% else %>
+			<dl>
+				<%unless kws[2].nil?%>
+					<dt><strong><%=get_zq_inner_link(kws[2])%></strong></dt>
+					<%for r in get_articles_by_editor_keyword(kws[2], 3)%>
+						<dd><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=ul(r["title"],18)%></a></dd>
+					<%end%>
+				<%end%>
+			</dl>
+			<div class="pic01">
+	            <a href="<%=@ci["lm2_url4"]%>" target="_blank"><img src="<%=@ci["lm2_image_url4"]%>" alt="<%=@ci["lm2_title4"]%>" width="143" height="96" /></a>
+			</div>
+          <% end %>
+      </div>
+      <div class="list02">
+        <ul>
+          <%for r in get_articles_by_editor_keyword(kws[3], 5)%>
+            <li><a href="<%=r["url"]%>" target="_blank" title="<%=r["title"]%>"><%=ul(r["title"],15)%></a></li>
+          <%end%>
+        </ul>
+      </div>
+    </div>

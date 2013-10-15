@@ -1,0 +1,10 @@
+<div id="tab-panel-220" style="font-size:14px;padding:10px 20px;text-align:left;">
+  <p class="tag-cloud">
+    <%for kw in HejiaTag.get_about_tags(@keyword)%>
+      <%i = rand(2)+1%>
+      <%@about_kws << kw%>
+      <a href='/zhuanqu/<%=kw%>.html' class="hot<%=i%>" target='_blank'><%=kw%></a>&nbsp;&nbsp;
+    <%end%>
+  </p>
+  <div class="clear"></div>
+</div>

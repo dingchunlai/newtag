@@ -1,0 +1,35 @@
+<div class="mbox">
+  <div id="sub_11">
+  <h1><a href="/zq/<%=@sort_name%>-<%=@si.kw2%>.html" target="_blank" class="more"><img src="http://www.51hejia.com/images/woshi522/more.gif" border="0" /></a><a href="/zq/<%=@sort_name%>-<%=@si.kw2%>.html" target="_blank"><%=@si.kw2%></a></h1>
+  </div>
+  <div class="mboxleft">
+    <div id="sub_12">
+	  <dl>
+	    <dt><a href="<%=@si.kw_url2%>" target="_blank"><img src="<%=@si.kw_image_url2%>" alt="<%=@si.kw_title2%>" width="126" height="184" border="0" /></a></dt>
+		<dd><a href="<%=@si.kw_url2%>" title="<%=@si.kw_title2%>" target="_blank"><%=utf8_left(@si.kw_title2, 8)%></a></dd>
+	  </dl>
+  </div>
+  </div>
+  <div class="mboxright">
+  <div id="sub_13">
+    <h4><a href="<%=@si.kw_url2%>" title="<%=@si.kw_title2%>" target="_blank"><%=@si.kw_title2%></a></h4>
+		<p><%=utf8_left(@si.kw_resume2,40)%> [<a href="<%=@si.kw_url2%>" target="_blank">查看详细</a>]</p>
+	 </div>
+     <div id="sub_14">
+<ul>
+    <%ars = get_articles_by_editor_keyword(@si.kw2, 6)%>
+    <%if ars.length > 0%>
+      <%for ar in ars%>
+      <li>
+      <a href="<%=ar["url"]%>" target="_blank" title="<%=ar["title"]%>"><%=utf8_left(ar["title"], 22)%></a>
+      </li>
+      <%end%>
+    <%else%>
+      <li style="color:#808080">
+      暂无数据
+      </li>
+    <%end%>
+ </ul>
+</div>
+  </div>
+</div>
